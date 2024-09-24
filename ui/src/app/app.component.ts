@@ -43,6 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private appService: AppService,
     private title: Title,
   ) {
+    //console.log('Current language in localStorage:', localStorage.LANGUAGE);
     service.setLang(Language.getByKey(localStorage.LANGUAGE) ?? Language.getByBrowserLang(navigator.language));
 
     this.subscription.add(
