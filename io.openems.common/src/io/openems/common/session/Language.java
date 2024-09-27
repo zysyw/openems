@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import io.openems.common.exceptions.OpenemsException;
 
 public enum Language {
+	ZH(Locale.CHINA), //
 	EN(Locale.ENGLISH), //
 	DE(Locale.GERMAN), //
 	CZ(Locale.forLanguageTag("cs")), //
@@ -16,7 +17,7 @@ public enum Language {
 	ES(Locale.forLanguageTag("es")), //
 	FR(Locale.FRENCH);
 
-	public static final Language DEFAULT = Language.DE;
+	public static final Language DEFAULT = Language.ZH;
 
 	private static Logger LOG = LoggerFactory.getLogger(Language.class);
 

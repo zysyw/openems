@@ -8,7 +8,7 @@ import localZH from '@angular/common/locales/zh'; // 简体中文区域设置
 import { TranslateLoader, TranslateService } from "@ngx-translate/core";
 import { Observable, of } from "rxjs";
 import { filter, take } from "rxjs/operators";
-import cn from 'src/assets/i18n/cn.json'; //简体中文json文件，made by sunmin
+import zh from 'src/assets/i18n/cn.json'; //简体中文json文件，made by sunmin
 import cz from "src/assets/i18n/cz.json";
 import de from "src/assets/i18n/de.json";
 import en from "src/assets/i18n/en.json";
@@ -36,7 +36,7 @@ export class MyTranslateLoader implements TranslateLoader {
 export class Language {
 
     // 新增中文支持
-    public static readonly CN: Language = new Language("Chinese", "cn", "cn", cn, localZH);
+    public static readonly ZH: Language = new Language("Chinese", "zh", "zh", zh, localZH);
     public static readonly DE: Language = new Language("German", "de", "de", de, localDE);
     public static readonly EN: Language = new Language("English", "en", "en", en, localEN);
     public static readonly CZ: Language = new Language("Czech", "cz", "de", cz, localDE /* NOTE: there is no locale in @angular/common for Czech */);
@@ -45,8 +45,8 @@ export class Language {
     public static readonly FR: Language = new Language("French", "fr", "fr", fr, localFR);
     public static readonly JA: Language = new Language("Japanese", "ja", "ja", ja, localJA);
 
-    public static readonly ALL = [Language.CN, Language.DE, Language.EN, Language.CZ, Language.NL, Language.ES, Language.FR, Language.JA];
-    public static readonly DEFAULT = Language.CN;
+    public static readonly ALL = [Language.ZH, Language.DE, Language.EN, Language.CZ, Language.NL, Language.ES, Language.FR, Language.JA];
+    public static readonly DEFAULT = Language.ZH;
 
     constructor(
         public readonly title: string,
@@ -72,9 +72,9 @@ export class Language {
 
     public static getByBrowserLang(browserLang: string): Language | null {
         switch (browserLang) {
-            case "cn":
+            case "zh":
             case "zh-CN":  // 简体中文
-                return Language.CN;
+                return Language.ZH;
             case "de": return Language.DE;
             case "en":
             case "en-US":
@@ -90,7 +90,7 @@ export class Language {
 
     public static getLocale(language: string) {
         switch (language) {
-            case Language.CN.key: return Language.CN.locale;
+            case Language.ZH.key: return Language.ZH.locale;
             case Language.DE.key: return Language.DE.locale;
             case Language.EN.key: return Language.EN.locale;
             case Language.ES.key: return Language.ES.locale;
@@ -134,7 +134,7 @@ export class Language {
             if (environment.debugMode) {
                 console.warn(`[Advert] No translation available for Language ${lang}. Implemented languages are: ${Object.keys(translationFile)}`);
             }
-            translationKey = Language.EN.key;
+            translationKey = Language.ZH.key;
         }
         return { lang: lang, translations: translationFile[translationKey], shouldMerge: true };
     }

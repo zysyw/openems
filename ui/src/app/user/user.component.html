@@ -156,7 +156,7 @@
               <ion-label translate>About.language</ion-label>
               <ion-select #langSelect (ionChange)="setLanguage(langSelect.value)" [value]="currentLanguage">
                 <ion-select-option *ngFor="let language of languages" [value]="language">
-                  {{ language.title }}
+                  {{ language.title }} <!-- 选项显示的还是英文，考虑翻译 -->
                 </ion-select-option>
               </ion-select>
             </ion-item>
