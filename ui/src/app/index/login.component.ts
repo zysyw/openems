@@ -107,6 +107,7 @@ export class LoginComponent implements OnInit, AfterContentChecked, OnDestroy {
         // Unclean
         this.ngOnInit();
         this.formIsDisabled = false;
+
       });
   }
 

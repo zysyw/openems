@@ -80,7 +80,7 @@ export class Websocket implements WebsocketInterface {
 
         this.service.currentUser = authenticateResponse.user;
 
-        // Metadata
+        // Metadata sunmin:it has already getten user
         this.service.metadata.next({
           user: authenticateResponse.user,
           edges: {},
