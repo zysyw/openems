@@ -1,0 +1,43 @@
+h1 {
+  color: #007bff;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #28a745;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px;
+  margin: 5px 0;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+strong {
+  display: block;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* 确保组件容器能够滚动 */
+:host {
+  display: block;
+  overflow-y: auto; /* 允许垂直滚动 */
+  max-height: 100vh; /* 限制组件的最大高度为视口的高度 */
+}
+
+/* 如果你想让某个特定的 div 滚动 */
+.scrollable-content {
+  max-height: 80vh; /* 可根据需要调整最大高度 */
+  overflow-y: auto; /* 允许垂直滚动 */
+  padding: 10px;
+}

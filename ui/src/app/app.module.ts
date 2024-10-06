@@ -25,6 +25,7 @@ import { IndexModule } from "./index/index.module";
 import { RegistrationModule } from "./registration/registration.module";
 import { StatusSingleComponent } from "./shared/components/status/single/status.component";
 import { ChartOptionsPopoverComponent } from "./shared/legacy/chartoptions/popover/popover.component";
+import { EdgeConfigViewerComponent } from './shared/service/edge-config-viewer/edge-config-viewer.component';
 import { MyErrorHandler } from "./shared/service/myerrorhandler";
 import { Pagination } from "./shared/service/pagination";
 import { SharedModule } from "./shared/shared.module";
@@ -54,6 +55,7 @@ import { UserModule } from "./user/user.module";
     TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: MyTranslateLoader } }),
     UserModule,
     RegistrationModule,
+    EdgeConfigViewerComponent,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

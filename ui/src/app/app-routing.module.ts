@@ -9,12 +9,13 @@ import { OverviewComponent as ConsumptionChartOverviewComponent } from "./edge/h
 import { DetailsOverviewComponent as GridDetailsOverviewComponent } from "./edge/history/common/grid/details/details.overview";
 import { OverviewComponent as GridChartOverviewComponent } from "./edge/history/common/grid/overview/overview";
 import { DetailsOverviewComponent } from "./edge/history/common/production/details/details.overview";
-import { DetailsOverviewComponent as DigitalOutputDetailsOverviewComponent } from "./edge/history/Controller/Io/DigitalOutput/details/details.overview";
 import { OverviewComponent as ProductionChartOverviewComponent } from "./edge/history/common/production/overview/overview";
 import { OverviewComponent as SelfconsumptionChartOverviewComponent } from "./edge/history/common/selfconsumption/overview/overview";
 import { OverviewComponent as ChannelthresholdChartOverviewComponent } from "./edge/history/Controller/ChannelThreshold/overview/overview";
 import { OverviewComponent as GridOptimizedChargeChartOverviewComponent } from "./edge/history/Controller/Ess/GridoptimizedCharge/overview/overview";
 import { OverviewComponent as TimeOfUseTariffOverviewComponent } from "./edge/history/Controller/Ess/TimeOfUseTariff/overview/overview";
+import { DetailsOverviewComponent as DigitalOutputDetailsOverviewComponent } from "./edge/history/Controller/Io/DigitalOutput/details/details.overview";
+import { OverviewComponent as DigitalOutputChartOverviewComponent } from "./edge/history/Controller/Io/DigitalOutput/overview/overview";
 import { DelayedSellToGridChartOverviewComponent } from "./edge/history/delayedselltogrid/symmetricpeakshavingchartoverview/delayedselltogridchartoverview.component";
 import { HeatingelementChartOverviewComponent } from "./edge/history/heatingelement/heatingelementchartoverview/heatingelementchartoverview.component";
 import { HeatPumpChartOverviewComponent } from "./edge/history/heatpump/heatpumpchartoverview/heatpumpchartoverview.component";
@@ -48,13 +49,13 @@ import { SystemExecuteComponent as EdgeSettingsSystemExecuteComponent } from "./
 import { SystemLogComponent as EdgeSettingsSystemLogComponent } from "./edge/settings/systemlog/systemlog.component";
 import { LoginComponent } from "./index/login.component";
 import { OverViewComponent } from "./index/overview/overview.component";
-import { UserComponent } from "./user/user.component";
 import { LoadingScreenComponent } from "./index/shared/loading-screen";
 import { CurrentAndVoltageOverviewComponent } from "./shared/components/edge/meter/currentVoltage/currentVoltage.overview";
 import { DataService } from "./shared/components/shared/dataservice";
 import { hasEdgeRole } from "./shared/guards/functional-guards";
+import { EdgeConfigViewerComponent } from "./shared/service/edge-config-viewer/edge-config-viewer.component";
 import { Role } from "./shared/type/role";
-import { OverviewComponent as DigitalOutputChartOverviewComponent } from "./edge/history/Controller/Io/DigitalOutput/overview/overview";
+import { UserComponent } from "./user/user.component";
 
 
 export const routes: Routes = [
@@ -68,6 +69,7 @@ export const routes: Routes = [
 
   { path: "user", component: UserComponent, data: { navbarTitleToBeTranslated: "Menu.user" } },
   { path: "changelog", component: ChangelogViewComponent, data: { navbarTitleToBeTranslated: "Menu.changelog" } },
+  //{ path: 'config', component: EdgeConfigViewerComponent },
 
   // Edge Pages
   {
@@ -112,6 +114,11 @@ export const routes: Routes = [
           { path: "digitaloutputchart", component: DigitalOutputChartOverviewComponent },
           { path: "digitaloutputchart/:componentId", component: DigitalOutputDetailsOverviewComponent },
         ],
+      },
+      {
+        path: "config",
+        component: EdgeConfigViewerComponent,
+        data: { navbarTitle: 'Edge Configuration' }
       },
 
       { path: "settings", data: { navbarTitleToBeTranslated: "Menu.edgeSettings" }, component: EdgeSettingsComponent },

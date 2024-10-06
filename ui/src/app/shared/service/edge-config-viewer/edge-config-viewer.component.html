@@ -1,0 +1,60 @@
+<div *ngIf="edgeConfig; else loading">
+  <h1>Edge Config Viewer</h1>
+  
+  <!-- 工厂列表 -->
+  <h2>Factories</h2>
+  <div *ngIf="getKeys(edgeConfig.factories).length > 0; else noFactories" class="scrollable-content">
+    <ul>
+      <li *ngFor="let factoryId of getKeys(edgeConfig.factories)">
+        <strong>Factory ID:</strong> {{ factoryId }}
+        <div>
+          <strong>Factory Name:</strong> {{ edgeConfig.factories[factoryId].name }}
+          <ul>
+            <li *ngFor="let componentId of edgeConfig.getComponentIdsByFactory(factoryId)">
+              <strong>Component ID:</strong> {{ componentId }}
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noFactories>
+    <p>No factories available.</p>
+  </ng-template>
+
+  <!-- 组件列表 -->
+  <h2>Components</h2>
+  <div *ngIf="getKeys(edgeConfig.components).length > 0; else noComponents" class="scrollable-content">
+    <ul>
+      <li *ngFor="let componentId of getKeys(edgeConfig.components)">
+        <strong>Component ID:</strong> {{ componentId }}
+        <div>
+          <strong>Factory ID:</strong> {{ edgeConfig.components[componentId].factoryId }}
+          <ul *ngIf="edgeConfig.components[componentId].channels">
+            <li *ngFor="let channelId of getKeys(edgeConfig.components[componentId].channels)">
+              <strong>Channel ID:</strong> {{ channelId }}
+              <div>
+                <strong>Channel Type:</strong> {{ edgeConfig.components[componentId].channels[channelId].type }}
+                <strong>Access Mode:</strong> {{ edgeConfig.components[componentId].channels[channelId].accessMode }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noComponents>
+    <p>No components available.</p>
+  </ng-template>
+</div>
+
+<!-- 加载中 -->
+<ng-template #loading>
+  <p>Loading Edge Config...</p>
+</ng-template>
+
+<!-- 错误信息 -->
+<div *ngIf="errorMessage">
+  <p>{{ errorMessage }}</p>
+</div>
+
