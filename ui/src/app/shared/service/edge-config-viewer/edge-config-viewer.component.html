@@ -15,6 +15,17 @@
             </li>
           </ul>
         </div>
+        <div>
+          <h3>Nature ID:</h3>
+          <ul *ngIf="getNatureIdsByFactory(factoryId).length > 0; else noNatures">
+            <li *ngFor="let natureId of getNatureIdsByFactory(factoryId)">
+              {{ natureId }}
+            </li>
+          </ul>
+          <ng-template #noNatures>
+            <p>No natures available for this factory.</p>
+          </ng-template>
+        </div>
       </li>
     </ul>
   </div>

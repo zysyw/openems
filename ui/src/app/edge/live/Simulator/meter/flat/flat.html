@@ -1,0 +1,21 @@
+<ng-container *ngIf="isInitialized">
+    <oe-flat-widget [icon]="{name: 'oe-consumption', color: 'warning'}" [title]="'General.consumption' | translate"
+        button (click)="presentModal()">
+
+        <!-- ConsumptionMeters -->
+        <ng-container *ngIf="consumptionMeters.length > 0">
+            <ng-container *ngFor="let component of consumptionMeters">
+                <oe-flat-widget-line [name]="component.alias" [channelAddress]="component.id + '/ActivePower'"
+                    [converter]="CONVERT_WATT_TO_KILOWATT">
+                </oe-flat-widget-line>
+            </ng-container>
+        </ng-container>
+
+        <!-- For no ConsumptionMeters -->
+        <ng-template #noMeters>
+            <oe-flat-widget-line [value]="sumActivePower" [converter]="CONVERT_WATT_TO_KILOWATT">
+            </oe-flat-widget-line>
+        </ng-template>
+
+    </oe-flat-widget>
+</ng-container>

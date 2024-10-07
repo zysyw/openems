@@ -12,6 +12,7 @@ import { EdgeConfig, Service } from "../../shared";
 export class EdgeConfigViewerComponent implements OnInit {
 
   edgeConfig: EdgeConfig | null = null;
+  naturesMap: { [natureId: string]: EdgeConfig.Nature } = {};
   errorMessage: string | null = null;
 
   constructor(private service: Service) { }
@@ -23,10 +24,19 @@ export class EdgeConfigViewerComponent implements OnInit {
   loadEdgeConfig(): void {
     this.service.getConfig().then((config: EdgeConfig) => {
       this.edgeConfig = config;
+      this.naturesMap = EdgeConfig.getNaturesOfFactories(this.edgeConfig.factories);
     }).catch(error => {
       this.errorMessage = 'Failed to load EdgeConfig';
       console.error(error);
     });
+  }
+
+  getNatureNameById(natureId: string): string {
+    return this.naturesMap[natureId]?.name || 'Unknown Nature';
+  }
+
+  getNatureIdsByFactory(factoryId: string): string[] {
+    return this.edgeConfig.getNatureIdsByFactoryId(factoryId);
   }
 
   // 辅助函数，返回一个对象的键列表
