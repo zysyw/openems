@@ -34,7 +34,7 @@ export class FlatComponent extends AbstractFlatWidget {
       new ChannelAddress("_sum", "ConsumptionActivePowerL2"),
       new ChannelAddress("_sum", "ConsumptionActivePowerL3"),
     ];
-
+    console.log(this.config);
     // Get consumptionMeterComponents
     this.consumptionMeters = this.config.getComponentsImplementingNature("io.openems.edge.meter.api.ElectricityMeter")
       .filter(component => component.isEnabled && this.config.isTypeConsumptionMetered(component));

@@ -41,6 +41,7 @@
         <strong>Component ID:</strong> {{ componentId }}
         <div>
           <strong>Factory ID:</strong> {{ edgeConfig.components[componentId].factoryId }}
+          <strong>Component Type:</strong> {{ edgeConfig.components[componentId].properties["type"] }}
           <ul *ngIf="edgeConfig.components[componentId].channels">
             <li *ngFor="let channelId of getKeys(edgeConfig.components[componentId].channels)">
               <strong>Channel ID:</strong> {{ channelId }}

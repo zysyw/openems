@@ -23,18 +23,11 @@ export class FlatComponent extends AbstractFlatWidget {
 
   protected override getChannelAddresses() {
 
-    const channelAddresses: ChannelAddress[] = [
-      new ChannelAddress("_sum", "ConsumptionActivePower"),
-
-      // TODO should be moved to Modal
-      new ChannelAddress("_sum", "ConsumptionActivePowerL1"),
-      new ChannelAddress("_sum", "ConsumptionActivePowerL2"),
-      new ChannelAddress("_sum", "ConsumptionActivePowerL3"),
-    ];
+    const channelAddresses: ChannelAddress[] = [];
 
     // Get consumptionMeterComponents
-    this.consumptionMeters = this.config.getComponentsImplementingNature("io.openems.edge.meter.api.ElectricityMeter")
-      .filter(component => component.isEnabled && this.config.isTypeConsumptionMetered(component));
+    this.consumptionMeters = this.config.getComponentsImplementingNature("io.openems.edge.simulator.meter.nrc.acting.SimulatorNrcMeterActing")
+      .filter(component => component.isEnabled);
 
     for (const component of this.consumptionMeters) {
       channelAddresses.push(
@@ -46,20 +39,6 @@ export class FlatComponent extends AbstractFlatWidget {
     }
 
     return channelAddresses;
-  }
-
-  protected override onCurrentData(currentData: CurrentData) {
-
-    let consumptionMetersSumOfActivePower: number = 0;
-    this.sumActivePower = currentData.allComponents["_sum/ConsumptionActivePower"];
-
-    // Iterate over evcsComponents to get ChargePower for every component
-    for (const component of this.consumptionMeters) {
-      if (currentData.allComponents[component.id + "/ActivePower"]) {
-        consumptionMetersSumOfActivePower += currentData.allComponents[component.id + "/ActivePower"];
-      }
-    }
-
   }
 
 }
