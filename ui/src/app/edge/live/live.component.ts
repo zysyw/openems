@@ -31,6 +31,7 @@ export class LiveComponent implements OnInit, OnDestroy {
     this.service.getConfig().then(config => {
       this.config = config;
       this.widgets = config.widgets;
+      console.log("LiveComponent.ngOnInit widgets:", this.widgets)
     });
   }
 
