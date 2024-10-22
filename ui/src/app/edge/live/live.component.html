@@ -145,14 +145,12 @@
       </ion-col>
     </ion-row>
 
-    <!-- Simulator Widgets -->
-    <ion-row class="ion-justify-content-center" style="margin-top: 20px;">
-      <ion-col size="12" size-lg="6" class="ion-no-padding">
-        Simulator!
-        <simulator-consumption> </simulator-consumption>
-      </ion-col>
-    </ion-row>
+  </ion-grid>
 
+  <ion-grid [hidden]="!edge.subscribeChannelsSuccessful" *ngIf="edge && edge.isOnline">
+    <!-- Simulator Widgets -->
+    <p>Simulator!</p>
+    <SimulatorMeters> </SimulatorMeters>
   </ion-grid>
 
   <ion-grid *ngIf="edge && edge.isOnline && !edge.subscribeChannelsSuccessful">

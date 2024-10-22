@@ -1,0 +1,19 @@
+<ng-container *ngIf="isInitialized">
+    <oe-flat-widget [icon]="{name: 'oe-consumption', color: 'warning'}" [title]="'General.consumption' | translate"
+        button (click)="presentModal()">
+
+        <!-- SimulatorMeter -->
+        <ng-container *ngIf="meter; else noMeter">
+            <oe-flat-widget-line [name]="meter.alias" [channelAddress]="meter.id + '/ActivePower'"
+                [converter]="CONVERT_WATT_TO_KILOWATT">
+            </oe-flat-widget-line>
+        </ng-container>
+
+        <!-- For no SimulatorMeter -->
+        <ng-template #noMeter>
+            <oe-flat-widget-line [name]="'No Meter Data'">
+            </oe-flat-widget-line>
+        </ng-template>
+
+    </oe-flat-widget>
+</ng-container>

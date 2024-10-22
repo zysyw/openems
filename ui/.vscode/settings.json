@@ -1,6 +1,6 @@
 {
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "cSpell.enabled": false,
     "i18n-ally.localesPaths": "src/assets/i18n",
     "i18n-ally.dirStructure": "file",
@@ -48,4 +48,8 @@
         "*.svg",
         "*.scss"
     ],
+    "[jinja-html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "html.format.enable": true,
 }

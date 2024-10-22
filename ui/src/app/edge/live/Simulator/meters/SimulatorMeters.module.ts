@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { SharedModule } from "src/app/shared/shared.module";
 import { FlatComponent } from "./flat/flat";
 import { ModalComponent } from "./modal/modal";
+import { SimulatorMetersComponent } from "./SimulatorMeters.component";
 
 @NgModule({
   imports: [
@@ -12,9 +13,10 @@ import { ModalComponent } from "./modal/modal";
   declarations: [
     FlatComponent,
     ModalComponent,
+    SimulatorMetersComponent,
   ],
   exports: [
-    FlatComponent,
+    SimulatorMetersComponent,
   ],
 })
-export class Simulator_Meter { }
+export class SimulatorMeters { }
