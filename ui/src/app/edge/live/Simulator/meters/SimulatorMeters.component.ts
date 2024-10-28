@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractFlatWidget } from "src/app/shared/components/flat/abstract-flat-widget";
-import { ChannelAddress, EdgeConfig, Utils } from "src/app/shared/shared";
+import { ChannelAddress, EdgeConfig } from "src/app/shared/shared";
 
 
 export interface MeterNode {
@@ -15,7 +15,6 @@ export interface MeterNode {
 export class SimulatorMetersComponent extends AbstractFlatWidget {
   public simulatorMeterComponents: EdgeConfig.Component[] | null = null;
   public simulatorMeters: MeterNode[] = [];
-  public readonly CONVERT_WATT_TO_KILOWATT = Utils.CONVERT_WATT_TO_KILOWATT;
 
   protected override getChannelAddresses() {
 

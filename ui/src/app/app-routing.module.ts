@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { environment } from "src/environments";
 import { ChangelogViewComponent } from "./changelog/view/view";
+import { DiagramComponent } from "./edge/diagram/diagram.component";
 import { EdgeComponent } from "./edge/edge.component";
 import { OverviewComponent as AutarchyChartOverviewComponent } from "./edge/history/common/autarchy/overview/overview";
 import { DetailsOverviewComponent as ConsumptionDetailsOverviewComponent } from "./edge/history/common/consumption/details/details.overview";
@@ -119,6 +120,12 @@ export const routes: Routes = [
         path: "config",
         component: EdgeConfigViewerComponent,
         data: { navbarTitle: 'Edge Configuration' }
+      },
+      {
+        path: "diagram", providers: [{
+          useClass: LiveDataService,
+          provide: DataService,
+        }], component: DiagramComponent,
       },
 
       { path: "settings", data: { navbarTitleToBeTranslated: "Menu.edgeSettings" }, component: EdgeSettingsComponent },

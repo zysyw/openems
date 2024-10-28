@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     public environment = environment;
     public backUrl: string | boolean = "/";
     public enableSideMenu: boolean;
-    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" = "Other";
+    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" = "Other";
     public isSystemLogEnabled: boolean = false;
     private ngUnsubscribe: Subject<void> = new Subject<void>();
 
@@ -143,12 +143,15 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             file = urlArray[3];
         }
         // Enable Segment Navigation for Edge-Index-Page
-        if ((file == "history" || file == "live") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
             if (file == "history") {
                 this.currentPage = "IndexHistory";
-            } else {
+            } else if(file == "live") {
                 this.currentPage = "IndexLive";
+            } else {
+                this.currentPage = "IndexDiagram";
             }
+
         } else if (file == "settings" && urlArray.length > 1) {
             this.currentPage = "EdgeSettings";
         }
@@ -166,6 +169,12 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
 
             /** Creates bug of being infinite forwarded betweeen live and history, if not relatively routed  */
             this.router.navigate(["../history"], { relativeTo: this.route });
+            this.cdRef.detectChanges();
+        }
+        if (event.detail.value == "IndexDiagram") {
+
+            /** Creates bug of being infinite forwarded betweeen live and diagram, if not relatively routed  */
+            this.router.navigate(["../diagram"], { relativeTo: this.route });
             this.cdRef.detectChanges();
         }
     }

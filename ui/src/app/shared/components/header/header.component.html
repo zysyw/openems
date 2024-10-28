@@ -9,7 +9,7 @@
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
     <!-- page title is shown if the current page isn't Live nor History -->
-    <ion-title *ngIf="currentPage !== 'IndexLive' && currentPage !== 'IndexHistory'" class="ion-hide-md-up"
+    <ion-title *ngIf="currentPage !== 'IndexLive' && currentPage !== 'IndexHistory' && currentPage !== 'IndexDiagram'" class="ion-hide-md-up"
       slot="start">
       {{ service.currentPageTitle }}
     </ion-title>
@@ -18,10 +18,13 @@
       {{ service.currentPageTitle }}
     </ion-title>
     <ng-container *ngIf="service.currentEdge | async as edge">
-      <ng-container *ngIf="currentPage === 'IndexLive' || currentPage === 'IndexHistory'">
+      <ng-container *ngIf="currentPage === 'IndexLive' || currentPage === 'IndexHistory' || currentPage === 'IndexDiagram'">
         <ion-buttons>
           <ion-segment mode="md" (ionChange)="segmentChanged($event)" [(ngModel)]="currentPage"
             class="ion-justify-content-center">
+            <ion-segment-button value="IndexDiagram">
+              <ion-label>接线图</ion-label> <!-- 应采用General.DIAGRAM，但太麻烦，暂未修改 -->
+            </ion-segment-button>
             <ion-segment-button value="IndexLive">
               <ion-label translate>General.LIVE</ion-label>
             </ion-segment-button>
