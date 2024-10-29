@@ -1,0 +1,588 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg" color-interpolation-filters="sRGB" xml:space="preserve" style="fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3">
+  <style>
+    .st1,.st2{stroke:#000;stroke-linecap:butt;stroke-width:2.21102}.st2{stroke-width:1.47402}.st3,.st4,.st5{stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.st4,.st5{fill:none;stroke:#c05046}.st5{stroke:#9dbb61}.st6{stroke-linecap:butt;stroke-width:2.21102}.st6,.st7{stroke:#c05046}.st7,.st8,.st9{stroke-linecap:butt}.st7{stroke-width:1.47402}.st8,.st9{stroke:#9dbb61;stroke-width:2.21102}.st9{stroke-width:1.47402}.st10{stroke:#c05046}.st10,.st11,.st12{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.st11{stroke:#9dbb61}.st12{fill:#fff;stroke:#c05046}.st14{fill:#000;font-family:宋体;font-size:1.00001em;font-weight:700}.st15{font-size:1em}.st16{fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:.75}.st17{fill:#000;font-family:宋体;font-size:1.16666em;font-weight:700}.st18{fill:#fff;stroke:none;stroke-linecap:butt;stroke-width:7.2}.st20,.st21{fill:#fff;stroke:#9dbb61;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}.st21{stroke:#000;stroke-width:.75}
+  </style>
+  <g id="group32-1">
+    <g id="shape33-2"/>
+    <g id="shape34-4">
+      <path id="svg_1" class="st1" d="m210.956 138.585-7.37 7.37"/>
+      <path id="svg_2" class="st1" d="m203.586 138.585 7.37 7.37"/>
+    </g>
+    <g id="meter0">
+      <path id="svg_3" class="st2" d="M207.309 130.399v11.79"/>
+      <path id="svg_4" class="st2" d="M207.309 156.089v11.16"/>
+      <path id="svg_5" class="st2" d="m196.579 142.189 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="shape38-13">
+    <path id="svg_6" class="st3" d="M177.593 79.374h343.86"/>
+  </g>
+  <g id="shape39-16">
+    <path id="svg_7" class="st3" d="M578.426 79.374h187.86"/>
+  </g>
+  <g transform="rotate(90 1122.68 109.134)" id="group43-19">
+    <g id="shape44-20"/>
+    <g id="shape45-22">
+      <path id="svg_8" class="st1" d="m1144.75 675.75-7.37 7.37"/>
+      <path id="svg_9" class="st1" d="m1137.38 675.75 7.37 7.37"/>
+    </g>
+    <g id="shape46-26">
+      <path id="svg_10" class="st2" d="M1141.103 667.564v11.79"/>
+      <path id="svg_11" class="st2" d="M1141.103 693.254v11.16"/>
+      <path id="svg_12" class="st2" d="m1130.373 679.354 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="shape51-31">
+    <path id="svg_13" class="st3" d="M535.55 127.563h-50.67v-48.19"/>
+  </g>
+  <g id="shape52-34">
+    <path id="svg_14" class="st3" d="M552.421 127.563h60.02v-48.19"/>
+  </g>
+  <g id="group53-37">
+    <g id="shape54-38"/>
+    <g id="shape55-40">
+      <path id="svg_15" class="st1" d="m424.606 138.585-7.37 7.37"/>
+      <path id="svg_16" class="st1" d="m417.236 138.585 7.37 7.37"/>
+    </g>
+    <g id="shape56-44">
+      <path id="svg_17" class="st2" d="M420.959 130.399v11.79"/>
+      <path id="svg_18" class="st2" d="M420.959 156.089v11.16"/>
+      <path id="svg_19" class="st2" d="m410.229 142.189 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group57-49">
+    <g id="shape58-50"/>
+    <g id="shape59-52">
+      <path id="svg_20" class="st1" d="m716.94 138.585-7.37 7.37"/>
+      <path id="svg_21" class="st1" d="m709.57 138.585 7.37 7.37"/>
+    </g>
+    <g id="shape60-56">
+      <path id="svg_22" class="st2" d="M713.293 130.399v11.79"/>
+      <path id="svg_23" class="st2" d="M713.293 156.089v11.16"/>
+      <path id="svg_24" class="st2" d="m702.563 142.189 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="shape61-61">
+    <path id="svg_25" class="st3" d="M207.307 130.398v-51.03"/>
+  </g>
+  <g id="shape62-64">
+    <path id="svg_26" class="st3" d="M420.956 130.398v-51.03h-.4"/>
+  </g>
+  <g id="shape63-67">
+    <path id="svg_27" class="st3" d="M713.294 130.398v-51.03h4.25"/>
+  </g>
+  <g id="shape64-70">
+    <path id="svg_28" class="st3" d="M85.839 185.674h221.05"/>
+  </g>
+  <g id="shape65-73">
+    <path id="svg_29" class="st3" d="M353.251 185.674h136.38"/>
+  </g>
+  <g id="shape66-76">
+    <path id="svg_30" class="st3" d="M639.594 185.674h140.58"/>
+  </g>
+  <g id="shape71-79">
+    <path id="svg_31" class="st3" d="M207.307 167.249v18.42"/>
+  </g>
+  <g id="shape73-82">
+    <path id="svg_32" class="st3" d="M713.29 167.249v18.42h.29"/>
+  </g>
+  <g id="shape74-85">
+    <path id="svg_33" class="st3" d="M420.957 167.249v18.14"/>
+  </g>
+  <g id="group75-88">
+    <g id="shape76-89">
+      <path id="svg_34" class="st4" d="M97.71 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape77-91">
+      <path id="svg_35" class="st4" d="M97.62 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group78-93">
+    <g id="shape79-94">
+      <path id="svg_36" class="st4" d="M194.984 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape80-96">
+      <path id="svg_37" class="st4" d="M194.893 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group81-98">
+    <g id="shape82-99">
+      <path id="svg_38" class="st4" d="M272.041 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape83-101">
+      <path id="svg_39" class="st4" d="M271.95 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group84-103">
+    <g id="shape85-104">
+      <path id="svg_40" class="st5" d="M369.418 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape86-106">
+      <path id="svg_41" class="st5" d="M369.327 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group87-108">
+    <g id="shape88-109">
+      <path id="svg_42" class="st5" d="M454.458 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape89-111">
+      <path id="svg_43" class="st5" d="M454.367 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group90-113">
+    <g id="shape91-114">
+      <path id="svg_44" class="st5" d="M654.017 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape92-116">
+      <path id="svg_45" class="st5" d="M653.926 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group93-118">
+    <g id="shape94-119">
+      <path id="svg_46" class="st5" d="M746.733 288.419a14.173 14.124-180 1 0 24.45 0 14.17 14.12-180 1 0-24.45 0"/>
+    </g>
+    <g id="shape95-121">
+      <path id="svg_47" class="st5" d="M746.643 288.418a14.219 14.17-180 0 0 24.63 0 14.219 14.17-180 0 0-24.63 0"/>
+    </g>
+  </g>
+  <g id="group96-123">
+    <g id="shape97-124"/>
+    <g id="shape98-126">
+      <path id="svg_48" class="st6" d="m113.578 352.6-7.37 7.37"/>
+      <path id="svg_49" class="st6" d="m106.208 352.6 7.37 7.37"/>
+    </g>
+    <g id="meter10">
+      <path id="svg_50" class="st7" d="M109.931 344.414v11.79"/>
+      <path id="svg_51" class="st7" d="M109.931 370.104v11.16"/>
+      <path id="svg_52" class="st7" d="m99.201 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group100-135">
+    <g id="shape101-136"/>
+    <g id="shape102-138">
+      <path id="svg_53" class="st6" d="m210.852 352.6-7.37 7.37"/>
+      <path id="svg_54" class="st6" d="m203.482 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape103-142">
+      <path id="svg_55" class="st7" d="M207.205 344.414v11.79"/>
+      <path id="svg_56" class="st7" d="M207.205 370.104v11.16"/>
+      <path id="svg_57" class="st7" d="m196.475 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group104-147">
+    <g id="shape105-148"/>
+    <g id="shape106-150">
+      <path id="svg_58" class="st6" d="m287.909 352.6-7.37 7.37"/>
+      <path id="svg_59" class="st6" d="m280.539 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape107-154">
+      <path id="svg_60" class="st7" d="M284.262 344.414v11.79"/>
+      <path id="svg_61" class="st7" d="M284.262 370.104v11.16"/>
+      <path id="svg_62" class="st7" d="m273.532 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group108-159">
+    <g id="shape109-160"/>
+    <g id="shape110-162">
+      <path id="svg_63" class="st8" d="m385.286 352.6-7.37 7.37"/>
+      <path id="svg_64" class="st8" d="m377.916 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape111-166">
+      <path id="svg_65" class="st9" d="M381.639 344.414v11.79"/>
+      <path id="svg_66" class="st9" d="M381.639 370.104v11.16"/>
+      <path id="svg_67" class="st9" d="m370.909 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group112-171">
+    <g id="shape113-172"/>
+    <g id="shape114-174">
+      <path id="svg_68" class="st8" d="m469.094 352.6-7.37 7.37"/>
+      <path id="svg_69" class="st8" d="m461.724 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape115-178">
+      <path id="svg_70" class="st9" d="M465.447 344.414v11.79"/>
+      <path id="svg_71" class="st9" d="M465.447 370.104v11.16"/>
+      <path id="svg_72" class="st9" d="m454.717 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group116-183">
+    <g id="shape117-184"/>
+    <g id="shape118-186">
+      <path id="svg_73" class="st8" d="m670.07 352.6-7.37 7.37"/>
+      <path id="svg_74" class="st8" d="m662.7 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape119-190">
+      <path id="svg_75" class="st9" d="M666.423 344.414v11.79"/>
+      <path id="svg_76" class="st9" d="M666.423 370.104v11.16"/>
+      <path id="svg_77" class="st9" d="m655.693 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="group120-195">
+    <g id="shape121-196"/>
+    <g id="shape122-198">
+      <path id="svg_78" class="st8" d="m762.317 352.6-7.37 7.37"/>
+      <path id="svg_79" class="st8" d="m754.947 352.6 7.37 7.37"/>
+    </g>
+    <g id="shape123-202">
+      <path id="svg_80" class="st9" d="M758.67 344.414v11.79"/>
+      <path id="svg_81" class="st9" d="M758.67 370.104v11.16"/>
+      <path id="svg_82" class="st9" d="m747.94 356.204 10.73 13.96v2.95"/>
+    </g>
+  </g>
+  <g id="shape124-207">
+    <path id="svg_83" class="st10" d="M109.937 381.264v21.26"/>
+  </g>
+  <g id="shape127-210">
+    <path id="svg_84" class="st10" d="M207.21 381.264v21.26"/>
+  </g>
+  <g id="shape128-213">
+    <path id="svg_85" class="st10" d="M284.267 381.264v33.49"/>
+  </g>
+  <g id="shape131-216">
+    <path id="svg_86" class="st11" d="M381.642 381.264v32.59h.13"/>
+  </g>
+  <g id="shape133-219">
+    <path id="svg_87" class="st11" d="M465.454 381.264v20.88h-.29"/>
+  </g>
+  <g id="shape135-222">
+    <path id="svg_88" class="st11" d="M666.429 381.264v33.49h-1.19"/>
+  </g>
+  <g id="shape137-225">
+    <path id="svg_89" class="st11" d="M758.676 381.264v21.26"/>
+  </g>
+  <g id="shape138-228">
+    <path id="svg_90" class="st10" d="M109.93 348.666v-38.98"/>
+  </g>
+  <g id="shape140-231">
+    <path id="svg_91" class="st10" d="m207.056 348.666.15-38.98"/>
+  </g>
+  <g id="shape141-234">
+    <path id="svg_92" class="st10" d="m284.662 360.713-.4-51.03"/>
+  </g>
+  <g id="shape142-237">
+    <path id="svg_93" class="st11" d="M382.04 360.713h-.4v-51.03"/>
+  </g>
+  <g id="shape145-240">
+    <path id="svg_94" class="st11" d="m666.429 344.414-.19-34.73"/>
+  </g>
+  <g id="shape146-243">
+    <desc>
+      离心式冷水机组L1
+    </desc>
+    <path id="svg_95" class="st12" d="M63.162 414.754h22.677v131.811H63.162z"/>
+    <path id="svg_96" style="fill:#fff;stroke:none;stroke-linecap:butt" d="M68.454 423.059h12.094v115.2H68.454z"/>
+    <text id="svg_97" class="st14" y="433.859" x="68.482">离
+    <tspan id="svg_98" class="st15" dy="1.2em" x="68.482">心</tspan>
+    <tspan id="svg_99" class="st15" dy="1.2em" x="68.482">式</tspan>
+    <tspan id="svg_100" class="st15" dy="1.2em" x="68.482">冷</tspan>
+    <tspan id="svg_101" class="st15" dy="1.2em" x="68.482">水</tspan>
+    <tspan id="svg_102" class="st15" dy="1.2em" x="68.482">机</tspan>
+    <tspan id="svg_103" class="st15" dy="1.2em" x="68.482">组</tspan>
+    <tspan id="svg_104" class="st15" dy="1.2em" x="68.452">L1</tspan></text>
+  </g>
+  <g id="shape150-254">
+    <desc>
+      5TA 1250kVA
+    </desc>
+    <path id="svg_105" class="st16" d="M35.099 278.426h57.575v20H35.099z"/>
+    <text id="svg_106" class="st17" y="284.23" x="53.309">5TA
+    <tspan id="svg_107" class="st15" dy="1.2em" x="39.199">1250kVA</tspan></text>
+  </g>
+  <g id="shape151-258">
+    <path id="svg_108" class="st10" d="M61.207 402.002h101.08"/>
+  </g>
+  <g id="shape152-261">
+    <desc>
+      水泵
+    </desc>
+    <path id="svg_109" class="st12" d="M138.705 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_110" class="st18" d="M144.02 466.259h12.047v28.8H144.02z"/>
+    <text id="svg_111" class="st14" y="477.059" x="144.025">水
+    <tspan id="svg_112" class="st15" dy="1.2em" x="144.025">泵</tspan></text>
+  </g>
+  <g id="shape153-266">
+    <path id="svg_113" class="st10" d="M148.563 414.757v-12.76"/>
+  </g>
+  <g id="shape154-269">
+    <path id="svg_114" class="st10" d="m73.086 414.472-.13-11.34"/>
+  </g>
+  <g id="shape157-272">
+    <desc>
+      卫生热水用热泵机组
+    </desc>
+    <path id="svg_115" class="st12" d="M100.154 415.037h22.677v131.811h-22.677z"/>
+    <path id="svg_116" class="st18" d="M105.469 416.142h12.047v129.6h-12.047z"/>
+    <text id="svg_117" class="st14" y="426.942" x="105.474">卫
+    <tspan id="svg_118" class="st15" dy="1.2em" x="105.474">生</tspan>
+    <tspan id="svg_119" class="st15" dy="1.2em" x="105.474">热</tspan>
+    <tspan id="svg_120" class="st15" dy="1.2em" x="105.474">水</tspan>
+    <tspan id="svg_121" class="st15" dy="1.2em" x="105.474">用</tspan>
+    <tspan id="svg_122" class="st15" dy="1.2em" x="105.474">热</tspan>
+    <tspan id="svg_123" class="st15" dy="1.2em" x="105.474">泵</tspan>
+    <tspan id="svg_124" class="st15" dy="1.2em" x="105.474">机</tspan>
+    <tspan id="svg_125" class="st15" dy="1.2em" x="105.474">组</tspan></text>
+  </g>
+  <g id="shape158-284">
+    <path id="svg_126" class="st10" d="M110.012 415.04v-12.76"/>
+  </g>
+  <g id="shape159-287">
+    <path id="svg_127" class="st10" d="M180.946 402.002h51.44"/>
+  </g>
+  <g id="shape163-290">
+    <desc>
+      离心式冷水机组L2
+    </desc>
+    <path id="svg_128" class="st12" d="M177.256 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_129" class="st18" d="M182.548 423.059h12.094v115.2h-12.094z"/>
+    <text id="svg_130" class="st14" y="433.859" x="182.576">离
+    <tspan id="svg_131" class="st15" dy="1.2em" x="182.576">心</tspan>
+    <tspan id="svg_132" class="st15" dy="1.2em" x="182.576">式</tspan>
+    <tspan id="svg_133" class="st15" dy="1.2em" x="182.576">冷</tspan>
+    <tspan id="svg_134" class="st15" dy="1.2em" x="182.576">水</tspan>
+    <tspan id="svg_135" class="st15" dy="1.2em" x="182.576">机</tspan>
+    <tspan id="svg_136" class="st15" dy="1.2em" x="182.576">组</tspan>
+    <tspan id="svg_137" class="st15" dy="1.2em" x="182.546">L2</tspan></text>
+  </g>
+  <g id="shape164-301">
+    <desc>
+      空调用热泵机组
+    </desc>
+    <path id="svg_138" class="st12" d="M215.807 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_139" class="st18" d="M221.122 430.259h12.047v100.8h-12.047z"/>
+    <text id="svg_140" class="st14" y="441.059" x="221.127">空
+    <tspan id="svg_141" class="st15" dy="1.2em" x="221.127">调</tspan>
+    <tspan id="svg_142" class="st15" dy="1.2em" x="221.127">用</tspan>
+    <tspan id="svg_143" class="st15" dy="1.2em" x="221.127">热</tspan>
+    <tspan id="svg_144" class="st15" dy="1.2em" x="221.127">泵</tspan>
+    <tspan id="svg_145" class="st15" dy="1.2em" x="221.127">机</tspan>
+    <tspan id="svg_146" class="st15" dy="1.2em" x="221.127">组</tspan></text>
+  </g>
+  <g id="shape165-311">
+    <path id="svg_147" class="st10" d="M188.598 414.757v-12.76"/>
+  </g>
+  <g id="shape166-314">
+    <path id="svg_148" class="st10" d="M226.497 414.757v-12.76"/>
+  </g>
+  <g id="shape167-317">
+    <desc>
+      6TA 630kVA
+    </desc>
+    <path id="svg_149" class="st16" d="M129.783 278.426h57.575v20h-57.575z"/>
+    <text id="svg_150" class="st17" y="284.23" x="147.993">6TA
+    <tspan id="svg_151" class="st15" dy="1.2em" x="137.403">630kVA</tspan></text>
+  </g>
+  <g id="shape168-321">
+    <desc>
+      9TA 200kVA
+    </desc>
+    <path id="svg_152" class="st16" d="M218.185 278.426h57.575v20h-57.575z"/>
+    <text id="svg_153" class="st17" y="284.23" x="236.395">9TA
+    <tspan id="svg_154" class="st15" dy="1.2em" x="225.805">200kVA</tspan></text>
+  </g>
+  <g id="shape169-325">
+    <desc>
+      10kV
+    </desc>
+    <path id="svg_155" class="st16" d="M33.933 75.04h152v20h-152z"/>
+    <text id="svg_156" y="92.244" x="85.743" style="fill:#000;font-family:宋体;font-size:1.99999em;font-weight:700">10kV</text>
+  </g>
+  <g id="shape170-328">
+    <desc>
+      排污泵
+    </desc>
+    <path id="svg_157" class="st12" d="M272.926 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_158" class="st18" d="M278.241 459.059h12.047v43.2h-12.047z"/>
+    <text id="svg_159" class="st14" y="469.859" x="278.246">排
+    <tspan id="svg_160" class="st15" dy="1.2em" x="278.246">污</tspan>
+    <tspan id="svg_161" class="st15" dy="1.2em" x="278.246">泵</tspan></text>
+  </g>
+  <g id="shape171-334">
+    <desc>
+      一二三区办公负荷
+    </desc>
+    <path id="svg_162" class="st20" d="M370.303 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_163" class="st18" d="M375.618 423.059h12.047v115.2h-12.047z"/>
+    <text id="svg_164" class="st14" y="433.859" x="375.623">一
+    <tspan id="svg_165" class="st15" dy="1.2em" x="375.623">二</tspan>
+    <tspan id="svg_166" class="st15" dy="1.2em" x="375.623">三</tspan>
+    <tspan id="svg_167" class="st15" dy="1.2em" x="375.623">区</tspan>
+    <tspan id="svg_168" class="st15" dy="1.2em" x="375.623">办</tspan>
+    <tspan id="svg_169" class="st15" dy="1.2em" x="375.623">公</tspan>
+    <tspan id="svg_170" class="st15" dy="1.2em" x="375.623">负</tspan>
+    <tspan id="svg_171" class="st15" dy="1.2em" x="375.623">荷</tspan></text>
+  </g>
+  <g id="shape172-345">
+    <desc>
+      1TA 1250kVA
+    </desc>
+    <path id="svg_172" class="st16" d="M311.638 278.426h57.575v20h-57.575z"/>
+    <text id="svg_173" class="st17" y="284.23" x="329.848">1TA
+    <tspan id="svg_174" class="st15" dy="1.2em" x="315.738">1250kVA</tspan></text>
+  </g>
+  <g id="shape173-349">
+    <desc>
+      3TA 1250kVA
+    </desc>
+    <path id="svg_175" class="st16" d="M397.559 278.426h57.575v20h-57.575z"/>
+    <text id="svg_176" class="st17" y="284.23" x="415.769">3TA
+    <tspan id="svg_177" class="st15" dy="1.2em" x="401.659">1250kVA</tspan></text>
+  </g>
+  <g id="shape174-353">
+    <desc>
+      2TA 1250kVA
+    </desc>
+    <path id="svg_178" class="st16" d="M590.866 278.426h57.575v20h-57.575z"/>
+    <text id="svg_179" class="st17" y="284.23" x="609.076">2TA
+    <tspan id="svg_180" class="st15" dy="1.2em" x="594.966">1250kVA</tspan></text>
+  </g>
+  <g id="shape175-357">
+    <desc>
+      4TA 1250kVA
+    </desc>
+    <path id="svg_181" class="st16" d="M684.083 278.426h57.575v20h-57.575z"/>
+    <text id="svg_182" class="st17" y="284.23" x="702.293">4TA
+    <tspan id="svg_183" class="st15" dy="1.2em" x="688.183">1250kVA</tspan></text>
+  </g>
+  <g id="shape177-361">
+    <desc>
+      四五区办公负荷
+    </desc>
+    <path id="svg_184" class="st20" d="M654.901 414.754h22.677v131.811h-22.677z"/>
+    <path id="svg_185" class="st18" d="M660.216 430.259h12.047v100.8h-12.047z"/>
+    <text id="svg_186" class="st14" y="441.059" x="660.221">四
+    <tspan id="svg_187" class="st15" dy="1.2em" x="660.221">五</tspan>
+    <tspan id="svg_188" class="st15" dy="1.2em" x="660.221">区</tspan>
+    <tspan id="svg_189" class="st15" dy="1.2em" x="660.221">办</tspan>
+    <tspan id="svg_190" class="st15" dy="1.2em" x="660.221">公</tspan>
+    <tspan id="svg_191" class="st15" dy="1.2em" x="660.221">负</tspan>
+    <tspan id="svg_192" class="st15" dy="1.2em" x="660.221">荷</tspan></text>
+  </g>
+  <g id="shape178-371">
+    <path id="svg_193" class="st11" d="m465.434 348.815.15-38.98"/>
+  </g>
+  <g id="shape179-374">
+    <path id="svg_194" class="st11" d="M439.324 402.151h51.44"/>
+  </g>
+  <g id="shape180-377">
+    <desc>
+      数据中心精密空调
+    </desc>
+    <path id="svg_195" class="st20" d="M435.634 414.903h22.677v131.811h-22.677z"/>
+    <path id="svg_196" class="st18" d="M440.949 423.208h12.047v115.2h-12.047z"/>
+    <text id="svg_197" class="st14" y="434.008" x="440.954">数
+    <tspan id="svg_198" class="st15" dy="1.2em" x="440.954">据</tspan>
+    <tspan id="svg_199" class="st15" dy="1.2em" x="440.954">中</tspan>
+    <tspan id="svg_200" class="st15" dy="1.2em" x="440.954">心</tspan>
+    <tspan id="svg_201" class="st15" dy="1.2em" x="440.954">精</tspan>
+    <tspan id="svg_202" class="st15" dy="1.2em" x="440.954">密</tspan>
+    <tspan id="svg_203" class="st15" dy="1.2em" x="440.954">空</tspan>
+    <tspan id="svg_204" class="st15" dy="1.2em" x="440.954">调</tspan></text>
+  </g>
+  <g id="shape181-388">
+    <desc>
+      数据中心U P S
+    </desc>
+    <path id="svg_205" class="st20" d="M474.185 414.903h22.677v131.811h-22.677z"/>
+    <path id="svg_206" class="st18" d="M479.5 430.408h12.047v100.801H479.5z"/>
+    <text id="svg_207" class="st14" y="441.208" x="479.505">数
+    <tspan id="svg_208" class="st15" dy="1.2em" x="479.505">据</tspan>
+    <tspan id="svg_209" class="st15" dy="1.2em" x="479.505">中</tspan>
+    <tspan id="svg_210" class="st15" dy="1.2em" x="479.505">心</tspan>
+    <tspan id="svg_211" class="st15" dy="1.2em" x="482.505">U</tspan>
+    <tspan id="svg_212" class="st15" dy="1.2em" x="482.505">P</tspan>
+    <tspan id="svg_213" class="st15" dy="1.2em" x="482.505">S</tspan></text>
+  </g>
+  <g id="shape182-398">
+    <path id="svg_214" class="st11" d="M446.976 414.906v-12.76"/>
+  </g>
+  <g id="shape183-401">
+    <path id="svg_215" class="st11" d="M484.875 414.906v-12.76"/>
+  </g>
+  <g id="shape184-404">
+    <path id="svg_216" class="st11" d="m758.587 349.188.15-38.98"/>
+  </g>
+  <g id="shape185-407">
+    <path id="svg_217" class="st11" d="M732.194 402.524h51.44"/>
+  </g>
+  <g id="shape186-410">
+    <desc>
+      照明
+    </desc>
+    <path id="svg_218" class="st20" d="M728.504 415.276h22.677v131.811h-22.677z"/>
+    <path id="svg_219" class="st18" d="M733.819 466.781h12.047v28.8h-12.047z"/>
+    <text id="svg_220" class="st14" y="477.581" x="733.824">照
+    <tspan id="svg_221" class="st15" dy="1.2em" x="733.824">明</tspan></text>
+  </g>
+  <g id="shape187-415">
+    <desc>
+      电梯
+    </desc>
+    <path id="svg_222" class="st20" d="M767.055 415.276h22.677v131.811h-22.677z"/>
+    <path id="svg_223" class="st18" d="M772.37 466.781h12.047v28.8H772.37z"/>
+    <text id="svg_224" class="st14" y="477.581" x="772.375">电
+    <tspan id="svg_225" class="st15" dy="1.2em" x="772.375">梯</tspan></text>
+  </g>
+  <g id="shape188-420">
+    <path id="svg_226" class="st11" d="M739.846 415.279v-12.76"/>
+  </g>
+  <g id="shape189-423">
+    <path id="svg_227" class="st11" d="M777.745 415.279v-12.76"/>
+  </g>
+  <g id="shape190-426">
+    <path id="svg_228" class="st10" d="m109.929 267.17.91-81.5"/>
+  </g>
+  <g id="shape191-429">
+    <path id="svg_229" class="st10" d="m207.202 267.17.11-81.5"/>
+  </g>
+  <g id="shape192-432">
+    <path id="svg_230" class="st10" d="m284.294 267.17-.03-81.5"/>
+  </g>
+  <g id="shape193-435">
+    <path id="svg_231" class="st11" d="m381.645 267.17-.03-81.5"/>
+  </g>
+  <g id="shape194-438">
+    <path id="svg_232" class="st11" d="m466.684 267.17-.03-81.5"/>
+  </g>
+  <g id="shape195-441">
+    <path id="svg_233" class="st11" d="m666.243 267.17-.03-81.5"/>
+  </g>
+  <g id="shape196-444">
+    <path id="svg_234" class="st11" d="m758.959 267.17-.03-81.5"/>
+  </g>
+  <g id="shape200-447">
+    <desc>
+      功率总加
+    </desc>
+    <path id="svg_235" class="st21" d="M118.488 28.347h154.205v34.016H118.488z"/>
+    <text id="svg_236" y="50.757" x="122.488" style="fill:#000;font-family:宋体;font-size:1.5em">功率总加：</text>
+  </g>
+  <g id="shape201-450">
+    <desc>
+      能源机房功率
+    </desc>
+    <path id="svg_237" class="st21" d="M343.858 28.347h154.205v34.016H343.858z"/>
+    <text id="svg_238" y="50.757" x="347.858" style="fill:#c05046;font-family:宋体;font-size:1.5em">能源机房功率：</text>
+  </g>
+  <g id="shape202-453">
+    <desc>
+      语音中心功率
+    </desc>
+    <path id="svg_239" class="st21" d="M577.516 28.347h154.205v34.016H577.516z"/>
+    <text id="svg_240" y="50.757" x="581.516" style="fill:#9dbb61;font-family:宋体;font-size:1.5em">语音中心功率：</text>
+  </g>
+  <g id="shape203-456">
+    <desc>
+      能源机房
+    </desc>
+    <path id="svg_241" class="st16" d="M131.528 549.921h154.205v34.016H131.528z"/>
+    <text id="svg_242" y="572.331" x="135.528" style="fill:#c05046;font-family:微软雅黑;font-size:1.5em;font-weight:700">能源机房</text>
+  </g>
+  <g id="shape204-459">
+    <desc>
+      语音中心
+    </desc>
+    <path id="svg_243" class="st16" d="M532.161 549.921h154.205v34.016H532.161z"/>
+    <text id="svg_244" y="572.331" x="536.161" style="fill:#9dbb61;font-family:微软雅黑;font-size:1.5em;font-weight:700">语音中心</text>
+  </g>
+  <path fill="none" id="canvas_background" d="M-1-1h1662v793H-1z"/>
+</svg>
