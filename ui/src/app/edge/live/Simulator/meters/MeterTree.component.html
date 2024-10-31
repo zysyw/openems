@@ -2,7 +2,7 @@
   <ion-row class="ion-justify-content-center">
     <!-- 第一列：主电表 -->
     <ion-col size="12" size="12" size-md="8" size-lg="3" class="ion-no-padding">
-      <SimulatorMeter [meter]="node.mainMeter"></SimulatorMeter>
+      <meterNode [meter]="node.mainMeter"></meterNode>
     </ion-col>
 
     <!-- 第二列：子电表 -->
@@ -13,7 +13,7 @@
           <ion-row>
             <ng-container *ngFor="let childNode of node.children">
               <ion-col size="12" size-lg="6" class="ion-no-padding">
-                <SimulatorMeter [meter]="childNode.mainMeter"></SimulatorMeter>
+                <meterNode [meter]="childNode.mainMeter"></meterNode>
               </ion-col>
             </ng-container>
           </ion-row>

@@ -2,8 +2,8 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { SharedModule } from "src/app/shared/shared.module";
 import { FlatComponent } from "./flat/flat";
+import { MeterTreeComponent } from "./MeterTree.component";
 import { ModalComponent } from "./modal/modal";
-import { SimulatorMetersComponent } from "./SimulatorMeters.component";
 
 @NgModule({
   imports: [
@@ -13,10 +13,10 @@ import { SimulatorMetersComponent } from "./SimulatorMeters.component";
   declarations: [
     FlatComponent,
     ModalComponent,
-    SimulatorMetersComponent,
+    MeterTreeComponent,
   ],
   exports: [
-    SimulatorMetersComponent,
+    MeterTreeComponent,
   ],
 })
-export class SimulatorMeters { }
+export class MetersTree { }

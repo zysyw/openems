@@ -41,7 +41,7 @@ import { Evcs_Api_ClusterComponent } from "./Multiple/Evcs_Api_Cluster/Evcs_Api_
 import { EvcsChartComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcs-chart/evcs.chart";
 import { Evcs_Api_ClusterModalComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcsCluster-modal.page";
 import { OfflineComponent } from "./offline/offline.component";
-import { SimulatorMeters } from "./Simulator/meters/SimulatorMeters.module";
+import { MetersTree } from "./Simulator/meters/MeterTree.module";
 
 @NgModule({
   imports: [
@@ -61,7 +61,7 @@ import { SimulatorMeters } from "./Simulator/meters/SimulatorMeters.module";
     SharedModule,
     Controller_Evcs,
     Controller_Ess_TimeOfUseTariff,
-    SimulatorMeters,
+    MetersTree,
   ],
   declarations: [
     AdministrationComponent,

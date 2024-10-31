@@ -9,10 +9,10 @@ export interface MeterNode {
 }
 
 @Component({
-  selector: 'SimulatorMeters',
-  templateUrl: './SimulatorMeters.component.html'
+  selector: 'MeterTree',
+  templateUrl: './MeterTree.component.html'
 })
-export class SimulatorMetersComponent extends AbstractFlatWidget {
+export class MeterTreeComponent extends AbstractFlatWidget {
   public simulatorMeterComponents: EdgeConfig.Component[] | null = null;
   public simulatorMeters: MeterNode[] = [];
 
@@ -22,9 +22,9 @@ export class SimulatorMetersComponent extends AbstractFlatWidget {
 
     // Get consumptionMeterComponents
     this.simulatorMeterComponents = Object.values(this.config.components)
-      .filter(component => component.isEnabled) // 过滤出 isEnabled 为 true 的组件
-      .filter(component => component.factoryId.includes("Simulator")) // 过滤出 factoryId 包含 "Simulator" 的组件
-      .filter(component => component.factoryId.includes("Meter")); // 过滤出 factoryId 包含 "Meter" 的组件
+      .filter(component => component.isEnabled) // 
+      .filter(component => component.factoryId.includes("Virtual")) //
+      .filter(component => component.factoryId.includes("Meter")); // 
 
     this.createComponentDictionary(this.simulatorMeterComponents)
 
@@ -52,11 +52,10 @@ export class SimulatorMetersComponent extends AbstractFlatWidget {
   }
 
   private createComponentDictionary(components: EdgeConfig.Component[]): void {
-    // 1. 遍历所有组件，找到 factoryId 包含 "Grid" 的组件作为主电表节点
+    // 1. 遍历所有组件，找到 factoryId 包含 "Virtual" 的组件作为主电表节点
     components.forEach(gridComponent => {
-      if (gridComponent.factoryId.includes('Grid')) {
+      if (gridComponent.factoryId.includes('Virtual')) {
         // 2. 使用正则匹配与当前主电表 alias 相关的子电表
-        const regex = new RegExp(`^[a-zA-Z0-9]*@${gridComponent.alias}$`);
         const relatedComponents = components.filter(component => regex.test(component.alias));
 
         // 3. 构造 MeterNode 结构

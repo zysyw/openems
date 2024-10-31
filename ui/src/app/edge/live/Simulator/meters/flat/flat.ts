@@ -1,14 +1,14 @@
 // @ts-strict-ignore
 import { Component, Input } from "@angular/core";
 import { EdgeConfig, Utils } from "src/app/shared/shared";
+import { MeterTreeComponent } from "../MeterTree.component";
 import { ModalComponent } from "../modal/modal";
-import { SimulatorMetersComponent } from "../SimulatorMeters.component";
 
 @Component({
-  selector: "SimulatorMeter",
+  selector: "meterNode",
   templateUrl: "./flat.html",
 })
-export class FlatComponent extends SimulatorMetersComponent {
+export class FlatComponent extends MeterTreeComponent {
 
   @Input() meter: EdgeConfig.Component;
   public readonly CONVERT_WATT_TO_KILOWATT = Utils.CONVERT_WATT_TO_KILOWATT;
