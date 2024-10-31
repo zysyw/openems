@@ -5,8 +5,8 @@
   </ion-refresher>
 
   <ion-grid [hidden]="!edge.subscribeChannelsSuccessful" *ngIf="edge && edge.isOnline">
-    <ion-row>
-      <ion-col size="12"> <!-- size="12" 确保内容占据整行，可以根据需要调整大小 -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-md="12" size-lg="12" class="ion-no-padding" style="display: flex; justify-content: center; align-items: center;"> 
         <div class="diagram-container" id="diagramContainer"></div>
       </ion-col>
     </ion-row>
