@@ -1,0 +1,721 @@
+<svg width="1647.78" height="595.276" xmlns="http://www.w3.org/2000/svg" xmlns:undefined="http://schemas.microsoft.com/visio/2003/SVGExtensions/" class="st27" color-interpolation-filters="sRGB" xml:space="preserve">
+ <style type="text/css">
+  <![CDATA[
+		.st1 {stroke:#000000;stroke-linecap:butt;stroke-width:2.21102}
+		.st2 {stroke:#000000;stroke-linecap:butt;stroke-width:1.47402}
+		.st3 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st4 {fill:none;stroke:#c05046;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st5 {fill:none;stroke:#9dbb61;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st6 {stroke:#c05046;stroke-linecap:butt;stroke-width:2.21102}
+		.st7 {stroke:#c05046;stroke-linecap:butt;stroke-width:1.47402}
+		.st8 {stroke:#9dbb61;stroke-linecap:butt;stroke-width:2.21102}
+		.st9 {stroke:#9dbb61;stroke-linecap:butt;stroke-width:1.47402}
+		.st10 {stroke:#c05046;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st11 {stroke:#9dbb61;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st12 {fill:#ffffff;stroke:#c05046;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st13 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st14 {fill:#000000;font-family:宋体;font-size:1.00001em;font-weight:bold}
+		.st15 {font-size:1em}
+		.st16 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st17 {fill:#000000;font-family:宋体;font-size:1.16666em;font-weight:bold}
+		.st18 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st19 {fill:#000000;font-family:宋体;font-size:1.99999em;font-weight:bold}
+		.st20 {fill:#ffffff;stroke:#9dbb61;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st21 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st22 {fill:#000000;font-family:宋体;font-size:1.5em}
+		.st23 {fill:#c05046;font-family:宋体;font-size:1.5em}
+		.st24 {fill:#9dbb61;font-family:宋体;font-size:1.5em}
+		.st25 {fill:#c05046;font-family:微软雅黑;font-size:1.5em;font-weight:bold}
+		.st26 {fill:#9dbb61;font-family:微软雅黑;font-size:1.5em;font-weight:bold}
+		.st27 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+ </style>
+
+ <g   >
+  <title>页-1</title>
+  <g    id="group32-1">
+   <title transform="translate(188.88600158691406,-428.031005859375) ">断路器</title>
+   <g    id="shape33-2">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(188.88600158691406,-428.031005859375) ">工作表.33</title>
+   </g>
+   <g    id="shape34-4">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(188.88600158691406,-428.031005859375) ">工作表.34</title>
+    <path id="svg_1" class="st1" d="m210.955602,138.585095l-7.37,7.37"/>
+    <path id="svg_2" class="st1" d="m203.585602,138.585095l7.37,7.37"/>
+   </g>
+   <g    id="shape35-8">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(188.88600158691406,-428.031005859375) ">工作表.35</title>
+    <path id="svg_3" class="st2" d="m207.308892,130.398993l0,8.18l0,3.61"/>
+    <path id="svg_4" class="st2" d="m207.308892,156.088993l0,3.01l0,8.15"/>
+    <path id="svg_5" class="st2" d="m196.578892,142.188993l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g   id="shape38-13">
+   <title transform="translate(177.59300231933594,-515.906005859375) ">工作表.38</title>
+   <path id="svg_6" class="st3" d="m177.593002,79.373994l343.86,0"/>
+  </g>
+  <g   id="shape39-16">
+   <title transform="translate(578.426025390625,-515.906005859375) ">工作表.39</title>
+   <path id="svg_7" class="st3" d="m578.426025,79.373994l187.86,0"/>
+  </g>
+  <g    transform="rotate(90 1122.6800537109377,109.13400268554695) " id="group43-19">
+   <title transform="translate(1122.6800537109375,109.13400268554688) ">断路器.43</title>
+   <g    id="shape44-20">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(1122.6800537109375,109.13400268554688) ">工作表.44</title>
+   </g>
+   <g    id="shape45-22">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(1122.6800537109375,109.13400268554688) ">工作表.45</title>
+    <path id="svg_8" class="st1" d="m1144.749654,675.750103l-7.37,7.37"/>
+    <path id="svg_9" class="st1" d="m1137.379654,675.750103l7.37,7.37"/>
+   </g>
+   <g    id="shape46-26">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(1122.6800537109375,109.13400268554688) ">工作表.46</title>
+    <path id="svg_10" class="st2" d="m1141.102944,667.564001l0,8.18l0,3.61"/>
+    <path id="svg_11" class="st2" d="m1141.102944,693.254001l0,3.01l0,8.15"/>
+    <path id="svg_12" class="st2" d="m1130.372944,679.354001l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="shape51-31">
+   <title transform="translate(535.5499877929688,-467.7170104980469) ">动态连接线</title>
+   <path id="svg_13" class="st3" d="m535.549988,127.56299l-50.67,0l0,-48.19"/>
+  </g>
+  <g    id="shape52-34">
+   <title transform="translate(552.4210205078125,-467.7170104980469) ">动态连接线.52</title>
+   <path id="svg_14" class="st3" d="m552.421021,127.56299l60.02,0l0,-48.19"/>
+  </g>
+  <g    id="group53-37">
+   <title transform="translate(402.5360107421875,-428.031005859375) ">断路器.53</title>
+   <g    id="shape54-38">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(402.5360107421875,-428.031005859375) ">工作表.54</title>
+   </g>
+   <g    id="shape55-40">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(402.5360107421875,-428.031005859375) ">工作表.55</title>
+    <path id="svg_15" class="st1" d="m424.605611,138.585095l-7.37,7.37"/>
+    <path id="svg_16" class="st1" d="m417.235611,138.585095l7.37,7.37"/>
+   </g>
+   <g    id="shape56-44">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(402.5360107421875,-428.031005859375) ">工作表.56</title>
+    <path id="svg_17" class="st2" d="m420.958901,130.398993l0,8.18l0,3.61"/>
+    <path id="svg_18" class="st2" d="m420.958901,156.088993l0,3.01l0,8.15"/>
+    <path id="svg_19" class="st2" d="m410.228901,142.188993l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group57-49">
+   <title transform="translate(694.8699951171875,-428.031005859375) ">断路器.57</title>
+   <g    id="shape58-50">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(694.8699951171875,-428.031005859375) ">工作表.58</title>
+   </g>
+   <g    id="shape59-52">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(694.8699951171875,-428.031005859375) ">工作表.59</title>
+    <path id="svg_20" class="st1" d="m716.939595,138.585095l-7.37,7.37"/>
+    <path id="svg_21" class="st1" d="m709.569595,138.585095l7.37,7.37"/>
+   </g>
+   <g    id="shape60-56">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(694.8699951171875,-428.031005859375) ">工作表.60</title>
+    <path id="svg_22" class="st2" d="m713.292885,130.398993l0,8.18l0,3.61"/>
+    <path id="svg_23" class="st2" d="m713.292885,156.088993l0,3.01l0,8.15"/>
+    <path id="svg_24" class="st2" d="m702.562885,142.188993l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="shape61-61">
+   <title transform="translate(214.39700317382812,-464.8819885253906) ">动态连接线.61</title>
+   <path id="svg_25" class="st3" d="m207.307003,130.398011l0,-51.03"/>
+  </g>
+  <g    id="shape62-64">
+   <title transform="translate(427.84600830078125,-464.8819885253906) ">动态连接线.62</title>
+   <path id="svg_26" class="st3" d="m420.956008,130.398011l0,-51.03l-0.4,0"/>
+  </g>
+  <g    id="shape63-67">
+   <title transform="translate(708.333984375,-464.8819885253906) ">动态连接线.63</title>
+   <path id="svg_27" class="st3" d="m713.293984,130.398011l0,-51.03l4.25,0"/>
+  </g>
+  <g   id="shape64-70">
+   <title transform="translate(85.83889770507812,-409.6059875488281) ">工作表.64</title>
+   <path id="svg_28" class="st3" d="m85.838898,185.674012l221.05,0"/>
+  </g>
+  <g   id="shape65-73">
+   <title transform="translate(353.2510070800781,-409.6059875488281) ">工作表.65</title>
+   <path id="svg_29" class="st3" d="m353.251007,185.674012l136.38,0"/>
+  </g>
+  <g   id="shape66-76">
+   <title transform="translate(639.593994140625,-409.6059875488281) ">工作表.66</title>
+   <path id="svg_30" class="st3" d="m639.593994,185.674012l140.58,0"/>
+  </g>
+  <g    id="shape71-79">
+   <title transform="translate(214.39700317382812,-428.031005859375) ">动态连接线.71</title>
+   <path id="svg_31" class="st3" d="m207.307003,167.248994l0,18.42"/>
+  </g>
+  <g    id="shape73-82">
+   <title transform="translate(706.3499755859375,-428.031005859375) ">动态连接线.73</title>
+   <path id="svg_32" class="st3" d="m713.289976,167.248994l0,18.42l0.29,0"/>
+  </g>
+  <g    id="shape74-85">
+   <title transform="translate(428.0469970703125,-428.031005859375) ">动态连接线.74</title>
+   <path id="svg_33" class="st3" d="m420.956997,167.248994l0,18.14"/>
+  </g>
+  <g    id="group75-88">
+   <title transform="translate(95.76020050048828,-285.59100341796875) ">变压器 2</title>
+   <g    id="shape76-89">
+    <title transform="translate(95.76020050048828,-285.59100341796875) ">工作表.76</title>
+    <path id="svg_34" class="st4" d="m97.710201,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape77-91">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(95.76020050048828,-285.59100341796875) ">工作表.77</title>
+    <path id="svg_35" class="st4" d="m97.619681,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group78-93">
+   <title transform="translate(193.03399658203125,-285.59100341796875) ">变压器 2.78</title>
+   <g    id="shape79-94">
+    <title transform="translate(193.03399658203125,-285.59100341796875) ">工作表.79</title>
+    <path id="svg_36" class="st4" d="m194.983997,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape80-96">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(193.03399658203125,-285.59100341796875) ">工作表.80</title>
+    <path id="svg_37" class="st4" d="m194.893477,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group81-98">
+   <title transform="translate(270.09100341796875,-285.59100341796875) ">变压器 2.81</title>
+   <g    id="shape82-99">
+    <title transform="translate(270.09100341796875,-285.59100341796875) ">工作表.82</title>
+    <path id="svg_38" class="st4" d="m272.041003,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape83-101">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(270.09100341796875,-285.59100341796875) ">工作表.83</title>
+    <path id="svg_39" class="st4" d="m271.950483,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group84-103">
+   <title transform="translate(367.4679870605469,-285.59100341796875) ">变压器 2.84</title>
+   <g    id="shape85-104">
+    <title transform="translate(367.4679870605469,-285.59100341796875) ">工作表.85</title>
+    <path id="svg_40" class="st5" d="m369.417987,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape86-106">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(367.4679870605469,-285.59100341796875) ">工作表.86</title>
+    <path id="svg_41" class="st5" d="m369.327467,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group87-108">
+   <title transform="translate(452.50799560546875,-285.59100341796875) ">变压器 2.87</title>
+   <g    id="shape88-109">
+    <title transform="translate(452.50799560546875,-285.59100341796875) ">工作表.88</title>
+    <path id="svg_42" class="st5" d="m454.457996,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape89-111">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(452.50799560546875,-285.59100341796875) ">工作表.89</title>
+    <path id="svg_43" class="st5" d="m454.367476,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group90-113">
+   <title transform="translate(652.0670166015625,-285.59100341796875) ">变压器 2.90</title>
+   <g    id="shape91-114">
+    <title transform="translate(652.0670166015625,-285.59100341796875) ">工作表.91</title>
+    <path id="svg_44" class="st5" d="m654.017017,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape92-116">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(652.0670166015625,-285.59100341796875) ">工作表.92</title>
+    <path id="svg_45" class="st5" d="m653.926497,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group93-118">
+   <title transform="translate(744.7830200195312,-285.59100341796875) ">变压器 2.93</title>
+   <g    id="shape94-119">
+    <title transform="translate(744.7830200195312,-285.59100341796875) ">工作表.94</title>
+    <path id="svg_46" class="st5" d="m746.73302,288.418997a14.1732,14.1241 -180 1 0 24.45,0a14.1694,14.1203 -180 1 0 -24.45,0z"/>
+   </g>
+   <g    id="shape95-121">
+    <title transform="translate(1.8594800233840942,-14.180800437927246) translate(744.7830200195312,-285.59100341796875) ">工作表.95</title>
+    <path id="svg_47" class="st5" d="m746.6425,288.418196a14.2187,14.1694 -180 0 0 24.63,0a14.2187,14.1694 -180 0 0 -24.63,0z"/>
+   </g>
+  </g>
+  <g    id="group96-123">
+   <title transform="translate(91.5082015991211,-214.01600646972656) ">断路器.96</title>
+   <g    id="shape97-124">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(91.5082015991211,-214.01600646972656) ">工作表.97</title>
+   </g>
+   <g    id="shape98-126">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(91.5082015991211,-214.01600646972656) ">工作表.98</title>
+    <path id="svg_48" class="st6" d="m113.577802,352.600094l-7.37,7.37"/>
+    <path id="svg_49" class="st6" d="m106.207802,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape99-130">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(91.5082015991211,-214.01600646972656) ">工作表.99</title>
+    <path id="svg_50" class="st7" d="m109.931092,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_51" class="st7" d="m109.931092,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_52" class="st7" d="m99.201092,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group100-135">
+   <title transform="translate(188.78199768066406,-214.01600646972656) ">断路器.100</title>
+   <g    id="shape101-136">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(188.78199768066406,-214.01600646972656) ">工作表.101</title>
+   </g>
+   <g    id="shape102-138">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(188.78199768066406,-214.01600646972656) ">工作表.102</title>
+    <path id="svg_53" class="st6" d="m210.851598,352.600094l-7.37,7.37"/>
+    <path id="svg_54" class="st6" d="m203.481598,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape103-142">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(188.78199768066406,-214.01600646972656) ">工作表.103</title>
+    <path id="svg_55" class="st7" d="m207.204888,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_56" class="st7" d="m207.204888,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_57" class="st7" d="m196.474888,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group104-147">
+   <title transform="translate(265.8389892578125,-214.01600646972656) ">断路器.104</title>
+   <g    id="shape105-148">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(265.8389892578125,-214.01600646972656) ">工作表.105</title>
+   </g>
+   <g    id="shape106-150">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(265.8389892578125,-214.01600646972656) ">工作表.106</title>
+    <path id="svg_58" class="st6" d="m287.908589,352.600094l-7.37,7.37"/>
+    <path id="svg_59" class="st6" d="m280.538589,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape107-154">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(265.8389892578125,-214.01600646972656) ">工作表.107</title>
+    <path id="svg_60" class="st7" d="m284.261879,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_61" class="st7" d="m284.261879,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_62" class="st7" d="m273.531879,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group108-159">
+   <title transform="translate(363.21600341796875,-214.01600646972656) ">断路器.108</title>
+   <g    id="shape109-160">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(363.21600341796875,-214.01600646972656) ">工作表.109</title>
+   </g>
+   <g    id="shape110-162">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(363.21600341796875,-214.01600646972656) ">工作表.110</title>
+    <path id="svg_63" class="st8" d="m385.285604,352.600094l-7.37,7.37"/>
+    <path id="svg_64" class="st8" d="m377.915604,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape111-166">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(363.21600341796875,-214.01600646972656) ">工作表.111</title>
+    <path id="svg_65" class="st9" d="m381.638894,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_66" class="st9" d="m381.638894,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_67" class="st9" d="m370.908894,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group112-171">
+   <title transform="translate(447.02398681640625,-214.01600646972656) ">断路器.112</title>
+   <g    id="shape113-172">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(447.02398681640625,-214.01600646972656) ">工作表.113</title>
+   </g>
+   <g    id="shape114-174">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(447.02398681640625,-214.01600646972656) ">工作表.114</title>
+    <path id="svg_68" class="st8" d="m469.093587,352.600094l-7.37,7.37"/>
+    <path id="svg_69" class="st8" d="m461.723587,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape115-178">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(447.02398681640625,-214.01600646972656) ">工作表.115</title>
+    <path id="svg_70" class="st9" d="m465.446877,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_71" class="st9" d="m465.446877,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_72" class="st9" d="m454.716877,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group116-183">
+   <title transform="translate(648,-214.01600646972656) ">断路器.116</title>
+   <g    id="shape117-184">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(648,-214.01600646972656) ">工作表.117</title>
+   </g>
+   <g    id="shape118-186">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(648,-214.01600646972656) ">工作表.118</title>
+    <path id="svg_73" class="st8" d="m670.0696,352.600094l-7.37,7.37"/>
+    <path id="svg_74" class="st8" d="m662.6996,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape119-190">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(648,-214.01600646972656) ">工作表.119</title>
+    <path id="svg_75" class="st9" d="m666.42289,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_76" class="st9" d="m666.42289,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_77" class="st9" d="m655.69289,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="group120-195">
+   <title transform="translate(740.2470092773438,-214.01600646972656) ">断路器.120</title>
+   <g    id="shape121-196">
+    <title transform="translate(11.120699882507324,-4.790550231933594) translate(740.2470092773438,-214.01600646972656) ">工作表.121</title>
+   </g>
+   <g    id="shape122-198">
+    <title transform="translate(14.699600219726562,-21.293899536132812) translate(740.2470092773438,-214.01600646972656) ">工作表.122</title>
+    <path id="svg_78" class="st8" d="m762.316609,352.600094l-7.37,7.37"/>
+    <path id="svg_79" class="st8" d="m754.946609,352.600094l7.37,7.37"/>
+   </g>
+   <g    id="shape123-202">
+    <title transform="translate(7.692890167236328,-0.0000015322500530601246) translate(740.2470092773438,-214.01600646972656) ">工作表.123</title>
+    <path id="svg_80" class="st9" d="m758.669899,344.413992l0,8.18l0,3.61"/>
+    <path id="svg_81" class="st9" d="m758.669899,370.103992l0,3.01l0,8.15"/>
+    <path id="svg_82" class="st9" d="m747.939899,356.203992l10.73,13.96l0,2.95"/>
+   </g>
+  </g>
+  <g    id="shape124-207">
+   <title transform="translate(102.84700012207031,-214.01600646972656) ">动态连接线.124</title>
+   <path id="svg_83" class="st10" d="m109.937,381.263994l0,21.26"/>
+  </g>
+  <g    id="shape127-210">
+   <title transform="translate(200.1199951171875,-214.01600646972656) ">动态连接线.127</title>
+   <path id="svg_84" class="st10" d="m207.209995,381.263994l0,21.26"/>
+  </g>
+  <g    id="shape128-213">
+   <title transform="translate(277.177001953125,-214.01600646972656) ">动态连接线.128</title>
+   <path id="svg_85" class="st10" d="m284.267002,381.263994l0,33.49"/>
+  </g>
+  <g    id="shape131-216">
+   <title transform="translate(374.62200927734375,-214.01600646972656) ">动态连接线.131</title>
+   <path id="svg_86" class="st11" d="m381.642009,381.263994l0,32.59l0.13,0"/>
+  </g>
+  <g    id="shape133-219">
+   <title transform="translate(472.3940124511719,-214.01600646972656) ">动态连接线.133</title>
+   <path id="svg_87" class="st11" d="m465.454012,381.263994l0,20.88l-0.29,0"/>
+  </g>
+  <g    id="shape135-222">
+   <title transform="translate(672.9190063476562,-214.01600646972656) ">动态连接线.135</title>
+   <path id="svg_88" class="st11" d="m666.429006,381.263994l0,33.49l-1.19,0"/>
+  </g>
+  <g    id="shape137-225">
+   <title transform="translate(751.5859985351562,-214.01600646972656) ">动态连接线.137</title>
+   <path id="svg_89" class="st11" d="m758.675999,381.263994l0,21.26"/>
+  </g>
+  <g    id="shape138-228">
+   <title transform="translate(117.0199966430664,-246.61399841308594) ">动态连接线.138</title>
+   <path id="svg_90" class="st10" d="m109.929997,348.666002l0,-38.98"/>
+  </g>
+  <g    id="shape140-231">
+   <title transform="translate(200.04600524902344,-246.61399841308594) ">动态连接线.140</title>
+   <path id="svg_91" class="st10" d="m207.056005,348.666002l0.15,-38.98"/>
+  </g>
+  <g    id="shape141-234">
+   <title transform="translate(291.552001953125,-234.56700134277344) ">动态连接线.141</title>
+   <path id="svg_92" class="st10" d="m284.662002,360.712999l-0.4,-51.03"/>
+  </g>
+  <g    id="shape142-237">
+   <title transform="translate(388.92999267578125,-234.56700134277344) ">动态连接线.142</title>
+   <path id="svg_93" class="st11" d="m382.039993,360.712999l-0.4,0l0,-51.03"/>
+  </g>
+  <g    id="shape145-240">
+   <title transform="translate(673.4190063476562,-250.86599731445312) ">动态连接线.145</title>
+   <path id="svg_94" class="st11" d="m666.429006,344.414003l-0.19,-34.73"/>
+  </g>
+  <g   id="shape146-243">
+   <title transform="translate(63.16170120239258,-48.71110153198242) ">工作表.146</title>
+   <desc transform="translate(63.16170120239258,-48.71110153198242) ">离心式冷水机组L1</desc>
+   <rect id="svg_95" class="st12" height="131.811" width="22.6772" y="414.753898" x="63.161701"/>
+   <rect id="svg_96" class="st13" height="115.2" width="12.0938" y="423.058898" x="68.453541" />
+   <text id="svg_97"  class="st14" y="433.858898" x="68.481701">离
+    <tspan id="svg_98" class="st15" dy="1.2em" x="68.481701">心</tspan>
+    <tspan id="svg_99" class="st15" dy="1.2em" x="68.481701">式</tspan>
+    <tspan id="svg_100" class="st15" dy="1.2em" x="68.481701">冷</tspan>
+    <tspan id="svg_101" class="st15" dy="1.2em" x="68.481701">水</tspan>
+    <tspan id="svg_102" class="st15" dy="1.2em" x="68.481701">机</tspan>
+    <tspan id="svg_103" class="st15" dy="1.2em" x="68.481701">组</tspan>
+    <tspan id="svg_104" class="st15" dy="1.2em" x="68.451701">L1</tspan></text>
+  </g>
+  <g   id="shape150-254">
+   <title transform="translate(35.09870147705078,-296.8500061035156) ">工作表.150</title>
+   <desc transform="translate(35.09870147705078,-296.8500061035156) ">5TA 1250kVA</desc>
+   <rect id="svg_105" class="st16" height="20" width="57.5748" y="278.425994" x="35.098701"/>
+   <text id="svg_106"  class="st17" y="284.229994" x="53.308701">5TA
+    <tspan id="svg_107" class="st15" dy="1.2em" x="39.198701">1250kVA</tspan></text>
+  </g>
+  <g   id="shape151-258">
+   <title transform="translate(61.207298278808594,-193.2779998779297) ">工作表.151</title>
+   <path id="svg_108" class="st10" d="m61.207298,402.002l101.08,0"/>
+  </g>
+  <g   id="shape152-261">
+   <title transform="translate(138.7050018310547,-48.71110153198242) ">工作表.152</title>
+   <desc transform="translate(138.7050018310547,-48.71110153198242) ">水泵</desc>
+   <rect id="svg_109" class="st12" height="131.811" width="22.6772" y="414.753898" x="138.705002"/>
+   <rect id="svg_110" class="st18" height="28.8001" width="12.0471" y="466.258898" x="144.020192" />
+   <text id="svg_111"  class="st14" y="477.058898" x="144.025002">水
+    <tspan id="svg_112" class="st15" dy="1.2em" x="144.025002">泵</tspan></text>
+  </g>
+  <g    id="shape153-266">
+   <title transform="translate(141.47300720214844,-179.81300354003906) ">动态连接线.153</title>
+   <path id="svg_113" class="st10" d="m148.563007,414.756996l0,-12.76"/>
+  </g>
+  <g    id="shape154-269">
+   <title transform="translate(80.10559844970703,-179.38800048828125) ">动态连接线.154</title>
+   <path id="svg_114" class="st10" d="m73.085598,414.472l-0.13,-11.34"/>
+  </g>
+  <g   id="shape157-272">
+   <title transform="translate(100.15399932861328,-48.42770004272461) ">工作表.157</title>
+   <desc transform="translate(100.15399932861328,-48.42770004272461) ">卫生热水用热泵机组</desc>
+   <rect id="svg_115" class="st12" height="131.811" width="22.6772" y="415.0373" x="100.153999"/>
+   <rect id="svg_116" class="st18" height="129.6" width="12.0471" y="416.1423" x="105.469189" />
+   <text id="svg_117"  class="st14" y="426.9423" x="105.473999">卫
+    <tspan id="svg_118" class="st15" dy="1.2em" x="105.473999">生</tspan>
+    <tspan id="svg_119" class="st15" dy="1.2em" x="105.473999">热</tspan>
+    <tspan id="svg_120" class="st15" dy="1.2em" x="105.473999">水</tspan>
+    <tspan id="svg_121" class="st15" dy="1.2em" x="105.473999">用</tspan>
+    <tspan id="svg_122" class="st15" dy="1.2em" x="105.473999">热</tspan>
+    <tspan id="svg_123" class="st15" dy="1.2em" x="105.473999">泵</tspan>
+    <tspan id="svg_124" class="st15" dy="1.2em" x="105.473999">机</tspan>
+    <tspan id="svg_125" class="st15" dy="1.2em" x="105.473999">组</tspan></text>
+  </g>
+  <g    id="shape158-284">
+   <title transform="translate(102.9219970703125,-179.52999877929688) ">动态连接线.158</title>
+   <path id="svg_126" class="st10" d="m110.011997,415.040001l0,-12.76"/>
+  </g>
+  <g   id="shape159-287">
+   <title transform="translate(180.9459991455078,-193.2779998779297) ">工作表.159</title>
+   <path id="svg_127" class="st10" d="m180.945999,402.002l51.44,0"/>
+  </g>
+  <g   id="shape163-290">
+   <title transform="translate(177.25599670410156,-48.71110153198242) ">工作表.163</title>
+   <desc transform="translate(177.25599670410156,-48.71110153198242) ">离心式冷水机组L2</desc>
+   <rect id="svg_128" class="st12" height="131.811" width="22.6772" y="414.753898" x="177.255997"/>
+   <rect id="svg_129" class="st18" height="115.2" width="12.0938" y="423.058898" x="182.547837" />
+   <text id="svg_130"  class="st14" y="433.858898" x="182.575997">离
+    <tspan id="svg_131" class="st15" dy="1.2em" x="182.575997">心</tspan>
+    <tspan id="svg_132" class="st15" dy="1.2em" x="182.575997">式</tspan>
+    <tspan id="svg_133" class="st15" dy="1.2em" x="182.575997">冷</tspan>
+    <tspan id="svg_134" class="st15" dy="1.2em" x="182.575997">水</tspan>
+    <tspan id="svg_135" class="st15" dy="1.2em" x="182.575997">机</tspan>
+    <tspan id="svg_136" class="st15" dy="1.2em" x="182.575997">组</tspan>
+    <tspan id="svg_137" class="st15" dy="1.2em" x="182.545997">L2</tspan></text>
+  </g>
+  <g   id="shape164-301">
+   <title transform="translate(215.8070068359375,-48.71110153198242) ">工作表.164</title>
+   <desc transform="translate(215.8070068359375,-48.71110153198242) ">空调用热泵机组</desc>
+   <rect id="svg_138" class="st12" height="131.811" width="22.6772" y="414.753898" x="215.807007"/>
+   <rect id="svg_139" class="st18" height="100.8" width="12.0471" y="430.258898" x="221.122197" />
+   <text id="svg_140"  class="st14" y="441.058898" x="221.127007">空
+    <tspan id="svg_141" class="st15" dy="1.2em" x="221.127007">调</tspan>
+    <tspan id="svg_142" class="st15" dy="1.2em" x="221.127007">用</tspan>
+    <tspan id="svg_143" class="st15" dy="1.2em" x="221.127007">热</tspan>
+    <tspan id="svg_144" class="st15" dy="1.2em" x="221.127007">泵</tspan>
+    <tspan id="svg_145" class="st15" dy="1.2em" x="221.127007">机</tspan>
+    <tspan id="svg_146" class="st15" dy="1.2em" x="221.127007">组</tspan></text>
+  </g>
+  <g    id="shape165-311">
+   <title transform="translate(181.50799560546875,-179.81300354003906) ">动态连接线.165</title>
+   <path id="svg_147" class="st10" d="m188.597996,414.756996l0,-12.76"/>
+  </g>
+  <g    id="shape166-314">
+   <title transform="translate(219.40699768066406,-179.81300354003906) ">动态连接线.166</title>
+   <path id="svg_148" class="st10" d="m226.496998,414.756996l0,-12.76"/>
+  </g>
+  <g   id="shape167-317">
+   <title transform="translate(129.7830047607422,-296.8500061035156) ">工作表.167</title>
+   <desc transform="translate(129.7830047607422,-296.8500061035156) ">6TA 630kVA</desc>
+   <rect id="svg_149" class="st16" height="20" width="57.5748" y="278.425994" x="129.783005"/>
+   <text id="svg_150"  class="st17" y="284.229994" x="147.993005">6TA
+    <tspan id="svg_151" class="st15" dy="1.2em" x="137.403005">630kVA</tspan></text>
+  </g>
+  <g   id="shape168-321">
+   <title transform="translate(218.18499755859375,-296.8500061035156) ">工作表.168</title>
+   <desc transform="translate(218.18499755859375,-296.8500061035156) ">9TA 200kVA</desc>
+   <rect id="svg_152" class="st16" height="20" width="57.5748" y="278.425994" x="218.184998"/>
+   <text id="svg_153"  class="st17" y="284.229994" x="236.394998">9TA
+    <tspan id="svg_154" class="st15" dy="1.2em" x="225.804998">200kVA</tspan></text>
+  </g>
+  <g   id="shape169-325">
+   <title transform="translate(33.93339920043945,-500.2359924316406) ">工作表.169</title>
+   <desc transform="translate(33.93339920043945,-500.2359924316406) ">10kV</desc>
+   <rect id="svg_155" class="st16" height="20" width="152" y="75.040008" x="33.933399"/>
+   <text id="svg_156"  class="st19" y="92.244008" x="85.743399">10kV</text>
+  </g>
+  <g   id="shape170-328">
+   <title transform="translate(272.9259948730469,-48.71110153198242) ">工作表.170</title>
+   <desc transform="translate(272.9259948730469,-48.71110153198242) ">排污泵</desc>
+   <rect id="svg_157" class="st12" height="131.811" width="22.6772" y="414.753898" x="272.925995"/>
+   <rect id="svg_158" class="st18" height="43.2002" width="12.0471" y="459.058898" x="278.241185" />
+   <text id="svg_159"  class="st14" y="469.858898" x="278.245995">排
+    <tspan id="svg_160" class="st15" dy="1.2em" x="278.245995">污</tspan>
+    <tspan id="svg_161" class="st15" dy="1.2em" x="278.245995">泵</tspan></text>
+  </g>
+  <g   id="shape171-334">
+   <title transform="translate(370.3030090332031,-48.71110153198242) ">工作表.171</title>
+   <desc transform="translate(370.3030090332031,-48.71110153198242) ">一二三区办公负荷</desc>
+   <rect id="svg_162" class="st20" height="131.811" width="22.6772" y="414.753898" x="370.303009"/>
+   <rect id="svg_163" class="st18" height="115.2" width="12.0471" y="423.058898" x="375.618199" />
+   <text id="svg_164"  class="st14" y="433.858898" x="375.623009">一
+    <tspan id="svg_165" class="st15" dy="1.2em" x="375.623009">二</tspan>
+    <tspan id="svg_166" class="st15" dy="1.2em" x="375.623009">三</tspan>
+    <tspan id="svg_167" class="st15" dy="1.2em" x="375.623009">区</tspan>
+    <tspan id="svg_168" class="st15" dy="1.2em" x="375.623009">办</tspan>
+    <tspan id="svg_169" class="st15" dy="1.2em" x="375.623009">公</tspan>
+    <tspan id="svg_170" class="st15" dy="1.2em" x="375.623009">负</tspan>
+    <tspan id="svg_171" class="st15" dy="1.2em" x="375.623009">荷</tspan></text>
+  </g>
+  <g   id="shape172-345">
+   <title transform="translate(311.63800048828125,-296.8500061035156) ">工作表.172</title>
+   <desc transform="translate(311.63800048828125,-296.8500061035156) ">1TA 1250kVA</desc>
+   <rect id="svg_172" class="st16" height="20" width="57.5748" y="278.425994" x="311.638"/>
+   <text id="svg_173"  class="st17" y="284.229994" x="329.848">1TA
+    <tspan id="svg_174" class="st15" dy="1.2em" x="315.738">1250kVA</tspan></text>
+  </g>
+  <g   id="shape173-349">
+   <title transform="translate(397.5589904785156,-296.8500061035156) ">工作表.173</title>
+   <desc transform="translate(397.5589904785156,-296.8500061035156) ">3TA 1250kVA</desc>
+   <rect id="svg_175" class="st16" height="20" width="57.5748" y="278.425994" x="397.55899"/>
+   <text id="svg_176"  class="st17" y="284.229994" x="415.76899">3TA
+    <tspan id="svg_177" class="st15" dy="1.2em" x="401.65899">1250kVA</tspan></text>
+  </g>
+  <g   id="shape174-353">
+   <title transform="translate(590.8660278320312,-296.8500061035156) ">工作表.174</title>
+   <desc transform="translate(590.8660278320312,-296.8500061035156) ">2TA 1250kVA</desc>
+   <rect id="svg_178" class="st16" height="20" width="57.5748" y="278.425994" x="590.866028"/>
+   <text id="svg_179"  class="st17" y="284.229994" x="609.076028">2TA
+    <tspan id="svg_180" class="st15" dy="1.2em" x="594.966028">1250kVA</tspan></text>
+  </g>
+  <g   id="shape175-357">
+   <title transform="translate(684.0830078125,-296.8500061035156) ">工作表.175</title>
+   <desc transform="translate(684.0830078125,-296.8500061035156) ">4TA 1250kVA</desc>
+   <rect id="svg_181" class="st16" height="20" width="57.5748" y="278.425994" x="684.083008"/>
+   <text id="svg_182"  class="st17" y="284.229994" x="702.293008">4TA
+    <tspan id="svg_183" class="st15" dy="1.2em" x="688.183008">1250kVA</tspan></text>
+  </g>
+  <g   id="shape177-361">
+   <title transform="translate(654.9010009765625,-48.71110153198242) ">工作表.177</title>
+   <desc transform="translate(654.9010009765625,-48.71110153198242) ">四五区办公负荷</desc>
+   <rect id="svg_184" class="st20" height="131.811" width="22.6772" y="414.753898" x="654.901001"/>
+   <rect id="svg_185" class="st18" height="100.8" width="12.0471" y="430.258898" x="660.216191" />
+   <text id="svg_186"  class="st14" y="441.058898" x="660.221001">四
+    <tspan id="svg_187" class="st15" dy="1.2em" x="660.221001">五</tspan>
+    <tspan id="svg_188" class="st15" dy="1.2em" x="660.221001">区</tspan>
+    <tspan id="svg_189" class="st15" dy="1.2em" x="660.221001">办</tspan>
+    <tspan id="svg_190" class="st15" dy="1.2em" x="660.221001">公</tspan>
+    <tspan id="svg_191" class="st15" dy="1.2em" x="660.221001">负</tspan>
+    <tspan id="svg_192" class="st15" dy="1.2em" x="660.221001">荷</tspan></text>
+  </g>
+  <g    id="shape178-371">
+   <title transform="translate(458.42401123046875,-246.46499633789062) ">动态连接线.178</title>
+   <path id="svg_193" class="st11" d="m465.434011,348.815004l0.15,-38.98"/>
+  </g>
+  <g   id="shape179-374">
+   <title transform="translate(439.3240051269531,-193.12899780273438) ">工作表.179</title>
+   <path id="svg_194" class="st11" d="m439.324005,402.151002l51.44,0"/>
+  </g>
+  <g   id="shape180-377">
+   <title transform="translate(435.6340026855469,-48.5619010925293) ">工作表.180</title>
+   <desc transform="translate(435.6340026855469,-48.5619010925293) ">数据中心精密空调</desc>
+   <rect id="svg_195" class="st20" height="131.811" width="22.6772" y="414.903099" x="435.634003"/>
+   <rect id="svg_196" class="st18" height="115.2" width="12.0471" y="423.208099" x="440.949193" />
+   <text id="svg_197"  class="st14" y="434.008099" x="440.954003">数
+    <tspan id="svg_198" class="st15" dy="1.2em" x="440.954003">据</tspan>
+    <tspan id="svg_199" class="st15" dy="1.2em" x="440.954003">中</tspan>
+    <tspan id="svg_200" class="st15" dy="1.2em" x="440.954003">心</tspan>
+    <tspan id="svg_201" class="st15" dy="1.2em" x="440.954003">精</tspan>
+    <tspan id="svg_202" class="st15" dy="1.2em" x="440.954003">密</tspan>
+    <tspan id="svg_203" class="st15" dy="1.2em" x="440.954003">空</tspan>
+    <tspan id="svg_204" class="st15" dy="1.2em" x="440.954003">调</tspan></text>
+  </g>
+  <g   id="shape181-388">
+   <title transform="translate(474.18499755859375,-48.5619010925293) ">工作表.181</title>
+   <desc transform="translate(474.18499755859375,-48.5619010925293) ">数据中心U P S</desc>
+   <rect id="svg_205" class="st20" height="131.811" width="22.6772" y="414.903099" x="474.184998"/>
+   <rect id="svg_206" class="st18" height="100.801" width="12.0471" y="430.408099" x="479.500188" />
+   <text id="svg_207"  class="st14" y="441.208099" x="479.504998">数
+    <tspan id="svg_208" class="st15" dy="1.2em" x="479.504998">据</tspan>
+    <tspan id="svg_209" class="st15" dy="1.2em" x="479.504998">中</tspan>
+    <tspan id="svg_210" class="st15" dy="1.2em" x="479.504998">心</tspan>
+    <tspan id="svg_211" class="st15" dy="1.2em" x="482.504998">U</tspan>
+    <tspan id="svg_212" class="st15" dy="1.2em" x="482.504998">P</tspan>
+    <tspan id="svg_213" class="st15" dy="1.2em" x="482.504998">S</tspan></text>
+  </g>
+  <g    id="shape182-398">
+   <title transform="translate(439.885986328125,-179.66400146484375) ">动态连接线.182</title>
+   <path id="svg_214" class="st11" d="m446.975986,414.905999l0,-12.76"/>
+  </g>
+  <g    id="shape183-401">
+   <title transform="translate(477.7850036621094,-179.66400146484375) ">动态连接线.183</title>
+   <path id="svg_215" class="st11" d="m484.875004,414.905999l0,-12.76"/>
+  </g>
+  <g    id="shape184-404">
+   <title transform="translate(751.5770263671875,-246.0919952392578) ">动态连接线.184</title>
+   <path id="svg_216" class="st11" d="m758.587026,349.188005l0.15,-38.98"/>
+  </g>
+  <g   id="shape185-407">
+   <title transform="translate(732.1939697265625,-192.75599670410156) ">工作表.185</title>
+   <path id="svg_217" class="st11" d="m732.19397,402.524003l51.44,0"/>
+  </g>
+  <g   id="shape186-410">
+   <title transform="translate(728.5040283203125,-48.18899917602539) ">工作表.186</title>
+   <desc transform="translate(728.5040283203125,-48.18899917602539) ">照明</desc>
+   <rect id="svg_218" class="st20" height="131.811" width="22.6772" y="415.276001" x="728.504028"/>
+   <rect id="svg_219" class="st18" height="28.8001" width="12.0471" y="466.781001" x="733.819218" />
+   <text id="svg_220"  class="st14" y="477.581001" x="733.824028">照
+    <tspan id="svg_221" class="st15" dy="1.2em" x="733.824028">明</tspan></text>
+  </g>
+  <g   id="shape187-415">
+   <title transform="translate(767.0549926757812,-48.18899917602539) ">工作表.187</title>
+   <desc transform="translate(767.0549926757812,-48.18899917602539) ">电梯</desc>
+   <rect id="svg_222" class="st20" height="131.811" width="22.6772" y="415.276001" x="767.054993"/>
+   <rect id="svg_223" class="st18" height="28.8001" width="12.0471" y="466.781001" x="772.370183" />
+   <text id="svg_224"  class="st14" y="477.581001" x="772.374993">电
+    <tspan id="svg_225" class="st15" dy="1.2em" x="772.374993">梯</tspan></text>
+  </g>
+  <g    id="shape188-420">
+   <title transform="translate(732.7559814453125,-179.29100036621094) ">动态连接线.188</title>
+   <path id="svg_226" class="st11" d="m739.845981,415.279l0,-12.76"/>
+  </g>
+  <g    id="shape189-423">
+   <title transform="translate(770.655029296875,-179.29100036621094) ">动态连接线.189</title>
+   <path id="svg_227" class="st11" d="m777.745029,415.279l0,-12.76"/>
+  </g>
+  <g    id="shape190-426">
+   <title transform="translate(103.29900360107422,-328.1099853515625) ">动态连接线.190</title>
+   <path id="svg_228" class="st10" d="m109.929004,267.170015l0.91,-81.5"/>
+  </g>
+  <g    id="shape191-429">
+   <title transform="translate(200.1719970703125,-328.1099853515625) ">动态连接线.191</title>
+   <path id="svg_229" class="st10" d="m207.201997,267.170015l0.11,-81.5"/>
+  </g>
+  <g    id="shape192-432">
+   <title transform="translate(291.364013671875,-328.1099853515625) ">动态连接线.192</title>
+   <path id="svg_230" class="st10" d="m284.294014,267.170015l-0.03,-81.5"/>
+  </g>
+  <g    id="shape193-435">
+   <title transform="translate(388.7149963378906,-328.1099853515625) ">动态连接线.193</title>
+   <path id="svg_231" class="st11" d="m381.644996,267.170015l-0.03,-81.5"/>
+  </g>
+  <g    id="shape194-438">
+   <title transform="translate(473.7539978027344,-328.1099853515625) ">动态连接线.194</title>
+   <path id="svg_232" class="st11" d="m466.683998,267.170015l-0.03,-81.5"/>
+  </g>
+  <g    id="shape195-441">
+   <title transform="translate(673.31298828125,-328.1099853515625) ">动态连接线.195</title>
+   <path id="svg_233" class="st11" d="m666.242988,267.170015l-0.03,-81.5"/>
+  </g>
+  <g    id="shape196-444">
+   <title transform="translate(766.0289916992188,-328.1099853515625) ">动态连接线.196</title>
+   <path id="svg_234" class="st11" d="m758.958992,267.170015l-0.03,-81.5"/>
+  </g>
+  <g   id="shape200-447">
+   <title transform="translate(118.48799896240234,-532.9130249023438) ">工作表.200</title>
+   <desc transform="translate(118.48799896240234,-532.9130249023438) ">功率总加</desc>
+   <rect id="svg_235" class="st21" height="34.0157" width="154.205" y="28.346975" x="118.487999"/>
+   <text id="svg_236"  class="st22" y="50.756975" x="122.487999">功率总加：</text>
+  </g>
+  <g   id="shape201-450">
+   <title transform="translate(343.8580017089844,-532.9130249023438) ">工作表.201</title>
+   <desc transform="translate(343.8580017089844,-532.9130249023438) ">能源机房功率</desc>
+   <rect id="svg_237" class="st21" height="34.0157" width="154.205" y="28.346975" x="343.858002"/>
+   <text id="svg_238"  class="st23" y="50.756975" x="347.858002">能源机房功率：</text>
+  </g>
+  <g   id="shape202-453">
+   <title transform="translate(577.5159912109375,-532.9130249023438) ">工作表.202</title>
+   <desc transform="translate(577.5159912109375,-532.9130249023438) ">语音中心功率</desc>
+   <rect id="svg_239" class="st21" height="34.0157" width="154.205" y="28.346975" x="577.515991"/>
+   <text id="svg_240"  class="st24" y="50.756975" x="581.515991">语音中心功率：</text>
+  </g>
+  <g   id="shape203-456">
+   <title transform="translate(131.5279998779297,-11.338600158691406) ">工作表.203</title>
+   <desc transform="translate(131.5279998779297,-11.338600158691406) ">能源机房</desc>
+   <rect id="svg_241" class="st16" height="34.0157" width="154.205" y="549.9214" x="131.528"/>
+   <text id="svg_242"  class="st25" y="572.3314" x="135.528">能源机房</text>
+  </g>
+  <g   id="shape204-459">
+   <title transform="translate(532.1610107421875,-11.338600158691406) ">工作表.204</title>
+   <desc transform="translate(532.1610107421875,-11.338600158691406) ">语音中心</desc>
+   <rect id="svg_243" class="st16" height="34.0157" width="154.205" y="549.9214" x="532.161011"/>
+   <text id="svg_244"  class="st26" y="572.3314" x="536.161011">语音中心</text>
+  </g>
+ </g>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="801" width="1662" y="-1" x="-1"/>
+ </g>
+</svg>
