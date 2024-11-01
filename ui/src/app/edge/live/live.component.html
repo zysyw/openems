@@ -148,9 +148,9 @@
   </ion-grid>
 
   <ion-grid [hidden]="!edge.subscribeChannelsSuccessful" *ngIf="edge && edge.isOnline">
-    <!-- Simulator Widgets -->
-    <p>Simulator!</p>
-    <SimulatorMeters> </SimulatorMeters>
+    <!-- MeterTree Widgets -->
+    <p>Meter Tree</p>
+    <MeterTree> </MeterTree>
   </ion-grid>
 
   <ion-grid *ngIf="edge && edge.isOnline && !edge.subscribeChannelsSuccessful">

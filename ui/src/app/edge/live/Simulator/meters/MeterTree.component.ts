@@ -13,64 +13,76 @@ export interface MeterNode {
   templateUrl: './MeterTree.component.html'
 })
 export class MeterTreeComponent extends AbstractFlatWidget {
-  public simulatorMeterComponents: EdgeConfig.Component[] | null = null;
-  public simulatorMeters: MeterNode[] = [];
+  public meterComponents: EdgeConfig.Component[] | null = null;
+  public meterTree: MeterNode;
+  public displayMeterTrees: MeterNode[]
 
   protected override getChannelAddresses() {
 
-    const channelAddresses: ChannelAddress[] = [];
-
     // Get consumptionMeterComponents
-    this.simulatorMeterComponents = Object.values(this.config.components)
+    this.meterComponents = Object.values(this.config.components)
       .filter(component => component.isEnabled) // 
-      .filter(component => component.factoryId.includes("Virtual")) //
       .filter(component => component.factoryId.includes("Meter")); // 
+    
+    const rootComponent = this.meterComponents.find(component => component.alias === 'root');
+    this.meterTree = this.createMeterNode(rootComponent)
+    this.displayMeterTrees = this.expandMeterTree(this.meterTree) //展开成二层结构进行展示
 
-    this.createComponentDictionary(this.simulatorMeterComponents)
-
-    for (const meterNode of this.simulatorMeters) {
-      // 为主电表（mainMeter）生成 ChannelAddress
-      channelAddresses.push(
-        new ChannelAddress(meterNode.mainMeter.id, "ActivePower"),
-        new ChannelAddress(meterNode.mainMeter.id, "ActivePowerL1"),
-        new ChannelAddress(meterNode.mainMeter.id, "ActivePowerL2"),
-        new ChannelAddress(meterNode.mainMeter.id, "ActivePowerL3")
-      );
-
-      // 为每个子电表生成 ChannelAddress
-      for (const childNode of meterNode.children) {
-        channelAddresses.push(
-          new ChannelAddress(childNode.mainMeter.id, "ActivePower"),
-          new ChannelAddress(childNode.mainMeter.id, "ActivePowerL1"),
-          new ChannelAddress(childNode.mainMeter.id, "ActivePowerL2"),
-          new ChannelAddress(childNode.mainMeter.id, "ActivePowerL3")
-        );
-      }
-    }
-    console.log(channelAddresses);
+    const channelAddresses = this.setChannelAddresses(this.meterTree)
+    
     return channelAddresses;
   }
 
-  private createComponentDictionary(components: EdgeConfig.Component[]): void {
-    // 1. 遍历所有组件，找到 factoryId 包含 "Virtual" 的组件作为主电表节点
-    components.forEach(gridComponent => {
-      if (gridComponent.factoryId.includes('Virtual')) {
-        // 2. 使用正则匹配与当前主电表 alias 相关的子电表
-        const relatedComponents = components.filter(component => regex.test(component.alias));
+  private createMeterNode(rootComponent: EdgeConfig.Component): MeterNode {
+    const node: MeterNode = {
+      mainMeter: rootComponent,
+      children: [],
+    };
+    
+    const childComponentIDs = rootComponent.properties?.['meterIds'] || []
+    const childComponents = this.meterComponents.filter(component => 
+      childComponentIDs.includes(component.id)
+    );
+    node.children = childComponents.map(child => this.createMeterNode(child));
+    return node
+  }
 
-        // 3. 构造 MeterNode 结构
-        const meterNode: MeterNode = {
-          mainMeter: gridComponent,  // 当前的 Grid 组件作为主电表
-          children: relatedComponents.map(child => ({
-            mainMeter: child,
-            children: []  // 暂时不考虑更深的嵌套子电表
-          }))
-        };
+  private setChannelAddresses(node: MeterNode): ChannelAddress[] {
+    
+    const channelAddresses = [
+      new ChannelAddress(node.mainMeter.id, "ActivePower"),
+      new ChannelAddress(node.mainMeter.id, "ActivePowerL1"),
+      new ChannelAddress(node.mainMeter.id, "ActivePowerL2"),
+      new ChannelAddress(node.mainMeter.id, "ActivePowerL3")
+    ];
 
-        // 4. 将 MeterNode 添加到 simulatorMeters 数组中
-        this.simulatorMeters.push(meterNode);
-      }
-    });
+    for (const child of node.children) {
+      channelAddresses.push(...this.setChannelAddresses(child));
+    }
+    return channelAddresses;
+  }
+
+  private expandMeterTree(node: MeterNode): MeterNode[] {
+    // 如果当前节点没有子节点，则返回空数组
+    if (node.children.length === 0) {
+        return [];
+    }
+
+    // 创建包含父节点和直接子节点的新 MeterNode
+    const currentLevelNode: MeterNode = {
+        mainMeter: node.mainMeter,
+        children: node.children,
+    };
+
+    // 结果数组包含当前节点和其子节点
+    let result = [currentLevelNode];
+
+    // 递归处理每个子节点，将结果合并到当前数组
+    for (const child of node.children) {
+        result = result.concat(this.expandMeterTree(child));
+    }
+
+    return result;
   }
 
 }
