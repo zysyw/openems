@@ -26,6 +26,7 @@ import { RegistrationModule } from "./registration/registration.module";
 import { StatusSingleComponent } from "./shared/components/status/single/status.component";
 import { ChartOptionsPopoverComponent } from "./shared/legacy/chartoptions/popover/popover.component";
 import { EdgeConfigViewerComponent } from './shared/service/edge-config-viewer/edge-config-viewer.component';
+import { AppStateTracker } from "./shared/ngrx-store/states";
 import { MyErrorHandler } from "./shared/service/myerrorhandler";
 import { Pagination } from "./shared/service/pagination";
 import { SharedModule } from "./shared/shared.module";
@@ -68,6 +69,7 @@ import { UserModule } from "./user/user.module";
     Pagination,
     CheckForUpdateService,
     AppService,
+    AppStateTracker,
   ],
   bootstrap: [AppComponent],
 })

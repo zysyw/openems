@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { EdgeOfflineModule } from "src/app/shared/components/edge/offline/offline.module";
 import { SharedModule } from "./../../shared/shared.module";
 import { Common_Autarchy } from "./common/autarchy/Common_Autarchy";
 import { Common_Consumption } from "./common/consumption/Common_Consumption";
@@ -24,6 +25,7 @@ import { Controller_Io_FixDigitalOutputModalComponent } from "./Controller/Io/Fi
 import { Controller_Io_HeatingElement } from "./Controller/Io/HeatingElement/Io_HeatingElement";
 import { Controller_Io_HeatpumpComponent } from "./Controller/Io/Heatpump/Io_Heatpump";
 import { Controller_Io_HeatpumpModalComponent } from "./Controller/Io/Heatpump/modal/modal.component";
+import { Controller_Api_ModbusTcp } from "./Controller/ModbusTcpApi/modbusTcpApi.module";
 import { Controller_Asymmetric_PeakShavingComponent } from "./Controller/PeakShaving/Asymmetric/Asymmetric";
 import { Controller_Asymmetric_PeakShavingModalComponent } from "./Controller/PeakShaving/Asymmetric/modal/modal.component";
 import { Controller_Symmetric_PeakShavingModalComponent } from "./Controller/PeakShaving/Symmetric/modal/modal.component";
@@ -40,27 +42,26 @@ import { LiveComponent } from "./live.component";
 import { Evcs_Api_ClusterComponent } from "./Multiple/Evcs_Api_Cluster/Evcs_Api_Cluster";
 import { EvcsChartComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcs-chart/evcs.chart";
 import { Evcs_Api_ClusterModalComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcsCluster-modal.page";
-import { OfflineComponent } from "./offline/offline.component";
 import { MetersTree } from "./Simulator/meters/MeterTree.module";
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    // Common
     Common_Autarchy,
-    Common_Production,
-    Common_Selfconsumption,
     Common_Consumption,
     Common_Grid,
-    // Controller
+    Common_Production,
+    Common_Selfconsumption,
+    Controller_Api_ModbusTcp,
     Controller_Ess_FixActivePower,
     Controller_Ess_GridOptimizedCharge,
+    Controller_Ess_TimeOfUseTariff,
+    Controller_Evcs,
     Controller_Io_HeatingElement,
+    EdgeOfflineModule,
     EnergymonitorModule,
     SharedModule,
-    Controller_Evcs,
-    Controller_Ess_TimeOfUseTariff,
     MetersTree,
   ],
   declarations: [
@@ -90,7 +91,6 @@ import { MetersTree } from "./Simulator/meters/MeterTree.module";
     Io_Api_DigitalInput_ModalComponent,
     Io_Api_DigitalInputComponent,
     LiveComponent,
-    OfflineComponent,
     StorageComponent,
     StorageModalComponent,
   ],
