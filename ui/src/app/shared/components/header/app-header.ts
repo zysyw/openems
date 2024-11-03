@@ -21,7 +21,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     public environment = environment;
     public backUrl: string | boolean = "/";
     public enableSideMenu: boolean;
-    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" = "Other";
+    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" = "Other";
     public isSystemLogEnabled: boolean = false;
 
     protected isHeaderAllowed: boolean = false;
@@ -76,7 +76,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         const urlArray = url.split("/");
         const file = urlArray.pop();
 
-        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || urlArray.length > 3) {
+        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || file == "diagram" || urlArray.length > 3) {
             // disable side-menu; show back-button instead
             this.enableSideMenu = false;
         } else {
@@ -123,7 +123,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         const file = urlArray.pop();
 
         // disable backUrl for History & EdgeIndex Component ++ Enable Segment Navigation
-        if ((file == "history" || file == "live") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
             this.backUrl = false;
             return;
         }
@@ -161,11 +161,13 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             file = urlArray[3];
         }
         // Enable Segment Navigation for Edge-Index-Page
-        if ((file == "history" || file == "live") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
             if (file == "history") {
                 this.currentPage = "IndexHistory";
-            } else {
+            } else if(file == "live") {
                 this.currentPage = "IndexLive";
+            } else {
+                this.currentPage = "IndexDiagram";
             }
         } else if (file == "settings" && urlArray.length > 1) {
             this.currentPage = "EdgeSettings";
@@ -185,6 +187,12 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             /** Creates bug of being infinite forwarded betweeen live and history, if not relatively routed  */
             // this.router.navigate(["../history"], { relativeTo: this.route });
             this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/history"]);
+            this.cdRef.detectChanges();
+        }
+        if (event.detail.value == "IndexDiagram") {
+            console.log("enter into diagram")
+            /** Creates bug of being infinite forwarded betweeen live and diagram, if not relatively routed  */
+            this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/diagram"]);
             this.cdRef.detectChanges();
         }
     }

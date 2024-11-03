@@ -573,7 +573,9 @@
       "MINUTES": "分钟",
       "DAY": "天",
       "DAYS": "天"
-    }
+    },
+    "CHARGE": "充电",
+    "DISCHARGE": "放电"
   },
   "Index": {
     "allConnected": "所有连接均已建立。",

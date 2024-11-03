@@ -1,6 +1,6 @@
 // @ts-strict-ignore
-import { AfterViewChecked, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { AfterViewChecked, ChangeDetectorRef, Component, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 import { MenuController, ModalController } from "@ionic/angular";
 import { Subject } from "rxjs";
 import { filter, takeUntil } from "rxjs/operators";
@@ -23,7 +23,11 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     public enableSideMenu: boolean;
     public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" = "Other";
     public isSystemLogEnabled: boolean = false;
+
+    protected isHeaderAllowed: boolean = true;
+
     private ngUnsubscribe: Subject<void> = new Subject<void>();
+    private _customBackUrl: string | null = null;
 
     constructor(
         private cdRef: ChangeDetectorRef,
@@ -32,8 +36,15 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         public router: Router,
         public service: Service,
         public websocket: Websocket,
-        private route: ActivatedRoute,
     ) { }
+
+    @Input() public set customBackUrl(url: string | null) {
+        if (!url) {
+            return;
+        }
+        this._customBackUrl = url;
+        this.updateBackUrl(url);
+    }
 
     ngOnInit() {
         // set inital URL
@@ -46,6 +57,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             window.scrollTo(0, 0);
             this.updateUrl((<NavigationEnd>event).urlAfterRedirects);
         });
+
     }
 
     // used to prevent 'Expression has changed after it was checked' error
@@ -57,13 +69,14 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         this.updateBackUrl(url);
         this.updateEnableSideMenu(url);
         this.updateCurrentPage(url);
+        console.log("updtae url:" + url)
     }
 
     updateEnableSideMenu(url: string) {
         const urlArray = url.split("/");
         const file = urlArray.pop();
 
-        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || urlArray.length > 3) {
+        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || file == "diagram" || urlArray.length > 3) {
             // disable side-menu; show back-button instead
             this.enableSideMenu = false;
         } else {
@@ -74,8 +87,13 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
 
     updateBackUrl(url: string) {
 
+        if (this._customBackUrl) {
+            this.backUrl = this._customBackUrl;
+            return;
+        }
+
         // disable backUrl & Segment Navigation on initial 'login' page
-        if (url === "/login" || url === "/overview") {
+        if (url === "/login" || url === "/overview" || url === "/index") {
             this.backUrl = false;
             return;
         }
@@ -168,13 +186,14 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         if (event.detail.value == "IndexHistory") {
 
             /** Creates bug of being infinite forwarded betweeen live and history, if not relatively routed  */
-            this.router.navigate(["../history"], { relativeTo: this.route });
+            // this.router.navigate(["../history"], { relativeTo: this.route });
+            this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/history"]);
             this.cdRef.detectChanges();
         }
         if (event.detail.value == "IndexDiagram") {
-
+            console.log("enter into diagram")
             /** Creates bug of being infinite forwarded betweeen live and diagram, if not relatively routed  */
-            this.router.navigate(["../diagram"], { relativeTo: this.route });
+            this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/diagram"]);
             this.cdRef.detectChanges();
         }
     }
