@@ -76,7 +76,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         const urlArray = url.split("/");
         const file = urlArray.pop();
 
-        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || file == "diagram" || urlArray.length > 3) {
+        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || urlArray.length > 3) {
             // disable side-menu; show back-button instead
             this.enableSideMenu = false;
         } else {
