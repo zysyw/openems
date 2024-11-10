@@ -1,6 +1,7 @@
 package io.openems.edge.simulator.meter.nrc.acting;
 
 import io.openems.common.test.AbstractComponentConfig;
+import io.openems.common.types.MeterType;
 import io.openems.common.utils.ConfigUtils;
 
 @SuppressWarnings("all")
@@ -9,6 +10,7 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	protected static class Builder {
 		private String id;
 		private String datasourceId;
+		private MeterType type = MeterType.CONSUMPTION_METERED;
 
 		private Builder() {
 		}
@@ -21,6 +23,11 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 		public Builder setDatasourceId(String datasourceId) {
 			this.datasourceId = datasourceId;
 			return this;
+		}
+		
+		public Builder setType(MeterType type) {
+		    this.type = type;
+		    return this;
 		}
 
 		public MyConfig build() {
@@ -52,6 +59,11 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	@Override
 	public String datasource_target() {
 		return ConfigUtils.generateReferenceTargetFilter(this.id(), this.datasource_id());
+	}
+	
+	@Override
+	public MeterType type() {
+		return this.builder.type;
 	}
 
 }
