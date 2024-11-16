@@ -65,6 +65,8 @@ public class SimulatorGridMeterActingImpl extends AbstractOpenemsComponent
 
 	private StepResponseHandler stepResponseHandler;
 	private Config config = null;
+	
+	private MeterType meterType = MeterType.GRID;
 
 	@Reference
 	private ComponentManager componentManager;
@@ -93,6 +95,7 @@ public class SimulatorGridMeterActingImpl extends AbstractOpenemsComponent
 	@Activate
 	private void activate(ComponentContext context, Config config) throws IOException {
 		this.config = config;
+		this.meterType = config.type();
 		super.activate(context, config.id(), config.alias(), config.enabled());
 
 		// update filter for 'datasource'
@@ -114,7 +117,7 @@ public class SimulatorGridMeterActingImpl extends AbstractOpenemsComponent
 
 	@Override
 	public MeterType getMeterType() {
-		return MeterType.GRID;
+		return this.meterType;
 	}
 
 	@Override

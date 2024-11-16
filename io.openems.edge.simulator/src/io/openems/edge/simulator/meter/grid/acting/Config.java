@@ -3,6 +3,8 @@ package io.openems.edge.simulator.meter.grid.acting;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
+import io.openems.common.types.MeterType;
+
 @ObjectClassDefinition(//
 		name = "Simulator GridMeter Acting", //
 		description = "This simulates an 'acting' Grid meter using data provided by a data source.")
@@ -13,6 +15,9 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 	@AttributeDefinition(name = "Alias", description = "Human-readable name of this Component; defaults to Component-ID")
 	String alias() default "";
+	
+	@AttributeDefinition(name = "Meter-Type", description = "What is measured by this Meter?")
+	MeterType type() default MeterType.GRID;
 
 	@AttributeDefinition(name = "Is enabled?", description = "Is this Component enabled?")
 	boolean enabled() default true;

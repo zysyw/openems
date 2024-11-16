@@ -1,6 +1,7 @@
 package io.openems.edge.simulator.meter.grid.acting;
 
 import io.openems.common.test.AbstractComponentConfig;
+import io.openems.common.types.MeterType;
 import io.openems.common.utils.ConfigUtils;
 
 @SuppressWarnings("all")
@@ -11,6 +12,7 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 		private String datasourceId;
 		private String startTime;
 		private boolean needFrequencyStepResponse;
+		private MeterType type = MeterType.GRID;
 
 		private Builder() {
 		}
@@ -33,6 +35,11 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 		public Builder needFrequencyStepResponse(boolean needFrequencyStepResponse) {
 			this.needFrequencyStepResponse = needFrequencyStepResponse;
 			return this;
+		}
+		
+		public Builder setType(MeterType type) {
+		    this.type = type;
+		    return this;
 		}
 
 		public MyConfig build() {
@@ -74,6 +81,11 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	@Override
 	public String startTime() {
 		return this.builder.startTime;
+	}
+	
+	@Override
+	public MeterType type() {
+		return this.builder.type;
 	}
 
 }

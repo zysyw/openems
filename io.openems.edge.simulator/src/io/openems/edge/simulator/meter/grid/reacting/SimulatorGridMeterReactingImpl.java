@@ -54,6 +54,8 @@ public class SimulatorGridMeterReactingImpl extends AbstractOpenemsComponent
 
 	private final CopyOnWriteArraySet<ManagedSymmetricEss> symmetricEsss = new CopyOnWriteArraySet<>();
 	private final CopyOnWriteArraySet<ElectricityMeter> meters = new CopyOnWriteArraySet<>();
+	
+	private MeterType meterType = MeterType.GRID;
 
 	@Reference
 	private ConfigurationAdmin cm;
@@ -104,6 +106,7 @@ public class SimulatorGridMeterReactingImpl extends AbstractOpenemsComponent
 
 	@Activate
 	private void activate(ComponentContext context, Config config) throws IOException {
+		this.meterType = config.type();
 		super.activate(context, config.id(), config.alias(), config.enabled());
 	}
 
@@ -198,7 +201,7 @@ public class SimulatorGridMeterReactingImpl extends AbstractOpenemsComponent
 
 	@Override
 	public MeterType getMeterType() {
-		return MeterType.GRID;
+		return this.meterType;
 	}
 
 	@Override
