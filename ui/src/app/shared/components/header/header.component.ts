@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     public environment = environment;
     public backUrl: string | boolean = "/";
     public enableSideMenu: boolean;
-    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" = "Other";
+    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" | "IndexCarbonFigure" = "Other";
     public isSystemLogEnabled: boolean = false;
 
     protected isHeaderAllowed: boolean = true;
@@ -76,7 +76,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         const urlArray = url.split("/");
         const file = urlArray.pop();
 
-        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || file == "diagram" || urlArray.length > 3) {
+        if (file == "user" || file == "settings" || file == "changelog" || file == "login" || file == "index" || file == "diagram" || file == "carbonFigure" || urlArray.length > 3) {
             // disable side-menu; show back-button instead
             this.enableSideMenu = false;
         } else {
@@ -161,13 +161,15 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             file = urlArray[3];
         }
         // Enable Segment Navigation for Edge-Index-Page
-        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram" || file == "carbonFigure") && urlArray.length == 3) {
             if (file == "history") {
                 this.currentPage = "IndexHistory";
             } else if(file == "live") {
                 this.currentPage = "IndexLive";
-            } else {
+            } else if(file == "diagram") {
                 this.currentPage = "IndexDiagram";
+            } else if(file == "carbonFigure") {
+                this.currentPage = "IndexCarbonFigure";
             }
 
         } else if (file == "settings" && urlArray.length > 1) {
@@ -179,6 +181,7 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     }
 
     public segmentChanged(event) {
+        console.log("Segment changed:", event);
         if (event.detail.value == "IndexLive") {
             this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/live"], { replaceUrl: true });
             this.cdRef.detectChanges();
@@ -194,6 +197,12 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             console.log("enter into diagram")
             /** Creates bug of being infinite forwarded betweeen live and diagram, if not relatively routed  */
             this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/diagram"]);
+            this.cdRef.detectChanges();
+        }
+        if (event.detail.value == "IndexCarbonFigure") {/**注意：该文件已废弃，组件在app-header.ts */
+            console.log("Enter into CarbonFigure")
+            /** Creates bug of being infinite forwarded betweeen live and carbonFigure, if not relatively routed  */
+            this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/carbonFigure"]);
             this.cdRef.detectChanges();
         }
     }

@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { environment } from "src/environments";
 import { ChangelogViewComponent } from "./changelog/view/view";
+import { CarbonFigureComponent } from "./edge/carbonFigure/carbonFigure.component";
 import { DiagramComponent } from "./edge/diagram/diagram.component";
 import { EdgeComponent } from "./edge/edge.component";
 import { OverviewComponent as AutarchyChartOverviewComponent } from "./edge/history/common/autarchy/overview/overview";
@@ -127,6 +128,12 @@ export const routes: Routes = [
           useClass: LiveDataService,
           provide: DataService,
         }], component: DiagramComponent,
+      },
+      {
+        path: "carbonFigure", providers: [{
+          useClass: HistoryDataService,
+          provide: DataService,
+        }], component: CarbonFigureComponent,
       },
 
       { path: "settings", data: { navbarTitleToBeTranslated: "Menu.edgeSettings" }, component: EdgeSettingsComponent },

@@ -21,7 +21,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
     public environment = environment;
     public backUrl: string | boolean = "/";
     public enableSideMenu: boolean;
-    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" = "Other";
+    public currentPage: "EdgeSettings" | "Other" | "IndexLive" | "IndexHistory" | "IndexDiagram" | "IndexCarbonFigure" = "Other";
     public isSystemLogEnabled: boolean = false;
 
     protected isHeaderAllowed: boolean = false;
@@ -123,7 +123,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
         const file = urlArray.pop();
 
         // disable backUrl for History & EdgeIndex Component ++ Enable Segment Navigation
-        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram" || file == "carbonFigure") && urlArray.length == 3) {
             this.backUrl = false;
             return;
         }
@@ -161,13 +161,15 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             file = urlArray[3];
         }
         // Enable Segment Navigation for Edge-Index-Page
-        if ((file == "history" || file == "live" || file == "diagram") && urlArray.length == 3) {
+        if ((file == "history" || file == "live" || file == "diagram" || file == "carbonFigure") && urlArray.length == 3) {
             if (file == "history") {
                 this.currentPage = "IndexHistory";
             } else if(file == "live") {
                 this.currentPage = "IndexLive";
-            } else {
+            } else  if(file == "diagram"){
                 this.currentPage = "IndexDiagram";
+            } else if(file == "carbonFigure") {
+                this.currentPage = "IndexCarbonFigure";
             }
         } else if (file == "settings" && urlArray.length > 1) {
             this.currentPage = "EdgeSettings";
@@ -190,9 +192,15 @@ export class AppHeaderComponent implements OnInit, OnDestroy, AfterViewChecked {
             this.cdRef.detectChanges();
         }
         if (event.detail.value == "IndexDiagram") {
-            console.log("enter into diagram")
+            console.log("Enter into Diagram")
             /** Creates bug of being infinite forwarded betweeen live and diagram, if not relatively routed  */
             this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/diagram"]);
+            this.cdRef.detectChanges();
+        }
+        if (event.detail.value == "IndexCarbonFigure") {/**注意：该文件已废弃，组件在app-header.ts */
+            console.log("Enter into CarbonFigure")
+            /** Creates bug of being infinite forwarded betweeen live and carbonFigure, if not relatively routed  */
+            this.router.navigate(["/device/" + this.service.currentEdge.value.id + "/carbonFigure"]);
             this.cdRef.detectChanges();
         }
     }

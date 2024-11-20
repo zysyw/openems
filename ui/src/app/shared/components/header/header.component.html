@@ -9,7 +9,7 @@
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
     <!-- page title is shown if the current page isn't Live nor History -->
-    <ion-title *ngIf="currentPage !== 'IndexLive' && currentPage !== 'IndexHistory' && currentPage !== 'IndexDiagram'" class="ion-hide-md-up"
+    <ion-title *ngIf="currentPage !== 'IndexLive' && currentPage !== 'IndexHistory' && currentPage !== 'IndexDiagram' && currentPage !== 'IndexCarbonFigure'" class="ion-hide-md-up"
       slot="start">
       {{ service.currentPageTitle }}
     </ion-title>
@@ -18,7 +18,7 @@
       {{ service.currentPageTitle }}
     </ion-title>
     <ng-container *ngIf="service.currentEdge | async as edge">
-      <ng-container *ngIf="currentPage === 'IndexLive' || currentPage === 'IndexHistory' || currentPage === 'IndexDiagram'">
+      <ng-container *ngIf="currentPage === 'IndexLive' || currentPage === 'IndexHistory' || currentPage === 'IndexDiagram' || currentPage === 'IndexCarbonFigure'">
         <ion-segment mode="md" (ionChange)="segmentChanged($event)" [(ngModel)]="currentPage"
           class="ion-justify-content-center">
           <ion-segment-button value="IndexDiagram">
@@ -29,6 +29,9 @@
           </ion-segment-button>
           <ion-segment-button value="IndexHistory">
             <ion-label translate>General.HISTORY</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="IndexCarbonFigure">
+            <ion-label>低碳指标</ion-label><!-- 应采用General.CARBONFIGURE，暂未修改 -->
           </ion-segment-button>
         </ion-segment>
       </ng-container>
@@ -41,7 +44,7 @@
         <ng-container *ngIf="edge.currentData | async as currentData">
           <ng-container *ngIf="currentData.summary.system as sum">
             <ion-button (click)="presentSingleStatusModal()"
-              *ngIf="(currentPage === 'IndexLive' || currentPage === 'IndexHistory' || currentPage === 'IndexDiagram' || currentPage === 'EdgeSettings') && sum.state !== null"
+              *ngIf="(currentPage === 'IndexLive' || currentPage === 'IndexHistory' || currentPage === 'IndexDiagram' || currentPage === 'IndexCarbonFigure' || currentPage === 'EdgeSettings') && sum.state !== null"
               color="light" fill="solid" shape="round">
               <ng-container [ngSwitch]="sum.state">
                 <ion-icon *ngSwitchCase="0" color="success" name="checkmark-circle-outline"></ion-icon>
