@@ -40,7 +40,7 @@
       5TA 1250kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">5TA <tspan x="4.1" dy="1.2em" class="st5">1250kVA</tspan></text>
+    <text x="108.21" y="581.08" class="st4">5TA <tspan x="94.1" dy="1.2em" class="st5">1250kVA</tspan></text>
   </g>
   <path d="M0 595.28h206.52" class="st6" transform="translate(552.351 -262.018)" id="shape151-55"/>
   <path d="M7.09 595.28v-29.79" class="st6" transform="translate(561.543 -183.804)" id="shape154-58"/>
@@ -50,14 +50,14 @@
       6TA 630kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">6TA <tspan x="7.62" dy="1.2em" class="st5">630kVA</tspan></text>
+    <text x="108.21" y="581.08" class="st4">6TA <tspan x="94.1" dy="1.2em" class="st5">630kVA</tspan></text>
   </g>
   <g id="shape168-68" transform="translate(950.583 -365.591)">
     <desc>
       9TA 200kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">9TA <tspan x="7.62" dy="1.2em" class="st5">200kVA</tspan></text>
+    <text x="98.21" y="581.08" class="st4">9TA <tspan x="84.1" dy="1.2em" class="st5">200kVA</tspan></text>
   </g>
   <g id="shape169-72" transform="translate(698.74 -481.89)">
     <desc>
@@ -71,28 +71,28 @@
       1TA 1250kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">1TA <tspan x="4.1" dy="1.2em" class="st5">1250kVA</tspan></text>
+    <text x="98.21" y="581.08" class="st4">1TA <tspan x="84.1" dy="1.2em" class="st5">1250kVA</tspan></text>
   </g>
   <g id="shape173-79" transform="translate(1257.61 -365.591)">
     <desc>
       3TA 1250kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">3TA <tspan x="4.1" dy="1.2em" class="st5">1250kVA</tspan></text>
+    <text x="98.21" y="581.08" class="st4">3TA <tspan x="84.1" dy="1.2em" class="st5">1250kVA</tspan></text>
   </g>
   <g id="shape174-83" transform="translate(1516.28 -364.83)">
     <desc>
       2TA 1250kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">2TA <tspan x="4.1" dy="1.2em" class="st5">1250kVA</tspan></text>
+    <text x="108.21" y="581.08" class="st4">2TA <tspan x="94.1" dy="1.2em" class="st5">1250kVA</tspan></text>
   </g>
   <g id="shape175-87" transform="translate(1745.05 -365.591)">
     <desc>
       4TA 1250kVA
     </desc>
     <path class="st3" d="M0 575.276h57.575v20H0z"/>
-    <text x="18.21" y="581.08" class="st4">4TA <tspan x="4.1" dy="1.2em" class="st5">1250kVA</tspan></text>
+    <text x="108.21" y="581.08" class="st4">4TA <tspan x="94.1" dy="1.2em" class="st5">1250kVA</tspan></text>
   </g>
   <path d="M0 595.28h99.62" class="st6" transform="translate(1271.54 -261.869)" id="shape179-91"/>
   <path d="M0 595.28h95.84" class="st6" transform="translate(1765.11 -260.787)" id="shape185-94"/>
@@ -126,24 +126,26 @@
   </g>
   <path d="M7.09 595.28v-46.41" class="st6" transform="translate(833.392 -475.795)" id="shape206-127"/>
   <path d="m-7.04 595.28-.09-35.44" class="st6" transform="translate(847.386 -417.685)" id="shape209-130"/>
-  <path class="st12" id="meter121" transform="translate(1693.56 -453.118)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter121" transform="translate(1693.56 -453.118)">
+  <path class="st12" id="meter121" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M7.09 595.28v-45.74" class="st6" transform="translate(1692.29 -476.467)" id="shape211-135"/>
   <path d="M7.09 595.28v-34.54" class="st6" transform="translate(1692.15 -417.685)" id="shape212-138"/>
   <path d="M7.09 595.28v-46.41" class="st6" transform="translate(1221.96 -475.795)" id="shape214-141"/>
   <path d="m7.02 595.28.13-35.44" class="st6" transform="translate(1221.89 -417.685)" id="shape215-144"/>
   <g id="shape216-147" transform="translate(1563.31 -539.575)">
     <desc>
-      语音中心功率
+      储能电池功率
     </desc>
     <path class="st8" d="M0 561.26h311.811v34.016H0z"/>
-    <text x="4" y="583.67" class="st11">语音中心功率：</text>
+    <text x="4" y="583.67" class="st10">储能电池功率：</text>
   </g>
   <g id="shape217-150" transform="translate(1067.24 -539.575)">
     <desc>
-      能源机房功率
+      光伏发电功率
     </desc>
     <path class="st8" d="M0 561.26h311.811v34.016H0z"/>
-    <text x="4" y="583.67" class="st10">能源机房功率：</text>
+    <text x="4" y="583.67" class="st11">光伏发电功率：</text>
   </g>
   <path d="M7.09 595.28v-33.25" class="st6" transform="translate(638.395 -319.971)" id="shape221-153"/>
   <path d="m-7.05 595.28-.07-33.57" class="st6" transform="translate(652.6 -263.723)" id="shape222-156"/>
@@ -162,10 +164,26 @@
   <path d="M0 595.28h-45.35V561.4" class="st6" transform="translate(1347.87 -487.701)" id="shape245-195"/>
   <path d="M0 595.28h51.02V561.4" class="st6" transform="translate(1370.55 -487.701)" id="shape246-198"/>
   <path style="fill:#00b050;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:.75" id="shape244-201" transform="rotate(90 920.693 1022.457)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter112" transform="translate(1223.23 -453.118)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter111" transform="translate(834.662 -453.118)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter401" transform="translate(639.665 -297.294)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter402" transform="translate(874.938 -297.091)" d="M0 572.598h11.622v22.677H0z"/>
+
+<g id="group-meter112" transform="translate(1223.23 -453.118)">
+  <path class="st12" id="meter112" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter111" transform="translate(834.662 -453.118)">
+  <path class="st12" id="meter111" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter401" transform="translate(639.665 -297.294)">
+  <path class="st12" id="meter401" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter402" transform="translate(874.938 -297.091)">
+  <path class="st12" id="meter402" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
   <g id="shape146-211" transform="translate(557.008 -51.993)">
     <desc>
       离心式冷水机组L1
@@ -190,18 +208,41 @@
     <path class="st15" d="M5.315 507.77h12.047v43.2H5.315z"/>
     <text x="5.32" y="518.57" class="st16">排<tspan x="5.32" dy="1.2em" class="st5">污</tspan><tspan x="5.32" dy="1.2em" class="st5">泵</tspan></text>
   </g>
-  <path class="st12" id="meter431" transform="translate(1010.85 -215.433)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter404" transform="translate(1160.21 -297.091)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter405" transform="translate(1320.92 -297.091)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter407" transform="translate(1814.11 -297.091)" d="M0 572.598h11.622v22.677H0z"/>
-  <path class="st12" id="meter406" transform="translate(1585.84 -296.33)" d="M0 572.598h11.622v22.677H0z"/>
+
+<g id="group-meter431" transform="translate(1010.85 -215.433)">
+  <path class="st12" id="meter431" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+<g id="group-meter404" transform="translate(1160.21 -297.091)">
+  <path class="st12" id="meter404" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter405" transform="translate(1320.92 -297.091)">
+  <path class="st12" id="meter405" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter407" transform="translate(1814.11 -297.091)">
+  <path class="st12" id="meter407" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
+
+<g id="group-meter406" transform="translate(1585.84 -296.33)">
+  <path class="st12" id="meter406" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+
   <path d="M0 595.28h108.53" class="st6" transform="translate(1103.08 -262.466)" id="shape247-248"/>
   <path d="M0 595.28h222.72" class="st6" transform="translate(1477.26 -260.787)" id="shape254-251"/>
   <path d="M-7.09 595.28v-25.69" class="st6" transform="translate(576 -235.276)" id="shape260-254"/>
-  <path class="st12" id="meter411" transform="translate(563.102 -212.598)" d="M0 572.598h11.622v22.677H0z"/>
+<g id="group-meter411" transform="translate(563.102 -212.598)">
+  <path class="st12" id="meter411" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M7.09 595.28v-29.79" class="st6" transform="translate(651.662 -184.252)" id="shape261-259"/>
   <path d="M-7.09 595.28v-25.69" class="st6" transform="translate(666.118 -235.723)" id="shape262-262"/>
-  <path class="st12" id="meter412" transform="translate(653.221 -213.046)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter412" transform="translate(653.221 -213.046)">
+  <path class="st12" id="meter412" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape157-267" transform="translate(647.693 -51.71)">
     <desc>
       卫生热水用热泵机组
@@ -212,7 +253,9 @@
   </g>
   <path d="M7.09 595.28v-31.31" class="st6" transform="translate(737.008 -183.804)" id="shape264-279"/>
   <path d="M7.09 595.28v-26.26" class="st6" transform="translate(737.008 -235.723)" id="shape265-282"/>
-  <path class="st12" id="meter413" transform="translate(738.284 -213.046)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter413" transform="translate(738.284 -213.046)">
+  <path class="st12" id="meter413" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape152-287" transform="translate(732.756 -51.993)">
     <desc>
       水泵
@@ -223,7 +266,9 @@
   </g>
   <path d="M7.09 595.28v-31.31" class="st6" transform="translate(830.551 -184.033)" id="shape267-292"/>
   <path d="M-7.09 595.28v-25.85" class="st6" transform="translate(844.724 -235.952)" id="shape268-295"/>
-  <path class="st12" id="meter421" transform="translate(831.827 -213.275)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter421" transform="translate(831.827 -213.275)">
+  <path class="st12" id="meter421" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape163-300" transform="translate(826.299 -51.993)">
     <desc>
       离心式冷水机组L2
@@ -234,10 +279,14 @@
   </g>
   <path d="M7.09 595.28v-31.31" class="st6" transform="translate(923.807 -184.033)" id="shape270-311"/>
   <path d="M7.09 595.28V569.5" class="st6" transform="translate(923.807 -235.952)" id="shape271-314"/>
-  <path class="st12" id="meter422" transform="translate(925.082 -213.275)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter422" transform="translate(925.082 -213.275)">
+  <path class="st12" id="meter422" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1111.18 -181.995)" id="shape273-319"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1125.35 -235.374)" id="shape274-322"/>
-  <path class="st12" id="meter441" transform="translate(1112.46 -212.696)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter441" transform="translate(1112.46 -212.696)">
+  <path class="st12" id="meter441" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape171-327" transform="translate(1106.93 -50.184)">
     <desc>
       一二三区办公负荷
@@ -248,7 +297,10 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1190.49 -182.91)" id="shape276-338"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1204.67 -236.288)" id="shape277-341"/>
-  <path class="st12" id="meter442" transform="translate(1191.77 -213.611)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter442" transform="translate(1191.77 -213.611)">
+  <path class="st12" id="meter442" d="M0 572.598h11.622v22.677H0z"/>
+</g>
+修改点说
   <g id="shape250-346" transform="translate(1186.3 -50.184)">
     <desc>
       屋顶光伏
@@ -259,7 +311,9 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1272.76 -181.966)" id="shape279-353"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1286.93 -235.344)" id="shape280-356"/>
-  <path class="st12" id="meter451" transform="translate(1274.03 -212.667)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter451" transform="translate(1274.03 -212.667)">
+  <path class="st12" id="meter451" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape180-361" transform="translate(1268.5 -51.844)">
     <desc>
       数据中心精密空调
@@ -270,7 +324,9 @@
   </g>
   <path d="M7.09 595.28V566.9" class="st6" transform="translate(1352.13 -183.655)" id="shape282-372"/>
   <path d="M7.09 595.28V569.9" class="st6" transform="translate(1352.13 -235.344)" id="shape283-375"/>
-  <path class="st12" id="meter452" transform="translate(1353.4 -212.667)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter452" transform="translate(1353.4 -212.667)">
+  <path class="st12" id="meter452" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape181-380" transform="translate(1347.87 -51.844)">
     <desc>
       数据中心U P S
@@ -281,7 +337,9 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1433.2 -143.317)" id="shape285-390"/>
   <path d="M7.06 595.28v-10.16h.06v-12.11" class="st6" transform="translate(1433.23 -182.965)" id="shape286-393"/>
-  <path class="st12" id="meter4611" transform="translate(1434.47 -160.288)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter4611" transform="translate(1434.47 -160.288)">
+  <path class="st12" id="meter4611" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape253-398" transform="translate(1430.08 -51.471)">
     <desc>
       充电桩
@@ -292,7 +350,9 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1510.11 -143.191)" id="shape419-404"/>
   <path d="M7.09 595.28v-21.26" class="st6" transform="translate(1510.11 -182.839)" id="shape420-407"/>
-  <path class="st12" id="meter4612" transform="translate(1511.38 -160.162)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter4612" transform="translate(1511.38 -160.162)">
+  <path class="st12" id="meter4612" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape252-412" transform="translate(1506.61 -51.345)">
     <desc>
       车棚光伏
@@ -303,10 +363,14 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1586.83 -143.504)" id="shape422-419"/>
   <path d="M7.09 595.28V573.2" class="st6" transform="translate(1586.83 -183.152)" id="shape423-422"/>
-  <path class="st12" id="meter4613" transform="translate(1588.1 -160.475)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter4613" transform="translate(1588.1 -160.475)">
+  <path class="st12" id="meter4613" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1672.61 -181.641)" id="shape425-427"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1686.79 -235.019)" id="shape426-430"/>
-  <path class="st12" id="meter462" transform="translate(1673.89 -212.342)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter462" transform="translate(1673.89 -212.342)">
+  <path class="st12" id="meter462" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape251-435" transform="translate(1583.15 -51.471)">
     <desc>
       储能
@@ -325,10 +389,14 @@
   </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1765.84 -181.744)" id="shape428-450"/>
   <path d="M7.09 595.28v-25.34" class="st6" transform="translate(1765.84 -235.122)" id="shape429-453"/>
-  <path class="st12" id="meter471" transform="translate(1767.12 -212.445)" d="M0 572.598h11.622v22.677H0z"/>
+ <g id="group-meter471" transform="translate(1767.12 -212.445)">
+  <path class="st12" id="meter471" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1840.11 -181.417)" id="shape431-458"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1854.28 -234.796)" id="shape432-461"/>
-  <path class="st12" id="meter472" transform="translate(1841.39 -212.118)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter472" transform="translate(1841.39 -212.118)">
+  <path class="st12" id="meter472" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <g id="shape186-466" transform="translate(1761.73 -51.471)">
     <desc>
       照明
@@ -348,7 +416,11 @@
   <path d="M0 595.28h174.13" class="st6" transform="translate(1431.09 -205.232)" id="shape435-476"/>
   <path d="M7.09 595.28V581" class="st6" transform="translate(1509.87 -246.278)" id="shape437-479"/>
   <path d="M7.09 595.28V578.2" class="st6" transform="translate(1510.12 -206.236)" id="shape438-482"/>
-  <path class="st12" id="meter461" transform="translate(1511.15 -223.601)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter461" transform="translate(1511.15 -223.601)">
+  <path class="st12" id="meter461" d="M0 572.598h11.622v22.677H0z"/>
+</g>
   <path d="M0 595.28h26.87" class="st6" transform="translate(1003.4 -262.205)" id="shape440-487"/>
-  <path class="st12" id="meter403" transform="translate(1010.85 -297.091)" d="M0 572.598h11.622v22.677H0z"/>
+  <g id="group-meter403" transform="translate(1010.85 -297.091)">
+  <path class="st12" id="meter403" d="M0 572.598h11.622v22.677H0z"/>
+</g>
 </svg>
