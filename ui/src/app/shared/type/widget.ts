@@ -7,6 +7,8 @@ export enum WidgetClass {
     "Energymonitor",
     "Common_Autarchy",
     "Common_Selfconsumption",
+    "Common_CarbonEmissionIntensity",    
+    "Common_EnergyEfficiency",
     "Storage",
     "Grid",
     "Common_Production",
@@ -97,6 +99,8 @@ export class Widgets {
                         return config.hasMeter();
                     case "Energymonitor":
                     case "Consumption":
+                    case "Common_EnergyEfficiency":
+                    case "Common_CarbonEmissionIntensity":
                         if (config.hasMeter() == true || config.hasProducer() == true || config.hasStorage() == true) {
                             return true;
                         } else {

@@ -45,12 +45,38 @@ public class SubtractChannelManager extends AbstractChannelListenerManager {
 
 		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_POWER,
 				SymmetricEss.ChannelId.ACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_POWER_L1,
+				SymmetricEss.ChannelId.ACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_POWER_L2,
+				SymmetricEss.ChannelId.ACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_POWER_L3,
+				SymmetricEss.ChannelId.ACTIVE_POWER);
+		
 		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.REACTIVE_POWER,
+				SymmetricEss.ChannelId.REACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.REACTIVE_POWER_L1,
+				SymmetricEss.ChannelId.REACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.REACTIVE_POWER_L2,
+				SymmetricEss.ChannelId.REACTIVE_POWER);
+		this.activateSubtractInteger(minuend, subtrahends, ElectricityMeter.ChannelId.REACTIVE_POWER_L3,
 				SymmetricEss.ChannelId.REACTIVE_POWER);
 
 		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_CONSUMPTION_ENERGY,
 				SymmetricEss.ChannelId.ACTIVE_CHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_CONSUMPTION_ENERGY_L1,
+				SymmetricEss.ChannelId.ACTIVE_CHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_CONSUMPTION_ENERGY_L2,
+				SymmetricEss.ChannelId.ACTIVE_CHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_CONSUMPTION_ENERGY_L3,
+				SymmetricEss.ChannelId.ACTIVE_CHARGE_ENERGY);
+		
 		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_PRODUCTION_ENERGY,
+				SymmetricEss.ChannelId.ACTIVE_DISCHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_PRODUCTION_ENERGY_L1,
+				SymmetricEss.ChannelId.ACTIVE_DISCHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_PRODUCTION_ENERGY_L2,
+				SymmetricEss.ChannelId.ACTIVE_DISCHARGE_ENERGY);
+		this.activateSubtractLong(minuend, subtrahends, ElectricityMeter.ChannelId.ACTIVE_PRODUCTION_ENERGY_L3,
 				SymmetricEss.ChannelId.ACTIVE_DISCHARGE_ENERGY);
 	}
 
@@ -65,7 +91,11 @@ public class SubtractChannelManager extends AbstractChannelListenerManager {
 					subtrahendsSum = TypeUtils.sum(subtrahendsSum, channel.getNextValue().get());
 				} else if (subtrahend instanceof SymmetricEss) {
 					IntegerReadChannel channel = ((SymmetricEss) subtrahend).channel(essChannelId);
-					subtrahendsSum = TypeUtils.sum(subtrahendsSum, channel.getNextValue().get());
+					Integer value = channel.getNextValue().get();
+	                if (meterChannelId.name().contains("_L")) {
+	                    value = value / 3; // Divide by 3 for phase-specific power
+	                }
+					subtrahendsSum = TypeUtils.sum(subtrahendsSum, value);
 				}
 			}
 
@@ -77,7 +107,11 @@ public class SubtractChannelManager extends AbstractChannelListenerManager {
 				minuendValue = channel.getNextValue().get();
 			} else if (minuend instanceof SymmetricEss) {
 				IntegerReadChannel channel = ((SymmetricEss) minuend).channel(essChannelId);
-				minuendValue = channel.getNextValue().get();
+				Integer value = channel.getNextValue().get();
+				if (meterChannelId.name().contains("_L")) {
+					value = value / 3; // Divide by 3 for phase-specific power
+                }
+				minuendValue = value;
 			} else {
 				// should not happen
 				minuendValue = null;
@@ -127,7 +161,11 @@ public class SubtractChannelManager extends AbstractChannelListenerManager {
 				result = channel.getNextValue().get();
 			} else if (minuend instanceof SymmetricEss) {
 				LongReadChannel channel = ((SymmetricEss) minuend).channel(essChannelId);
-				result = channel.getNextValue().get();
+				Long value = channel.getNextValue().get();
+                if (meterChannelId.name().contains("_L")) {
+                    value = value / 3; // Divide by 3 for phase-specific power
+                }
+				result = value;
 			}
 
 			// Subtrahends
@@ -137,7 +175,11 @@ public class SubtractChannelManager extends AbstractChannelListenerManager {
 					result = TypeUtils.subtract(result, channel.getNextValue().get());
 				} else if (subtrahend instanceof SymmetricEss) {
 					LongReadChannel channel = ((SymmetricEss) subtrahend).channel(essChannelId);
-					result = TypeUtils.subtract(result, channel.getNextValue().get());
+					Long value = channel.getNextValue().get();
+	                if (meterChannelId.name().contains("_L")) {
+	                    value = value / 3; // Divide by 3 for phase-specific power
+	                }
+					result = TypeUtils.subtract(result, value);
 				}
 			}
 

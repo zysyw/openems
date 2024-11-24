@@ -271,12 +271,14 @@ export class Utils {
       return "-";
     }
     const thisValue: number = (value / 1000);
-
+    /*
     if (thisValue >= 0) {
       return formatNumber(thisValue, "de", "1.0-1") + " kW";
     } else {
       return "0 kW";
     }
+    */
+    return formatNumber(thisValue, "en", "1.0-1") + " kW";
   };
 
   /**
@@ -463,7 +465,7 @@ export class Utils {
     saveAs(data, filename + ".xlsx");
   }
 
-  /*
+  /**
   * Calculate the Self-Consumption rate.
   *
   * @param sellToGrid the Sell-To-Grid power (i.e. the inverted GridActivePower)
@@ -493,6 +495,53 @@ export class Utils {
   }
 
   /**
+  * Calculate the Energy Efficiency.
+  *
+  * @param consumptionMetersSumOfEnergy the Consumption Power (ConsumptionActivePower)
+  * @param area  the Building Area
+  * @returns  the Energy Efficiency
+  */
+  public static calculateEnergyEfficiency(consumptionMetersSumOfEnergy: number, area: number): number | null {
+    if (consumptionMetersSumOfEnergy == null) {
+      return null;
+    }
+
+    if (consumptionMetersSumOfEnergy <= 0) {
+      /*  */
+      return 0;
+    }
+
+    // Energy Efficiency
+    let result = (consumptionMetersSumOfEnergy / area);
+
+    return result;
+  }
+
+  /**
+    * Calculate the Carbon Emission Intensity.
+    *
+    * @param consumptionEnergyperYear the Consumption Energy during a year
+    * @param CarbonEmissionFactor  the Factor of Carbon Emission. in China, it's equal to 0.581 kg/kWh.
+    * @param area  the Building Area
+    * @returns  the Carbon Emission Intensity
+    */
+  public static calculateCarbonEmissionIntensity(consumptionEnergyperYear: number,CarbonEmissionFactor: number, area: number): number | null {
+    if (consumptionEnergyperYear == null) {
+      return null;
+    }
+
+    if (consumptionEnergyperYear <= 0) {
+      /*  */
+      return 0;
+    }
+
+    // Energy Efficiency
+    let result = (consumptionEnergyperYear * CarbonEmissionFactor / area);
+
+    return result;
+  }
+
+  /**
    * Calculate the Autarchy Rate
    *
    * @param buyFromGrid the Buy-From-Grid power (GridActivePower)
@@ -509,6 +558,50 @@ export class Utils {
         /* max 100 */ Math.min(100,
           /* calculate autarchy */(1 - buyFromGrid / consumptionActivePower) * 100,
         ));
+      }
+
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Calculate the Carbon Emission Intensity Level
+   *
+   * @param EnergyCarbonEmissionIntensity the actual Carbon Emission Intensity of the building
+   * @param expectedCarbonEmissionIntensity the Expected Carbon Emission Intensity of the building
+   * @returns the Energy Efficiency Level
+   */
+  public static calculateCarbonEmissionIntensityLevel(EnergyCarbonEmissionIntensity: number, expectedCarbonEmissionIntensity: number): number | null {
+    if (EnergyCarbonEmissionIntensity != null && expectedCarbonEmissionIntensity != null) {
+      if (expectedCarbonEmissionIntensity <= 0) {
+        /* avoid divide by zero; expectedCarbonEmissionIntensity == 0 -> CarbonEmissionIntensityLevel 0 % */
+        return 0;
+      } else {
+        return /* min 0 */ Math.max(0,
+        (EnergyCarbonEmissionIntensity / expectedCarbonEmissionIntensity) * 100,);
+      }
+
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Calculate the Energy Efficiency Level
+   *
+   * @param EnergyEfficiency the actual Energy Efficiency of the building
+   * @param StandardEnergyEfficiency the Standard Energy Efficiency of this kind of the building
+   * @returns the Energy Efficiency Level
+   */
+  public static calculateEnergyEfficiencyLevel(EnergyEfficiency: number, StandardEnergyEfficiency: number): number | null {
+    if (EnergyEfficiency != null && StandardEnergyEfficiency != null) {
+      if (StandardEnergyEfficiency <= 0) {
+        /* avoid divide by zero; StandardEnergyEfficiency == 0 -> EnergyEfficiencyLevel 0 % */
+        return 0;
+      } else {
+        return /* min 0 */ Math.max(0,
+        (EnergyEfficiency / StandardEnergyEfficiency) * 100,);
       }
 
     } else {

@@ -43,6 +43,8 @@ import { Evcs_Api_ClusterComponent } from "./Multiple/Evcs_Api_Cluster/Evcs_Api_
 import { EvcsChartComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcs-chart/evcs.chart";
 import { Evcs_Api_ClusterModalComponent } from "./Multiple/Evcs_Api_Cluster/modal/evcsCluster-modal.page";
 import { MetersTree } from "./Simulator/meters/MeterTree.module";
+import { Common_EnergyEfficiency } from "./common/energyefficiency/Common_EnergyEfficiency";
+import { Common_CarbonEmissionIntensity } from "./common/carbonemissionintensity/Common_EnergyEfficiency";
 
 @NgModule({
   imports: [
@@ -53,6 +55,8 @@ import { MetersTree } from "./Simulator/meters/MeterTree.module";
     Common_Grid,
     Common_Production,
     Common_Selfconsumption,
+    Common_EnergyEfficiency,
+    Common_CarbonEmissionIntensity,
     Controller_Api_ModbusTcp,
     Controller_Ess_FixActivePower,
     Controller_Ess_GridOptimizedCharge,
