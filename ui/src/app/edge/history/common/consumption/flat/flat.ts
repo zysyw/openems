@@ -29,7 +29,7 @@ export class FlatComponent extends AbstractFlatWidget {
             .filter(component => component.isEnabled && this.config.isTypeConsumptionMetered(component)
                 && !this.config.getNatureIdsByFactoryId(component.factoryId).includes("io.openems.edge.evcs.api.Evcs"));
         this.consumptionMeterComponents.forEach((component) => {
-            channels.push(new ChannelAddress(component.id, "ActiveProductionEnergy"));
+            channels.push(new ChannelAddress(component.id, "ActiveProductionEnergy")); /**这里为什么不用ActiveConsumptionEnergy？ */
         });
 
         return channels;

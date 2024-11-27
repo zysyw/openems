@@ -13,6 +13,8 @@ import { OverviewComponent as GridChartOverviewComponent } from "./edge/history/
 import { DetailsOverviewComponent } from "./edge/history/common/production/details/details.overview";
 import { OverviewComponent as ProductionChartOverviewComponent } from "./edge/history/common/production/overview/overview";
 import { OverviewComponent as SelfconsumptionChartOverviewComponent } from "./edge/history/common/selfconsumption/overview/overview";
+import { OverviewComponent as EnergyEfficiencyChartOverviewComponent } from "./edge/history/common/energyefficiency/overview/overview";
+import { OverviewComponent as CarbonEmissionIntensityChartOverviewComponent } from "./edge/history/common/carbonemissionintensity/overview/overview";
 import { OverviewComponent as ChannelthresholdChartOverviewComponent } from "./edge/history/Controller/ChannelThreshold/overview/overview";
 import { OverviewComponent as GridOptimizedChargeChartOverviewComponent } from "./edge/history/Controller/Ess/GridoptimizedCharge/overview/overview";
 import { OverviewComponent as TimeOfUseTariffOverviewComponent } from "./edge/history/Controller/Ess/TimeOfUseTariff/overview/overview";
@@ -110,6 +112,8 @@ export const routes: Routes = [
           { path: "productionchart/:componentId", component: DetailsOverviewComponent },
           { path: "productionchart/:componentId/currentVoltage", component: CurrentAndVoltageOverviewComponent },
           { path: "selfconsumptionchart", component: SelfconsumptionChartOverviewComponent },
+          { path: "energyefficiencychart", component: EnergyEfficiencyChartOverviewComponent },
+          { path: "carbonemissionintensitychart", component: CarbonEmissionIntensityChartOverviewComponent },
           { path: "storagechart", component: StorageChartOverviewComponent },
 
           // Controllers

@@ -5,6 +5,8 @@ import { CommonEnergyMonitor } from "./energy/energy";
 import { Common_Grid } from "./grid/grid";
 import { Common_Production } from "./production/production";
 import { Common_Selfconsumption } from "./selfconsumption/SelfConsumption";
+import { Common_EnergyEfficiency } from "./energyefficiency/EnergyEfficiency";
+import { Common_CarbonEmissionIntensity } from "./carbonemissionintensity/EnergyEfficiency";
 
 @NgModule({
   imports: [
@@ -14,6 +16,8 @@ import { Common_Selfconsumption } from "./selfconsumption/SelfConsumption";
     Common_Grid,
     Common_Production,
     Common_Selfconsumption,
+    Common_EnergyEfficiency,
+    Common_CarbonEmissionIntensity,
   ],
   exports: [
     Common_Autarchy,
@@ -22,6 +26,8 @@ import { Common_Selfconsumption } from "./selfconsumption/SelfConsumption";
     Common_Grid,
     Common_Production,
     Common_Selfconsumption,
+    Common_EnergyEfficiency,
+    Common_CarbonEmissionIntensity,
   ],
 })
 export class Common { }

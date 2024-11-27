@@ -25,7 +25,7 @@ export class FlatComponent extends AbstractFlatWidget {
     protected override getChannelAddresses() {
       return [
         new ChannelAddress("_sum", "ConsumptionActivePower"),
-    ];
+      ];
     }
 
     protected override onCurrentData(currentData: CurrentData) {

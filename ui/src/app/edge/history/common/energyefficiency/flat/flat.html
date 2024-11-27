@@ -1,0 +1,5 @@
+<oe-flat-widget [title]="'能效水平'" [icon]="{name: 'oe-consumption', color:'environmental'}"
+    button routerLink="/device/{{edge.id}}/history/energyefficiencychart" *ngIf="isInitialized">
+    <oe-flat-widget-percentagebar [value]="calculatedEnergyEfficiencyLevel">
+    </oe-flat-widget-percentagebar>
+</oe-flat-widget>
