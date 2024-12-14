@@ -24,20 +24,15 @@ export class FlatComponent extends AbstractFlatWidget {
 
     protected override getChannelAddresses() {
       return [
-        new ChannelAddress("_sum", "ConsumptionActivePower"),
+        new ChannelAddress("_sum", "GridActivePower"),
       ];
     }
 
     protected override onCurrentData(currentData: CurrentData) {
-      let consumptionActivePower: number = 0;
-      consumptionActivePower += currentData.allComponents["_sum/ConsumptionActivePower"];
-      this.calculatedCarbonEmissionIntensity = Utils.calculateCarbonEmissionIntensity(
-          consumptionActivePower / 1000 * 8760, /**按平均功率计算年kWh，1年8760小时*/
-          0.581,/*碳排放因子 */
-          77024,/*用友建筑面积 */
-      );
-      this.calculatedCarbonEmissionIntensityLevel = Utils.calculateCarbonEmissionIntensityLevel(
-        this.calculatedCarbonEmissionIntensity, 
+      this.calculatedCarbonEmissionIntensityLevel = Utils.calculateBuildingCarbonEmissionIntensityLevel(
+        currentData.allComponents["_sum/GridActivePower"] / 1000 * 8760, /**按平均功率计算年kWh，1年8760小时*/
+        0.581,/*碳排放因子 */
+        77024,/*用友建筑面积 */
         18, /*按18kgCO2每平米每年计算 */
       );
     }

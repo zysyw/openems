@@ -502,7 +502,7 @@ export class Utils {
   * @returns  the Energy Efficiency
   */
   public static calculateEnergyEfficiency(consumptionMetersSumOfEnergy: number, area: number): number | null {
-    if (consumptionMetersSumOfEnergy == null) {
+    if (consumptionMetersSumOfEnergy == null || area == null) {
       return null;
     }
 
@@ -569,17 +569,17 @@ export class Utils {
    * Calculate the Carbon Emission Intensity Level
    *
    * @param EnergyCarbonEmissionIntensity the actual Carbon Emission Intensity of the building
-   * @param expectedCarbonEmissionIntensity the Expected Carbon Emission Intensity of the building
-   * @returns the Energy Efficiency Level
+   * @param StandardCarbonEmissionIntensity the Expected Carbon Emission Intensity of the building
+   * @returns the Carbon Emission Intensity
    */
-  public static calculateCarbonEmissionIntensityLevel(EnergyCarbonEmissionIntensity: number, expectedCarbonEmissionIntensity: number): number | null {
-    if (EnergyCarbonEmissionIntensity != null && expectedCarbonEmissionIntensity != null) {
-      if (expectedCarbonEmissionIntensity <= 0) {
+  public static calculateCarbonEmissionIntensityLevel(EnergyCarbonEmissionIntensity: number, StandardCarbonEmissionIntensity: number): number | null {
+    if (EnergyCarbonEmissionIntensity != null && StandardCarbonEmissionIntensity != null) {
+      if (StandardCarbonEmissionIntensity <= 0) {
         /* avoid divide by zero; expectedCarbonEmissionIntensity == 0 -> CarbonEmissionIntensityLevel 0 % */
         return 0;
       } else {
         return /* min 0 */ Math.max(0,
-        (EnergyCarbonEmissionIntensity / expectedCarbonEmissionIntensity) * 100,);
+        (EnergyCarbonEmissionIntensity / StandardCarbonEmissionIntensity) * 100,);
       }
 
     } else {
@@ -608,6 +608,67 @@ export class Utils {
       return null;
     }
   }
+
+  /**
+   * Calculate the Energy Efficiency Level of the building
+   *
+   * @param consumptionMetersSumOfActiveConsumptionEnergy the sum of the Energy in the building
+   * @param buildingArea  the Building Area
+   * @param StandardEnergyEfficiency the Standard Energy Efficiency of this kind of the building
+   * @returns the Energy Efficiency Level
+   */
+  public static calculateBuildingEnergyEfficiencLevel(
+      consumptionMetersSumOfActiveConsumptionEnergy: number,
+      buildingArea: number,
+      standardEnergyConsumption: number
+    ): number {
+        // 计算能效值
+        const calculatedEnergyEfficiency: number = Utils.calculateEnergyEfficiency(
+            consumptionMetersSumOfActiveConsumptionEnergy,
+            buildingArea
+        );
+
+        // 根据标准计算能效等级
+        const calculatedEnergyEfficiencyLevel: number = Utils.calculateEnergyEfficiencyLevel(
+            calculatedEnergyEfficiency,
+            standardEnergyConsumption
+        );
+
+        // 返回能效等级
+        return calculatedEnergyEfficiencyLevel;
+      }
+
+  /**
+   * Calculate the Energy Efficiency Level of the building
+   *
+   * @param GridBuyEnergy the Energy from Grid
+   * @param CarbonEmissionFactor  the Factor of Carbon Emission. in China, it's equal to 0.581 kg/kWh.
+   * @param buildingArea  the Building Area
+   * @param StandardCarbonEmissionIntensity the Standard Carbon Emission Intensity of the building
+   * @returns the Carbon Emission Intensity
+   */
+  public static calculateBuildingCarbonEmissionIntensityLevel(
+    GridBuyEnergy: number,
+    CarbonEmissionFactor: number,
+    buildingArea: number,
+    StandardCarbonEmissionIntensity: number
+  ): number {
+      // 计算碳排放值
+      const calculatedCarbonEmissionIntensity: number = Utils.calculateCarbonEmissionIntensity(
+        GridBuyEnergy,
+        CarbonEmissionFactor,
+        buildingArea
+      );
+
+      // 根据标准计算碳排放等级
+      const calculatedCarbonEmissionIntensityLevel: number = Utils.calculateEnergyEfficiencyLevel(
+          calculatedCarbonEmissionIntensity,
+          StandardCarbonEmissionIntensity
+      );
+
+      // 返回碳排放等级
+      return calculatedCarbonEmissionIntensityLevel;
+    }
 
   /**
    * Rounds values between 0 and -1kW to 0

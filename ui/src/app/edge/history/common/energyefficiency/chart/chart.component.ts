@@ -12,30 +12,31 @@ import { ChannelAddress } from "src/app/shared/shared";
 export class ChartComponent extends AbstractHistoryChart {
 
     protected override getChartData(): HistoryUtils.ChartData {
-        this.spinnerId = "selfconsumption-chart";
+        this.spinnerId = "energyefficiency-chart";
         return {
             input:
                 [{
-                    name: "GridSell",
-                    powerChannel: ChannelAddress.fromString("_sum/GridActivePower"),
-                    energyChannel: ChannelAddress.fromString("_sum/GridSellActiveEnergy"),
-                    ...(this.chartType === "line" && { converter: HistoryUtils.ValueConverter.POSITIVE_AS_ZERO_AND_INVERT_NEGATIVE }),
+                name: "Consumption",
+                powerChannel: ChannelAddress.fromString("_sum/ConsumptionActivePower"),
+                energyChannel: ChannelAddress.fromString("_sum/ConsumptionActiveEnergy"),
                 },
-                {
-                    name: "ProductionActivePower",
-                    powerChannel: ChannelAddress.fromString("_sum/ProductionActivePower"),
-                    energyChannel: ChannelAddress.fromString("_sum/ProductionActiveEnergy"),
-                }],
+                ],
             output: (data: HistoryUtils.ChannelData) => {
                 return [{
-                    name: this.translate.instant("General.selfConsumption"),
+                    name: "能效水平",
                     nameSuffix: (energyValues: QueryHistoricTimeseriesEnergyResponse) => {
-                        return Utils.calculateSelfConsumption(energyValues?.result.data["_sum/GridSellActiveEnergy"] ?? null, energyValues?.result.data["_sum/ProductionActiveEnergy"] ?? null);
+                        return Utils.calculateBuildingEnergyEfficiencLevel((energyValues?.result.data["_sum/ConsumptionActiveEnergy"] ?? null) /1000,
+                            77024,/*用友建筑面积 */
+                            53/*按《建筑节能与可再生能源利用通用规范》GB55015-2021续表A.0.2，夏热冬冷地区标准能耗按53kWh每年每平米计算*/
+                        );
                     },
                     converter: () => {
-                        return data["GridSell"]
+                        return data["Consumption"]
                             ?.map((value, index) =>
-                                Utils.calculateSelfConsumption(value, data["ProductionActivePower"][index]),
+                                Utils.calculateBuildingEnergyEfficiencLevel(value,
+                                    77024,/*用友建筑面积 */
+                                    53/*按《建筑节能与可再生能源利用通用规范》GB55015-2021续表A.0.2，夏热冬冷地区标准能耗按53kWh每年每平米计算*/
+                                )
                             );
                     },
                     color: "rgb(253,197,7)",

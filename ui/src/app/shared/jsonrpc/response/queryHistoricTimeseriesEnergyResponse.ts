@@ -27,4 +27,18 @@ export class QueryHistoricTimeseriesEnergyResponse extends JsonrpcResponseSucces
     ) {
         super(id, result);
     }
+    
+    /**
+     * Prints the result to the console in a formatted way.
+     */
+    public printResult(): void {
+        console.log("QueryHistoricTimeseriesEnergyResponse:");
+        console.log("ID:", this.id);
+
+        console.log("Data:");
+        for (const [channelAddress, values] of Object.entries(this.result.data)) {
+            console.log(`  Channel: ${channelAddress}`);
+            console.log("  Values:", values);
+        }
+    }
 }

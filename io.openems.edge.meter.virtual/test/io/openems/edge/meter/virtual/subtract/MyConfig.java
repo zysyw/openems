@@ -11,7 +11,7 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 		private String id;
 		private MeterType type;
 		private boolean addToSum;
-		private String minuendId;
+		private String[] minuendsIds;
 		private String[] subtrahendsIds;
 
 		private Builder() {
@@ -32,10 +32,10 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 			return this;
 		}
 
-		public Builder setMinuendId(String minuendId) {
-			this.minuendId = minuendId;
-			return this;
-		}
+		public Builder setMinuendsIds(String... minuendsIds) {
+            this.minuendsIds = minuendsIds;
+            return this;
+        }
 
 		public Builder setSubtrahendsIds(String... subtrahendsIds) {
 			this.subtrahendsIds = subtrahendsIds;
@@ -74,9 +74,9 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	}
 
 	@Override
-	public String minuend_id() {
-		return this.builder.minuendId;
-	}
+	public String[] minuends_ids() {
+        return this.builder.minuendsIds;
+    }
 
 	@Override
 	public String[] subtrahends_ids() {
@@ -84,8 +84,8 @@ public class MyConfig extends AbstractComponentConfig implements Config {
 	}
 
 	@Override
-	public String minuend_target() {
-		return ConfigUtils.generateReferenceTargetFilter(this.id(), this.minuend_id());
+	public String minuends_target() {
+		return ConfigUtils.generateReferenceTargetFilter(this.id(), this.minuends_ids());
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import { Service } from "../../service/service";
 import { Websocket } from "../../service/websocket";
 import { Converter } from "../shared/converter";
 import { DataService } from "../shared/dataservice";
+import { HistoryDataService } from "src/app/edge/history/historydataservice";
 
 @Directive()
 export abstract class AbstractFlatWidget implements OnInit, OnDestroy {
@@ -68,8 +69,11 @@ export abstract class AbstractFlatWidget implements OnInit, OnDestroy {
                 this.dataService.currentValue.pipe(takeUntil(this.stopOnDestroy)).subscribe(value => {
                     this.onCurrentData(value);
                     this.afterOnCurrentData();
+                    //console.log(value);
                 });
-
+                if (this.dataService instanceof HistoryDataService) {
+                    console.log("dataService is an instance of HistoryDataService");
+                }
                 this.formGroup = this.getFormGroup();
             });
         });

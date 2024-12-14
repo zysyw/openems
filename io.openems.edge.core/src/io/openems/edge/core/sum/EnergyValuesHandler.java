@@ -115,7 +115,7 @@ public class EnergyValuesHandler {
 			var lastValue = this.lastEnergyValues.get(channelId);
 			value = lastValue;
 		}
-
+		
 		this.parent.channel(channelId).setNextValue(value);
 		this.lastEnergyValues.put(channelId, value);
 		return value;

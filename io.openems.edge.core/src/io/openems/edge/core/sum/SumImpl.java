@@ -415,8 +415,12 @@ public class SumImpl extends AbstractOpenemsComponent implements Sum, OpenemsCom
 				productionAcActiveEnergySum);
 		var leaveTheSystem = TypeUtils.sum(essActiveChargeEnergySum, gridSellActiveEnergySum,
 				/* handling corner-case */ productionAcActiveEnergyNegative.calculate());
-		this.energyValuesHandler.setValue(Sum.ChannelId.CONSUMPTION_ACTIVE_ENERGY,
-				Optional.ofNullable(enterTheSystem).orElse(0L) - Optional.ofNullable(leaveTheSystem).orElse(0L));
+		var consumptionActiveEnergyValue = (enterTheSystem == null && leaveTheSystem == null) 
+		        ? null 
+		        : Optional.ofNullable(enterTheSystem).orElse(0L) - Optional.ofNullable(leaveTheSystem).orElse(0L);
+		this.energyValuesHandler.setValue(Sum.ChannelId.CONSUMPTION_ACTIVE_ENERGY, consumptionActiveEnergyValue);
+		/*this.energyValuesHandler.setValue(Sum.ChannelId.CONSUMPTION_ACTIVE_ENERGY,
+				Optional.ofNullable(enterTheSystem).orElse(0L) - Optional.ofNullable(leaveTheSystem).orElse(0L));*/
 
 		// Further calculated Channels
 		var essDischargePowerSum = essDcDischargePower.calculate();

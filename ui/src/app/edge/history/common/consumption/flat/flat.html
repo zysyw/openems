@@ -12,7 +12,7 @@
         </ng-container>
 
         <ng-container *ngFor="let component of consumptionMeterComponents">
-            <oe-flat-widget-line [name]="component.alias" [channelAddress]="component.id + '/ActiveProductionEnergy'"
+            <oe-flat-widget-line [name]="component.alias" [channelAddress]="component.id + '/ActiveConsumptionEnergy'"
                 [converter]="Utils.CONVERT_TO_KILO_WATTHOURS"></oe-flat-widget-line>
         </ng-container>
 

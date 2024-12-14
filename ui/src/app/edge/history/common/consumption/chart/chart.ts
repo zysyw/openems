@@ -43,7 +43,7 @@ export class ChartComponent extends AbstractHistoryChart {
       inputChannel.push({
         name: meter.id + "/ActivePower",
         powerChannel: ChannelAddress.fromString(meter.id + "/ActivePower"),
-        energyChannel: ChannelAddress.fromString(meter.id + "/ActiveProductionEnergy"),
+        energyChannel: ChannelAddress.fromString(meter.id + "/ActiveConsumptionEnergy"),
       });
     });
 
@@ -86,7 +86,7 @@ export class ChartComponent extends AbstractHistoryChart {
           datasets.push({
             name: meter.alias,
             nameSuffix: (energyValues: QueryHistoricTimeseriesEnergyResponse) => {
-              return energyValues?.result.data[meter.id + "/ActiveProductionEnergy"];
+              return energyValues?.result.data[meter.id + "/ActiveConsumptionEnergy"];
             },
             converter: () => {
               return data[meter.id + "/ActivePower"] ?? null;

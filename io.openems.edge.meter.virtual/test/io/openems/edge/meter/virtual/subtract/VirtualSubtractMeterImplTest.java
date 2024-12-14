@@ -28,7 +28,7 @@ public class VirtualSubtractMeterImplTest {
 						.setId("meter0") //
 						.setType(GRID) //
 						.setAddToSum(true) //
-						.setMinuendId("meter1") //
+						.setMinuendsIds("meter1") //
 						.setSubtrahendsIds("meter2", "ess0") //
 						.build()) //
 				.next(new TestCase() //

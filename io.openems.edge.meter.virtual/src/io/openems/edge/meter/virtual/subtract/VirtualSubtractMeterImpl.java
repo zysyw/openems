@@ -1,5 +1,6 @@
 package io.openems.edge.meter.virtual.subtract;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.osgi.service.cm.ConfigurationAdmin;
@@ -37,8 +38,8 @@ public class VirtualSubtractMeterImpl extends AbstractOpenemsComponent
 	@Reference
 	protected ConfigurationAdmin cm;
 
-	@Reference(policy = ReferencePolicy.STATIC, policyOption = ReferencePolicyOption.GREEDY, cardinality = ReferenceCardinality.OPTIONAL)
-	private OpenemsComponent minuend;
+	@Reference(policy = ReferencePolicy.STATIC, policyOption = ReferencePolicyOption.GREEDY, cardinality = ReferenceCardinality.MULTIPLE)
+	private List<OpenemsComponent> minuends; // 修改为 List 类型
 
 	@Reference(policy = ReferencePolicy.STATIC, policyOption = ReferencePolicyOption.GREEDY, cardinality = ReferenceCardinality.MULTIPLE)
 	private List<OpenemsComponent> subtrahends;
@@ -57,34 +58,32 @@ public class VirtualSubtractMeterImpl extends AbstractOpenemsComponent
 		super.activate(context, config.id(), config.alias(), config.enabled());
 		this.config = config;
 
-		// update filter for 'minuend'
-		if (config.minuend_id() == null || config.minuend_id().isBlank()) {
-			// assume zero values for minuend and set reference filter to something
-			// unresolvable
-			if (OpenemsComponent.updateReferenceFilterRaw(this.cm, this.servicePid(), "minuend", "(false)")) {
-				return;
-			}
+// Update filter for 'minuends'
+		if (config.minuends_ids() == null || config.minuends_ids().length == 0) {
+			// If no minuends provided, assume zero values and set reference filter to an
+			// unresolvable condition
+			this.minuends = new ArrayList<>();
 		} else {
-			// use given minuend meter or ess
-			if (OpenemsComponent.updateReferenceFilter(this.cm, this.servicePid(), "minuend", config.minuend_id())) {
+			// Use given minuends (meters or ESS)
+			if (OpenemsComponent.updateReferenceFilter(this.cm, this.servicePid(), "minuends", config.minuends_ids())) {
 				return;
 			}
 		}
 
-		// update filter for 'subtrahends'
+// Update filter for 'subtrahends'
 		if (OpenemsComponent.updateReferenceFilter(this.cm, this.servicePid(), "subtrahends",
 				config.subtrahends_ids())) {
 			return;
 		}
 
-		this.channelManager.activate(this.minuend, this.subtrahends);
+// Activate channelManager with updated minuends and subtrahends
+		this.channelManager.activate(this.minuends, this.subtrahends);
 	}
 
 	@Override
 	@Deactivate
 	protected void deactivate() {
 		this.channelManager.deactivate();
-
 		super.deactivate();
 	}
 
@@ -109,5 +108,4 @@ public class VirtualSubtractMeterImpl extends AbstractOpenemsComponent
 				OpenemsComponent.getModbusSlaveNatureTable(accessMode), //
 				ElectricityMeter.getModbusSlaveNatureTableWithoutIndividualPhases(accessMode));
 	}
-
 }

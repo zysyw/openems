@@ -6,36 +6,40 @@ import { ChartAxis, HistoryUtils, Utils, YAxisType } from "src/app/shared/servic
 import { ChannelAddress } from "src/app/shared/shared";
 
 @Component({
-    selector: "energyefficiencyChart",
+    selector: "carbonemissionintensityChart",
     templateUrl: "../../../../../shared/components/chart/abstracthistorychart.html",
 })
 export class ChartComponent extends AbstractHistoryChart {
 
     protected override getChartData(): HistoryUtils.ChartData {
-        this.spinnerId = "selfconsumption-chart";
+        this.spinnerId = "carbonemissionintensity-chart";
         return {
             input:
                 [{
-                    name: "GridSell",
+                    name: "GridBuy",
                     powerChannel: ChannelAddress.fromString("_sum/GridActivePower"),
-                    energyChannel: ChannelAddress.fromString("_sum/GridSellActiveEnergy"),
+                    energyChannel: ChannelAddress.fromString("_sum/GridBuyActiveEnergy"),
                     ...(this.chartType === "line" && { converter: HistoryUtils.ValueConverter.POSITIVE_AS_ZERO_AND_INVERT_NEGATIVE }),
                 },
-                {
-                    name: "ProductionActivePower",
-                    powerChannel: ChannelAddress.fromString("_sum/ProductionActivePower"),
-                    energyChannel: ChannelAddress.fromString("_sum/ProductionActiveEnergy"),
-                }],
+                ],
             output: (data: HistoryUtils.ChannelData) => {
                 return [{
-                    name: this.translate.instant("General.selfConsumption"),
+                    name: "碳排放强度水平",
                     nameSuffix: (energyValues: QueryHistoricTimeseriesEnergyResponse) => {
-                        return Utils.calculateSelfConsumption(energyValues?.result.data["_sum/GridSellActiveEnergy"] ?? null, energyValues?.result.data["_sum/ProductionActiveEnergy"] ?? null);
+                        return Utils.calculateBuildingCarbonEmissionIntensityLevel(energyValues?.result.data["_sum/GridBuyActiveEnergy"] ?? null, 
+                            0.581,/*碳排放因子 */
+                            77024,/*用友建筑面积 */
+                            18, /*按18kgCO2每平米每年计算 */
+                        );
                     },
                     converter: () => {
-                        return data["GridSell"]
+                        return data["GridBuy"]
                             ?.map((value, index) =>
-                                Utils.calculateSelfConsumption(value, data["ProductionActivePower"][index]),
+                                Utils.calculateBuildingCarbonEmissionIntensityLevel(value, 
+                                    0.581,/*碳排放因子 */
+                                    77024,/*用友建筑面积 */
+                                    18, /*按18kgCO2每平米每年计算 */
+                                ),
                             );
                     },
                     color: "rgb(253,197,7)",

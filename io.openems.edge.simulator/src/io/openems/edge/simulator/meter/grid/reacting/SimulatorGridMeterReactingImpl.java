@@ -143,11 +143,11 @@ public class SimulatorGridMeterReactingImpl extends AbstractOpenemsComponent
 				switch (m.getMeterType()) {
 				case CONSUMPTION_METERED:
 				case MANAGED_CONSUMPTION_METERED:
-				case GRID:
-					// ignore
-					break;
 				case CONSUMPTION_NOT_METERED:
 					activePower = add(activePower, m.getActivePowerChannel().getNextValue().get());
+					break;
+				case GRID:
+					// ignore
 					break;
 				case PRODUCTION:
 				case PRODUCTION_AND_CONSUMPTION:

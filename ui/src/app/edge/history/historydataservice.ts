@@ -18,7 +18,7 @@ export class HistoryDataService extends DataService {
   protected override timestamps: string[] = [];
   private activeQueryData: string;
   private channelAddresses: { [sourceId: string]: ChannelAddress } = {};
-
+  
   constructor(
     @Inject(Websocket) protected websocket: Websocket,
     @Inject(Service) protected service: Service,
@@ -56,7 +56,7 @@ export class HistoryDataService extends DataService {
                   for (const [key, value] of Object.entries(result.data)) {
                     allComponents[key] = value;
                   }
-
+                  console.log(allComponents);
                   this.currentValue.next({ allComponents: allComponents });
                   this.timestamps = response.result["timestamps"] ?? [];
                 }
