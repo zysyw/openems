@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
 import { HistoryDataErrorModule } from "src/app/shared/components/history-data-error/history-data-error.module";
 import { SharedModule } from "../../shared/shared.module";
 import { Common } from "../history/common/common";
@@ -11,9 +13,11 @@ import { CarbonFigureComponent } from "./carbonFigure.component";
       Controller,
       HistoryDataErrorModule,
       SharedModule,
+      CommonModule,
+      BrowserModule,
     ],
     declarations: [
         CarbonFigureComponent,
     ],
 })
-export class carbonFigureModule { }
+export class CarbonFigureModule { }

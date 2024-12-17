@@ -1,3 +1,37 @@
-:host {
-  display: block;
+.table-container {
+  text-align: center; /* 表格整体居中 */
+  margin: 20px;
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  table {
+    width: 90%; /* 表格宽度占父容器的 90% */
+    margin: 0 auto; /* 居中 */
+    border-collapse: collapse; /* 移除单元格间隙 */
+  }
+
+  th, td {
+    border: 1px solid #ddd; /* 单元格边框 */
+    padding: 8px; /* 单元格内边距 */
+    text-align: center; /* 居中对齐 */
+    white-space: nowrap; /* 防止换行 */
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 400px; /* 第一列设置固定宽度 */
+    text-align: left; /* 第一列左对齐，便于长文本显示 */
+  }
+
+  th {
+    background-color: #f4f4f4; /* 表头背景色 */
+    font-weight: bold;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* 奇偶行颜色区分 */
+  }
 }

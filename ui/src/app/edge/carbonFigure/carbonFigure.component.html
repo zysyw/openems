@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="table-container">
+      <!-- 技术指标表 -->
+      <h2>技术指标</h2>
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let header of technicalHeaders">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of technicalData">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- 历史指标表 -->
+      <h2>历史指标</h2>
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let header of historicalHeaders">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of historicalData">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-content>
