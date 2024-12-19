@@ -71,9 +71,6 @@ export abstract class AbstractCarbonFigure implements OnInit, OnDestroy {
                     this.afterOnCurrentData();
                     //console.log(value);
                 });
-                if (this.dataService instanceof HistoryDataService) {
-                    console.log("dataService is an instance of HistoryDataService");
-                }
                 this.formGroup = this.getFormGroup();
             });
         });
