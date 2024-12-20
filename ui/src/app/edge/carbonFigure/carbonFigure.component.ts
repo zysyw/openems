@@ -13,10 +13,10 @@ export enum PeriodType {
 }
 
 interface EnergyFigures {
-  autarchy: number;
-  carbonEmissionIntensity: number;
-  energyEfficiency: number;
-  selfconsumption: number;
+  autarchy: string;
+  carbonEmissionIntensity: string;
+  energyEfficiency: string;
+  selfconsumption: string;
 }
 
 type PeriodFigures = Record<PeriodType, EnergyFigures>;
@@ -41,55 +41,47 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
   public override ngOnInit() {
     for (const period of Object.values(PeriodType)) {
       this.figures[period] = {
-        autarchy: 0,
-        carbonEmissionIntensity: 0,
-        energyEfficiency: 0,
-        selfconsumption: 0,
+        autarchy: "0",
+        carbonEmissionIntensity: "0",
+        energyEfficiency: "0",
+        selfconsumption: "0",
       };
     }
     super.ngOnInit();
-    this.period = PeriodType.Today;
-    //this.calculateFigures();    
+    this.period = PeriodType.Today;  
   }
-
-  private async calculateFigures() {
-    const periods = [
-        PeriodType.Today,
-        PeriodType.Yesterday,
-        PeriodType.ThisMonth,
-        PeriodType.LastMonth,
-        PeriodType.ThisYear,
-        PeriodType.LastYear
-    ];
-    //this.period = periods[0];
-    //this.currentPeriodIndex++;
-    /*while (this.currentPeriodIndex < 2/*periods.length) {
-      this.period = periods[this.currentPeriodIndex];
-      this.service.historyPeriod.next(this.getPeriod(this.period));
-      await this.waitForDataUpdate(); // 等待数据更新完成
-      console.log(`${this.period}: `, this.figures);
-      this.currentPeriodIndex++;
-    } */
-    // 所有 PeriodType 处理完成，更新表格
-    this.setTableValues();
-    console.log('All periods processed:', this.figures);
-}
 
   private setTableValues(){
     this.technicalHeaders = ['指标名称', '本日', '本月', '本年度'];
     this.technicalData = [
-    ['光伏消纳率', '70%', '75%', '80%'],
-    ['可再生能源替代率', '70%', '75%', '80%'],
-    ['碳排放强度水平', '50kg/kWh', '45kg/kWh', '40kg/kWh'],
-    ['能效水平', '95%', '92%', '90%'],
+    ['光伏消纳率', this.figures[PeriodType.Today].selfconsumption, 
+      this.figures[PeriodType.ThisMonth].selfconsumption, 
+      this.figures[PeriodType.ThisYear].selfconsumption],
+    ['可再生能源替代率', this.figures[PeriodType.Today].autarchy, 
+      this.figures[PeriodType.ThisMonth].autarchy, 
+      this.figures[PeriodType.ThisYear].autarchy],
+    ['碳排放强度水平', this.figures[PeriodType.Today].carbonEmissionIntensity, 
+      this.figures[PeriodType.ThisMonth].carbonEmissionIntensity, 
+      this.figures[PeriodType.ThisYear].carbonEmissionIntensity],
+    ['能效水平', this.figures[PeriodType.Today].energyEfficiency, 
+      this.figures[PeriodType.ThisMonth].energyEfficiency, 
+      this.figures[PeriodType.ThisYear].energyEfficiency],
     ];
 
     this.historicalHeaders = ['指标名称', '上日', '上月', '上年度'];
     this.historicalData = [
-    ['光伏消纳率', '70%', '75%', '80%'],
-    ['可再生能源替代率', '68%', '73%', '78%'],
-    ['碳排放强度水平', '52kg/kWh', '47kg/kWh', '42kg/kWh'],
-    ['能效水平', '93%', '91%', '89%'],
+      ['光伏消纳率', this.figures[PeriodType.Yesterday].selfconsumption, 
+        this.figures[PeriodType.LastMonth].selfconsumption, 
+        this.figures[PeriodType.LastYear].selfconsumption],
+      ['可再生能源替代率', this.figures[PeriodType.Yesterday].autarchy, 
+        this.figures[PeriodType.LastMonth].autarchy, 
+        this.figures[PeriodType.LastYear].autarchy],
+      ['碳排放强度水平', this.figures[PeriodType.Yesterday].carbonEmissionIntensity, 
+        this.figures[PeriodType.LastMonth].carbonEmissionIntensity, 
+        this.figures[PeriodType.LastYear].carbonEmissionIntensity],
+      ['能效水平', this.figures[PeriodType.Yesterday].energyEfficiency, 
+        this.figures[PeriodType.LastMonth].energyEfficiency, 
+        this.figures[PeriodType.LastYear].energyEfficiency],
     ];
   }
 
@@ -104,33 +96,40 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
   
   protected override onCurrentData(currentData: CurrentData) {
     console.log("Enter onCurrentData");
-    const autarchyValue =
-            Utils.calculateAutarchy(
-                currentData.allComponents["_sum/GridBuyActiveEnergy"] / 1000,
-                currentData.allComponents["_sum/ConsumptionActiveEnergy"] / 1000);
-    const selfconsumptionValue = Utils.calculateSelfConsumption(
-            currentData.allComponents["_sum/GridSellActiveEnergy"],
-            currentData.allComponents["_sum/ProductionActiveEnergy"]);
-    const carbonEmissionIntensityLevel = Utils.calculateBuildingCarbonEmissionIntensityLevel(
-        currentData.allComponents["_sum/GridBuyActiveEnergy"] / 1000, 
-        0.581,/*碳排放因子 */
-        77024,/*用友建筑面积 */
-        18, /*按18kgCO2每平米每年计算 */);
-    const energyEfficiencyLevel = Utils.calculateBuildingEnergyEfficiencLevel(
-        currentData.allComponents["_sum/ConsumptionActiveEnergy"] / 1000,
-        77024,/*用友建筑面积 */
-        53);
-    this.figures[this.period].autarchy = autarchyValue;
-    this.figures[this.period].selfconsumption = selfconsumptionValue;
-    this.figures[this.period].carbonEmissionIntensity = carbonEmissionIntensityLevel;
-    this.figures[this.period].energyEfficiency = energyEfficiencyLevel;
+    if (!currentData || Object.keys(currentData.allComponents).length === 0) {
+      this.figures[this.period].autarchy = "-";
+      this.figures[this.period].selfconsumption = "-";
+      this.figures[this.period].carbonEmissionIntensity = "-";
+      this.figures[this.period].energyEfficiency = "-";
+    } else {
+      const autarchyValue =
+              Utils.calculateAutarchy(
+                  currentData.allComponents["_sum/GridBuyActiveEnergy"] / 1000,
+                  currentData.allComponents["_sum/ConsumptionActiveEnergy"] / 1000);
+      const selfconsumptionValue = Utils.calculateSelfConsumption(
+              currentData.allComponents["_sum/GridSellActiveEnergy"],
+              currentData.allComponents["_sum/ProductionActiveEnergy"]);
+      const carbonEmissionIntensityLevel = Utils.calculateBuildingCarbonEmissionIntensityLevel(
+          currentData.allComponents["_sum/GridBuyActiveEnergy"] / 1000, 
+          0.581,/*碳排放因子 */
+          77024,/*用友建筑面积 */
+          18, /*按18kgCO2每平米每年计算 */);
+      const energyEfficiencyLevel = Utils.calculateBuildingEnergyEfficiencLevel(
+          currentData.allComponents["_sum/ConsumptionActiveEnergy"] / 1000,
+          77024,/*用友建筑面积 */
+          53);
+      this.figures[this.period].autarchy = this.toPercentageString(autarchyValue);
+      this.figures[this.period].selfconsumption = this.toPercentageString(selfconsumptionValue);
+      this.figures[this.period].carbonEmissionIntensity = this.toPercentageString(carbonEmissionIntensityLevel);
+      this.figures[this.period].energyEfficiency = this.toPercentageString(energyEfficiencyLevel);
+    }
   }
 
   protected override afterOnCurrentData(): void {  
     console.log(`${this.period}: `, this.figures);
     const periodValues = Object.values(PeriodType);
     
-    if (this.currentPeriodIndex < 4/*periodValues.length*/) {
+    if (this.currentPeriodIndex < periodValues.length) {
         this.period = periodValues[this.currentPeriodIndex]; // 获取下一个 PeriodType
         this.service.historyPeriod.next(this.getPeriod(this.period)); // 触发更新
         this.currentPeriodIndex++;
@@ -139,6 +138,10 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
         this.setTableValues();
         console.log('All periods processed:', this.figures);
     }
+  }
+
+  private toPercentageString(value: number): string {
+    return (value).toFixed(2) + '%';
   }
 
   private getPeriod(period:PeriodType): DefaultTypes.HistoryPeriod{

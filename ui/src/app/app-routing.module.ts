@@ -3,18 +3,19 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { environment } from "src/environments";
 import { ChangelogViewComponent } from "./changelog/view/view";
 import { CarbonFigureComponent } from "./edge/carbonFigure/carbonFigure.component";
+import { FigureDataService } from "./edge/carbonFigure/figuredataservice";
 import { DiagramComponent } from "./edge/diagram/diagram.component";
 import { EdgeComponent } from "./edge/edge.component";
 import { OverviewComponent as AutarchyChartOverviewComponent } from "./edge/history/common/autarchy/overview/overview";
+import { OverviewComponent as CarbonEmissionIntensityChartOverviewComponent } from "./edge/history/common/carbonemissionintensity/overview/overview";
 import { DetailsOverviewComponent as ConsumptionDetailsOverviewComponent } from "./edge/history/common/consumption/details/details.overview";
 import { OverviewComponent as ConsumptionChartOverviewComponent } from "./edge/history/common/consumption/overview/overview";
+import { OverviewComponent as EnergyEfficiencyChartOverviewComponent } from "./edge/history/common/energyefficiency/overview/overview";
 import { DetailsOverviewComponent as GridDetailsOverviewComponent } from "./edge/history/common/grid/details/details.overview";
 import { OverviewComponent as GridChartOverviewComponent } from "./edge/history/common/grid/overview/overview";
 import { DetailsOverviewComponent } from "./edge/history/common/production/details/details.overview";
 import { OverviewComponent as ProductionChartOverviewComponent } from "./edge/history/common/production/overview/overview";
 import { OverviewComponent as SelfconsumptionChartOverviewComponent } from "./edge/history/common/selfconsumption/overview/overview";
-import { OverviewComponent as EnergyEfficiencyChartOverviewComponent } from "./edge/history/common/energyefficiency/overview/overview";
-import { OverviewComponent as CarbonEmissionIntensityChartOverviewComponent } from "./edge/history/common/carbonemissionintensity/overview/overview";
 import { OverviewComponent as ChannelthresholdChartOverviewComponent } from "./edge/history/Controller/ChannelThreshold/overview/overview";
 import { OverviewComponent as GridOptimizedChargeChartOverviewComponent } from "./edge/history/Controller/Ess/GridoptimizedCharge/overview/overview";
 import { OverviewComponent as TimeOfUseTariffOverviewComponent } from "./edge/history/Controller/Ess/TimeOfUseTariff/overview/overview";
@@ -135,7 +136,7 @@ export const routes: Routes = [
       },
       {
         path: "carbonFigure", providers: [{
-          useClass: HistoryDataService,
+          useClass: FigureDataService,
           provide: DataService,
         }], component: CarbonFigureComponent,
       },

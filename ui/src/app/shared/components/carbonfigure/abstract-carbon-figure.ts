@@ -9,7 +9,6 @@ import { takeUntil } from "rxjs/operators";
 import { ChannelAddress, CurrentData, Edge, EdgeConfig, Utils } from "src/app/shared/shared";
 import { v4 as uuidv4 } from "uuid";
 
-import { HistoryDataService } from "src/app/edge/history/historydataservice";
 import { Service } from "../../service/service";
 import { Websocket } from "../../service/websocket";
 import { Converter } from "../shared/converter";
@@ -69,7 +68,6 @@ export abstract class AbstractCarbonFigure implements OnInit, OnDestroy {
                 this.dataService.currentValue.pipe(takeUntil(this.stopOnDestroy)).subscribe(value => {
                     this.onCurrentData(value);
                     this.afterOnCurrentData();
-                    //console.log(value);
                 });
                 this.formGroup = this.getFormGroup();
             });
