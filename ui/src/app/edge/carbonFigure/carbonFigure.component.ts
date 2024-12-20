@@ -39,7 +39,6 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
   public dataUpdateCallback: (value: void | PromiseLike<void>) => void;
 
   public override ngOnInit() {
-    super.ngOnInit();
     for (const period of Object.values(PeriodType)) {
       this.figures[period] = {
         autarchy: 0,
@@ -48,9 +47,9 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
         selfconsumption: 0,
       };
     }
-
-    this.calculateFigures();
-    
+    super.ngOnInit();
+    this.period = PeriodType.Today;
+    //this.calculateFigures();    
   }
 
   private async calculateFigures() {
@@ -62,33 +61,18 @@ export class CarbonFigureComponent extends AbstractCarbonFigure{
         PeriodType.ThisYear,
         PeriodType.LastYear
     ];
-    this.period = periods[0];
-    this.currentPeriodIndex++;
-    while (this.currentPeriodIndex < periods.length) {
+    //this.period = periods[0];
+    //this.currentPeriodIndex++;
+    /*while (this.currentPeriodIndex < 2/*periods.length) {
       this.period = periods[this.currentPeriodIndex];
       this.service.historyPeriod.next(this.getPeriod(this.period));
       await this.waitForDataUpdate(); // 等待数据更新完成
       console.log(`${this.period}: `, this.figures);
       this.currentPeriodIndex++;
-    } 
+    } */
     // 所有 PeriodType 处理完成，更新表格
     this.setTableValues();
     console.log('All periods processed:', this.figures);
-    
-    /*for (const period of periods) {
-        this.period = period; // 设置当前 PeriodType
-        this.service.historyPeriod.next(this.getPeriod(this.period)); // 更新 historyPeriod
-        await this.waitForDataUpdate(); // 等待数据更新完成
-        console.log(`${period}: `, this.figures);
-    }
-
-    this.setTableValues(); // 最后更新表格*/
-}
-
-private waitForDataUpdate(): Promise<void> {
-    return new Promise(resolve => {
-        this.dataUpdateCallback = resolve;
-    });
 }
 
   private setTableValues(){
@@ -140,25 +124,22 @@ private waitForDataUpdate(): Promise<void> {
     this.figures[this.period].selfconsumption = selfconsumptionValue;
     this.figures[this.period].carbonEmissionIntensity = carbonEmissionIntensityLevel;
     this.figures[this.period].energyEfficiency = energyEfficiencyLevel;
-    console.log(this.figures);
-
-    if (this.dataUpdateCallback) {
-        this.dataUpdateCallback();
-    }
   }
 
-  /*protected override afterOnCurrentData(): void {  
+  protected override afterOnCurrentData(): void {  
+    console.log(`${this.period}: `, this.figures);
     const periodValues = Object.values(PeriodType);
-    this.currentPeriodIndex++;
-    if (this.currentPeriodIndex < periodValues.length) {
+    
+    if (this.currentPeriodIndex < 4/*periodValues.length*/) {
         this.period = periodValues[this.currentPeriodIndex]; // 获取下一个 PeriodType
         this.service.historyPeriod.next(this.getPeriod(this.period)); // 触发更新
+        this.currentPeriodIndex++;
     } else {
         // 所有 PeriodType 处理完成，更新表格
         this.setTableValues();
         console.log('All periods processed:', this.figures);
     }
-  }*/
+  }
 
   private getPeriod(period:PeriodType): DefaultTypes.HistoryPeriod{
     const today = new Date();
