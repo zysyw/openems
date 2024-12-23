@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { RefresherCustomEvent } from "@ionic/angular";
 import * as d3 from 'd3';
 import { AbstractDiagramBase } from "src/app/shared/components/diagram/abstract-diagram";
 import { DataService } from "src/app/shared/components/shared/dataservice";
@@ -30,6 +29,7 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
         new ChannelAddress("_sum", "ConsumptionActivePower"),
         new ChannelAddress('_sum', 'GridActivePower'),
         new ChannelAddress('_sum', 'ProductionActivePower'),
+        new ChannelAddress('_sum', 'EssActivePower'),
     ];
 
     this.allMeters = this.config.getComponentsImplementingNature("io.openems.edge.meter.api.ElectricityMeter");

@@ -138,7 +138,7 @@
       储能电池功率
     </desc>
     <path class="st8" d="M0 561.26h311.811v34.016H0z"/>
-    <text x="4" y="583.67" style="fill:#c05046;font-family:微软雅黑;font-size:1.5em;font-weight:700">储能电池功率：</text>
+    <text id="_sum_EssActivePower" x="4" y="583.67" style="fill:#c05046;font-family:微软雅黑;font-size:1.5em;font-weight:700">储能电池功率：</text>
   </g>
   <g id="shape217-150" transform="translate(1067.24 -539.575)">
     <desc>
