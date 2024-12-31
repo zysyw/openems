@@ -477,7 +477,7 @@
     "cumulative": "累计值",
     "currentName": "现用名",
     "currentValue": "当前值",
-    "dateFormat": "年-月-日",
+    "dateFormat": "yyyy年-MM月-dd日",
     "digitalInputs": "数字输入",
     "numberOfComponents": "组件数量",
     "directConsumption": "直接消费",
