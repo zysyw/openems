@@ -364,7 +364,7 @@
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1586.83 -143.504)" id="shape422-419"/>
   <path d="M7.09 595.28V573.2" class="st6" transform="translate(1586.83 -183.152)" id="shape423-422"/>
   <g id="group-meter4613" transform="translate(1588.1 -160.475)">
-  <path class="st12" id="meter4613_ActivePower" d="M0 572.598h11.622v22.677H0z"/>
+  <path class="st12" id="ess0_ActivePower" d="M0 572.598h11.622v22.677H0z"/>
 </g>
   <path d="M7.09 595.28v-30.94" class="st6" transform="translate(1672.61 -181.641)" id="shape425-427"/>
   <path d="M-7.09 595.28v-25.34" class="st6" transform="translate(1686.79 -235.019)" id="shape426-430"/>

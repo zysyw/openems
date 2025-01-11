@@ -59,7 +59,7 @@
           </ion-card-content>
         </ion-card>
 
-        <!-- Show and Edit UserInformation -->
+        <!-- Show and Edit UserInformation 
         <ion-card>
           <ion-item lines="full" color="light">
             <ion-icon slot="start" size="large" color="primary" name="person-outline"></ion-icon>
@@ -81,7 +81,7 @@
             <ion-item lines="none">
               <ion-button slot="start" (click)="enableAndDisableEditMode()"
                 [disabled]="!isEditModeDisabled && !this.form?.formGroup?.dirty">
-                <ion-label>{{isEditModeDisabled ?'bearbeiten':'zurücksetzen'}}</ion-label>
+                <ion-label>{{isEditModeDisabled ?'编辑':'重置'}}</ion-label>
                 <ion-icon name="pencil-outline" slot="end"></ion-icon>
               </ion-button>
               <ion-button [disabled]="!form?.formGroup?.dirty" slot="end" (click)="applyChanges()">
@@ -91,7 +91,7 @@
             </ion-item>
 
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
 
         <ion-card *ngIf="companyInformationFields.length > 0">
           <ion-item lines="full" color="light">

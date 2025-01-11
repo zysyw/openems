@@ -16,6 +16,7 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
   private channelAddresses: ChannelAddress[] = [];
   public evcss: EdgeConfig.Component[] | null = null;
   public allMeters: EdgeConfig.Component[] | null = null;
+  public allEsss: EdgeConfig.Component[] | null = null;
 
   constructor(
     service: Service,          
@@ -25,13 +26,14 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
   }
 
   protected getChannelAddresses(): ChannelAddress[] {
+    //Get Sum
     const channelAddresses: ChannelAddress[] = [
         new ChannelAddress("_sum", "ConsumptionActivePower"),
         new ChannelAddress('_sum', 'GridActivePower'),
         new ChannelAddress('_sum', 'ProductionActivePower'),
         new ChannelAddress('_sum', 'EssActivePower'),
     ];
-
+    //Get Meters
     this.allMeters = this.config.getComponentsImplementingNature("io.openems.edge.meter.api.ElectricityMeter");
 
     for (const component of this.allMeters) {
@@ -39,7 +41,14 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
         new ChannelAddress(component.id, "ActivePower"),
       );
     }
+    //Get Esss
+    this.allEsss = this.config.getComponentsImplementingNature("io.openems.edge.ess.api.SymmetricEss");
 
+    for (const component of this.allEsss) {
+      channelAddresses.push(
+        new ChannelAddress(component.id, "ActivePower"),
+      );
+    }
     // Get EVCSs
     this.evcss = this.config.getComponentsImplementingNature("io.openems.edge.evcs.api.Evcs")
       .filter(component =>
@@ -73,11 +82,11 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
 
   protected onCurrentData(data: { [key: string]: any }): void {
     //console.log('Received data:', data);
-    this.updateMeterValue(data);
+    this.updateDiagramDisplayValue(data);
   }
 
-  private  updateMeterValue(data: { [key: string]: any }): void{
-    // 遍历数据对象，根据 key 更新对应的 meter 元素
+  private  updateDiagramDisplayValue(data: { [key: string]: any }): void{
+    // 遍历数据对象，根据 key 更新对应的 <g> 元素
     Object.keys(data).forEach(channelKey => {
       const bindingKey = this.replaceSlashWithColon(channelKey);
       // 选择对应的 <g> 元素
@@ -119,8 +128,8 @@ export class DiagramComponent extends AbstractDiagramBase implements OnInit, OnD
   private getTextAttr(bindingElement: d3.Selection, bindingKey: string): { xPos: number, yPos: number, font: string, fill: string,style: string } {
     const bbox = bindingElement.node()?.getBBox();
     // 根据 bindingKey 的内容选择计算逻辑
-    if (bindingKey.includes("meter")) {
-      // 适用于 meter 的逻辑
+    if (bindingKey.includes("meter") || bindingKey.includes("ess")) {
+      // 适用于 meter 或者 ess 的逻辑
       return {
         xPos: bbox.x + bbox.width + 10, // 右侧 10 像素
         yPos: bbox.y + bbox.height / 2, // 垂直居中

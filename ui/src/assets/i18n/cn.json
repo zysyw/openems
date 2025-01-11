@@ -285,7 +285,7 @@
       "tryAgain": "稍后再试...",
       "otherPeriod": "其他期间",
       "period": "时期",
-      "selectedDay": "{{ 价值 }}",
+      "selectedDay": "{{ value }}",
       "selectedPeriod": "选定时期：",
       "today": "今天",
       "week": "星期",
@@ -550,7 +550,7 @@
       "november": "十一月",
       "december": "十二月"
     },
-    "save": "节省",
+    "save": "保存",
     "SystemOutage": "由于维护工作，在线监控暂时不可用。请稍后重试。有关更多信息，请参阅",
     "Country": {
       "germany": "德国",
